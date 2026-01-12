@@ -1,0 +1,606 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const jamStart = new Date('2026-01-30T18:00:00-06:00');
+const jamEnd = new Date('2026-01-31T18:00:00-06:00');
+---
+
+<Layout title="Catholic Game Jam">
+  <main>
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="hero-content">
+        <span class="hero-cross">✝</span>
+        <h1>Catholic Game Jam</h1>
+        <p class="tagline">Build something beautiful. Build on what came before.</p>
+
+        <div class="countdown" id="countdown">
+          <div class="countdown-item">
+            <span class="countdown-value" id="days">--</span>
+            <span class="countdown-label">Days</span>
+          </div>
+          <div class="countdown-item">
+            <span class="countdown-value" id="hours">--</span>
+            <span class="countdown-label">Hours</span>
+          </div>
+          <div class="countdown-item">
+            <span class="countdown-value" id="minutes">--</span>
+            <span class="countdown-label">Minutes</span>
+          </div>
+          <div class="countdown-item">
+            <span class="countdown-value" id="seconds">--</span>
+            <span class="countdown-label">Seconds</span>
+          </div>
+        </div>
+
+        <a href="#register" class="cta-button">
+          <span>Register Now</span>
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M5 12h14M12 5l7 7-7 7"/>
+          </svg>
+        </a>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="section" id="about">
+      <div class="container">
+        <h2>About</h2>
+        <div class="about-content">
+          <p class="lead">A 24-hour game jam for creators who want to make games that glorify God.</p>
+
+          <div class="philosophy">
+            <h3>Our Philosophy</h3>
+            <p>Don't start from scratch. Find an open-source project, a template, an asset pack—anything that gives you a foundation—and build something Catholic from it. Fork it, extend it, reskin it.</p>
+            <p>What you make here becomes part of that same commons. Future jams build on your work. The body of Catholic games grows.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Details Section -->
+    <section class="section section-alt" id="details">
+      <div class="container">
+        <h2>Details</h2>
+        <div class="details-grid">
+          <div class="detail-card">
+            <div class="detail-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                <line x1="16" y1="2" x2="16" y2="6"></line>
+                <line x1="8" y1="2" x2="8" y2="6"></line>
+                <line x1="3" y1="10" x2="21" y2="10"></line>
+              </svg>
+            </div>
+            <h3>When</h3>
+            <p><strong>January 30, 2026</strong><br/>6:00 PM CST</p>
+            <p class="detail-arrow">↓</p>
+            <p><strong>January 31, 2026</strong><br/>6:00 PM CST</p>
+            <p class="detail-duration">24 hours</p>
+          </div>
+
+          <div class="detail-card">
+            <div class="detail-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+              </svg>
+            </div>
+            <h3>Theme</h3>
+            <p>Make a <strong>recognizably Catholic</strong> game.</p>
+            <p class="detail-note">Saints, sacraments, scripture, tradition—the faith is rich with inspiration.</p>
+          </div>
+
+          <div class="detail-card">
+            <div class="detail-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                <circle cx="9" cy="7" r="4"></circle>
+                <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+              </svg>
+            </div>
+            <h3>Teams</h3>
+            <p>Solo or team—your choice.</p>
+            <p class="detail-note">Any size, any composition.</p>
+          </div>
+
+          <div class="detail-card">
+            <div class="detail-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"></path>
+              </svg>
+            </div>
+            <h3>Tools</h3>
+            <p>Any engine, any language, any assets.</p>
+            <p class="detail-note">Respect licenses. Build on foundations.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Rules Section -->
+    <section class="section" id="rules">
+      <div class="container">
+        <h2>Rules</h2>
+        <ol class="rules-list">
+          <li>
+            <span class="rule-number">1</span>
+            <div class="rule-content">
+              <strong>Start from an existing open-source foundation</strong>
+              <p>Recommended, not required. Templates, engines, asset packs—build on the work of others.</p>
+            </div>
+          </li>
+          <li>
+            <span class="rule-number">2</span>
+            <div class="rule-content">
+              <strong>Your submission must be MIT licensed</strong>
+              <p>Keep the commons growing. Your work enables future creators.</p>
+            </div>
+          </li>
+          <li>
+            <span class="rule-number">3</span>
+            <div class="rule-content">
+              <strong>Keep it Catholic</strong>
+              <p>Reverent, not irreverent. Glorify God in your work.</p>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- Register Section -->
+    <section class="section section-alt" id="register">
+      <div class="container">
+        <h2>Register</h2>
+        <p class="register-intro">Join us for 24 hours of creation, collaboration, and Catholic game-making.</p>
+        <a href="https://tally.so" target="_blank" rel="noopener noreferrer" class="cta-button cta-button-large">
+          <span>Register on Tally</span>
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+            <polyline points="15 3 21 3 21 9"></polyline>
+            <line x1="10" y1="14" x2="21" y2="3"></line>
+          </svg>
+        </a>
+      </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="section" id="faq">
+      <div class="container">
+        <h2>FAQ</h2>
+        <div class="faq-list">
+          <details class="faq-item">
+            <summary>Do I need to be Catholic?</summary>
+            <p>No, all are welcome. Just respect the theme and create something that honors the faith.</p>
+          </details>
+
+          <details class="faq-item">
+            <summary>Can I work on a team?</summary>
+            <p>Yes, any size. Find teammates beforehand or go solo—your choice.</p>
+          </details>
+
+          <details class="faq-item">
+            <summary>What if I want to start from scratch?</summary>
+            <p>That's fine. We encourage building on existing work, but it's not required.</p>
+          </details>
+
+          <details class="faq-item">
+            <summary>How do I submit?</summary>
+            <p>Details will be shared with registered participants before the jam begins.</p>
+          </details>
+
+          <details class="faq-item">
+            <summary>What do I win?</summary>
+            <p>The satisfaction of contributing to the Catholic game commons. No prizes—just the joy of creation.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-content">
+          <a href="https://github.com/JohnVonDrashek/catholic-game-jam" target="_blank" rel="noopener noreferrer" class="footer-link">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+            </svg>
+            GitHub
+          </a>
+          <a href="https://github.com/JohnVonDrashek/catholic-game-jam/blob/main/CODE_OF_CONDUCT.md" target="_blank" rel="noopener noreferrer" class="footer-link">
+            Code of Conduct
+          </a>
+        </div>
+        <p class="footer-credit">Made with ✝ by <a href="https://github.com/JohnVonDrashek">John VonDrashek</a></p>
+      </div>
+    </footer>
+  </main>
+</Layout>
+
+<style>
+  /* Hero Section */
+  .hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 2rem;
+    background: linear-gradient(180deg, var(--color-bg) 0%, #F5F5F4 100%);
+  }
+
+  .hero-content {
+    max-width: var(--max-width);
+  }
+
+  .hero-cross {
+    font-size: 3rem;
+    color: var(--color-accent);
+    display: block;
+    margin-bottom: 1.5rem;
+    animation: float 3s ease-in-out infinite;
+  }
+
+  @keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+  }
+
+  .hero h1 {
+    font-size: clamp(2.5rem, 8vw, 4.5rem);
+    font-weight: 700;
+    margin-bottom: 1rem;
+    letter-spacing: -0.02em;
+  }
+
+  .tagline {
+    font-size: clamp(1.1rem, 3vw, 1.35rem);
+    color: var(--color-text-muted);
+    margin-bottom: 3rem;
+    font-style: italic;
+  }
+
+  /* Countdown */
+  .countdown {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-bottom: 3rem;
+    flex-wrap: wrap;
+  }
+
+  .countdown-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 70px;
+  }
+
+  .countdown-value {
+    font-family: var(--font-serif);
+    font-size: clamp(2rem, 6vw, 3rem);
+    font-weight: 700;
+    color: var(--color-text);
+    line-height: 1;
+  }
+
+  .countdown-label {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--color-text-muted);
+    margin-top: 0.5rem;
+  }
+
+  /* CTA Button */
+  .cta-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+    background: var(--color-accent);
+    color: white;
+    padding: 1rem 2rem;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 14px rgba(184, 134, 11, 0.3);
+  }
+
+  .cta-button:hover {
+    background: var(--color-accent-hover);
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(184, 134, 11, 0.4);
+  }
+
+  .cta-button svg {
+    transition: transform 0.3s ease;
+  }
+
+  .cta-button:hover svg {
+    transform: translateX(4px);
+  }
+
+  .cta-button-large {
+    padding: 1.25rem 2.5rem;
+    font-size: 1.1rem;
+  }
+
+  /* Sections */
+  .section {
+    padding: 5rem 2rem;
+  }
+
+  .section-alt {
+    background: #F5F5F4;
+  }
+
+  .container {
+    max-width: var(--max-width);
+    margin: 0 auto;
+  }
+
+  .section h2 {
+    font-size: clamp(2rem, 5vw, 2.75rem);
+    margin-bottom: 2rem;
+    text-align: center;
+  }
+
+  /* About */
+  .about-content {
+    text-align: center;
+  }
+
+  .lead {
+    font-size: 1.25rem;
+    color: var(--color-text-muted);
+    margin-bottom: 2.5rem;
+  }
+
+  .philosophy {
+    background: white;
+    padding: 2rem;
+    border-radius: 12px;
+    border: 1px solid var(--color-border);
+    text-align: left;
+  }
+
+  .philosophy h3 {
+    font-size: 1.35rem;
+    margin-bottom: 1rem;
+    color: var(--color-accent);
+  }
+
+  .philosophy p {
+    margin-bottom: 1rem;
+  }
+
+  .philosophy p:last-child {
+    margin-bottom: 0;
+  }
+
+  /* Details Grid */
+  .details-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1.5rem;
+  }
+
+  .detail-card {
+    background: white;
+    padding: 1.75rem;
+    border-radius: 12px;
+    border: 1px solid var(--color-border);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .detail-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.06);
+  }
+
+  .detail-icon {
+    width: 48px;
+    height: 48px;
+    background: #FEF3C7;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1rem;
+    color: var(--color-accent);
+  }
+
+  .detail-card h3 {
+    font-size: 1.1rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .detail-arrow {
+    color: var(--color-accent);
+    font-size: 1.25rem;
+    margin: 0.5rem 0;
+  }
+
+  .detail-duration {
+    font-size: 0.875rem;
+    color: var(--color-accent);
+    font-weight: 600;
+    margin-top: 0.75rem;
+  }
+
+  .detail-note {
+    font-size: 0.875rem;
+    color: var(--color-text-muted);
+    margin-top: 0.5rem;
+  }
+
+  /* Rules */
+  .rules-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .rules-list li {
+    display: flex;
+    gap: 1.5rem;
+    align-items: flex-start;
+    background: white;
+    padding: 1.5rem;
+    border-radius: 12px;
+    border: 1px solid var(--color-border);
+  }
+
+  .rule-number {
+    font-family: var(--font-serif);
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--color-accent);
+    min-width: 2rem;
+  }
+
+  .rule-content strong {
+    display: block;
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .rule-content p {
+    color: var(--color-text-muted);
+    font-size: 0.95rem;
+  }
+
+  /* Register */
+  #register {
+    text-align: center;
+  }
+
+  .register-intro {
+    font-size: 1.1rem;
+    color: var(--color-text-muted);
+    margin-bottom: 2rem;
+  }
+
+  /* FAQ */
+  .faq-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .faq-item {
+    background: white;
+    border: 1px solid var(--color-border);
+    border-radius: 8px;
+    overflow: hidden;
+  }
+
+  .faq-item summary {
+    padding: 1.25rem 1.5rem;
+    cursor: pointer;
+    font-weight: 600;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+  }
+
+  .faq-item summary::-webkit-details-marker {
+    display: none;
+  }
+
+  .faq-item summary::after {
+    content: '+';
+    font-size: 1.5rem;
+    color: var(--color-accent);
+    transition: transform 0.3s ease;
+  }
+
+  .faq-item[open] summary::after {
+    transform: rotate(45deg);
+  }
+
+  .faq-item p {
+    padding: 0 1.5rem 1.25rem;
+    color: var(--color-text-muted);
+  }
+
+  /* Footer */
+  .footer {
+    padding: 3rem 2rem;
+    border-top: 1px solid var(--color-border);
+  }
+
+  .footer-content {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-bottom: 1.5rem;
+    flex-wrap: wrap;
+  }
+
+  .footer-link {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--color-text-muted);
+    font-size: 0.9rem;
+  }
+
+  .footer-link:hover {
+    color: var(--color-accent);
+  }
+
+  .footer-credit {
+    text-align: center;
+    font-size: 0.875rem;
+    color: var(--color-text-muted);
+  }
+
+  /* Mobile adjustments */
+  @media (max-width: 600px) {
+    .countdown {
+      gap: 1rem;
+    }
+
+    .countdown-item {
+      min-width: 60px;
+    }
+
+    .rules-list li {
+      flex-direction: column;
+      gap: 1rem;
+    }
+  }
+</style>
+
+<script>
+  const jamStart = new Date('2026-01-30T18:00:00-06:00');
+
+  function updateCountdown() {
+    const now = new Date();
+    const diff = jamStart.getTime() - now.getTime();
+
+    if (diff <= 0) {
+      document.getElementById('countdown')!.innerHTML = '<p style="font-size: 1.5rem; color: var(--color-accent); font-weight: 600;">The jam has begun!</p>';
+      return;
+    }
+
+    const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+    const seconds = Math.floor((diff % (1000 * 60)) / 1000);
+
+    document.getElementById('days')!.textContent = days.toString().padStart(2, '0');
+    document.getElementById('hours')!.textContent = hours.toString().padStart(2, '0');
+    document.getElementById('minutes')!.textContent = minutes.toString().padStart(2, '0');
+    document.getElementById('seconds')!.textContent = seconds.toString().padStart(2, '0');
+  }
+
+  updateCountdown();
+  setInterval(updateCountdown, 1000);
+</script>
