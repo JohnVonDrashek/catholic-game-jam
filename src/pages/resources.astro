@@ -15,646 +15,1199 @@ import CrossIcon from '../components/CrossIcon.astro';
       </div>
     </section>
 
-    <!-- Game Engines -->
-    <section class="section" id="engines">
+    <!-- Tab Navigation -->
+    <nav class="tab-nav" id="tab-nav">
       <div class="container">
-        <h2>Game Engines</h2>
-        <p class="section-intro">Choose your weapon. All of these are free and beginner-friendly.</p>
-
-        <div class="resource-category">
-          <h3 class="category-title beginner">Beginner Friendly</h3>
-          <div class="resource-grid">
-            <a href="https://www.renpy.org/" target="_blank" rel="noopener noreferrer" class="resource-card">
-              <div class="card-header">
-                <span class="resource-logo resource-logo-svg" style="background: #FF7F7F;">
-                  <svg viewBox="0 0 24 24" fill="white"><path d="M10.166 0S6.908 1.035 6.25 4.744C4.885 5.647 4.194 6.368 4.19 6.66c0 .023.02.042.031.063.115-.054 5.565-2.614 9.422-2.967a8.31 8.31 0 01.707-.03c1.8-.007 4.532.365 4.569.37-.063-.269-1.722-1.02-2.817-1.217C13.504.009 10.166 0 10.166 0zm8.754 4.096c-.039-.003-3.665-.261-5.342-.096-3.94.388-9.242 2.675-9.356 2.725.16.27 1.288.38 1.848.384-.085 1.63-.804 4.532-.674 4.553.09.014.295-.547.295-.547s-.105.322-.201.692c.404-.02.597-.04.851-.018.057.005.143.01.184.078.134-.26.137-.494.137-.494s.056.211.043.494c.096-.082.209-.316.209-.316s-.009.201-.018.324c.08.048.213.033.213.033a6.8 6.8 0 01-.092.592c-.062.312-.16.488-.4.803-.297.002-.617.244-.748.57-.02.17.246.37.246.37l-.39 1.896a1.743 1.743 0 00-.583.937s-.078.912-.013 1.23c.04.202 1 .846 1.671.89.397.025 1.19-.618 1.19-.618l.506-.049c.276.346.528.441.931.553l.11.34s-.182.149-.182.26c0 .11.197.214.197.214s-1.108.156-1.074 1.53c.018.728 1.01 1.074 1.824 1.105.855.033 2.012-.513 2.012-.513s.184.066.412.048c.262-.02.549-.205.549-.205s-.426.331-.436 1.268c-.002.25.172.537.364.7.114.095.3.17.412.171.173.001-.359-.495-.375-.813-.028-.541.69-.626 1.135-.626.471-.001 1.812.614 2.82.626 1.57.02 2.583-1.212 2.613-2.16.037-1.14-.951-1.834-1.304-2.21-.052-.233-.324-.722-.604-.782-.487-.104-.963.09-.963.09s-.112-.03-.223-.088c.794-1.087.876-1.977.887-2.728.032-2.214-1.539-3.268-1.762-3.39.371-.38.53-.64.622-.847a27.5 27.5 0 00-.18 1.051l.369-.326v.379s.44-.45.504-.914c.039.377.021.914.021.914s.552-.561.737-1.92c.035.862.066 1.508.066 1.508s.29-1.837.192-3.75c-.048-.928-.144-2.02-.47-2.746.825-.647 1.245-.959 1.227-1.16 0-.004-.007-.009-.007-.012z"/></svg>
-                </span>
-                <div>
-                  <span class="resource-badge">VISUAL NOVELS</span>
-                  <h4>Ren'Py</h4>
-                </div>
-              </div>
-              <p>Perfect for story-driven games. Write your narrative, add images, and you're done. Great for first-timers.</p>
-            </a>
-            <a href="https://twinery.org/" target="_blank" rel="noopener noreferrer" class="resource-card">
-              <div class="card-header">
-                <span class="resource-logo resource-logo-svg" style="background: #59BB59;">
-                  <svg viewBox="0 0 7 8" fill="white"><path d="M 0,0 3,0 3,8 0,8 Z"/><path d="M 0,6.5 C 0,1 7,1 7,1 V 4 C 7,4 3,4 3,6.5 V 8 H 0 Z"/></svg>
-                </span>
-                <div>
-                  <span class="resource-badge">TEXT ADVENTURES</span>
-                  <h4>Twine</h4>
-                </div>
-              </div>
-              <p>Create interactive fiction with zero coding. Just write your story and connect the branches.</p>
-            </a>
-            <a href="https://bitsy.org/" target="_blank" rel="noopener noreferrer" class="resource-card">
-              <div class="card-header">
-                <span class="resource-logo resource-logo-svg" style="background: #6767b2;">
-                  <svg viewBox="0 0 80 80" fill="white"><path d="M10,20 20,20 20,30 30,30 30,20 40,20 40,50 60,50 60,80 50,80 50,70 30,70 30,80 20,80 20,60 10,60z"/><path d="M60,40 70,40 70,50 60,50z"/><path d="M70,20 80,20 80,40 70,40z"/></svg>
-                </span>
-                <div>
-                  <span class="resource-badge">TINY GAMES</span>
-                  <h4>Bitsy</h4>
-                </div>
-              </div>
-              <p>Make small, charming games in a simple tile-based editor. Perfect for atmospheric experiences.</p>
-            </a>
-            <a href="https://gdevelop.io/" target="_blank" rel="noopener noreferrer" class="resource-card">
-              <div class="card-header">
-                <span class="resource-logo resource-logo-img" style="background: #4B5DC4;">
-                  <img src="/images/logos/gdevelop.png" alt="GDevelop" />
-                </span>
-                <div>
-                  <span class="resource-badge">NO CODE</span>
-                  <h4>GDevelop</h4>
-                </div>
-              </div>
-              <p>Visual game builder with drag-and-drop events. Great for platformers and action games without coding.</p>
-            </a>
-          </div>
-        </div>
-
-        <div class="resource-category">
-          <h3 class="category-title intermediate">Intermediate</h3>
-          <div class="resource-grid">
-            <a href="https://godotengine.org/" target="_blank" rel="noopener noreferrer" class="resource-card">
-              <div class="card-header">
-                <span class="resource-logo resource-logo-svg" style="background: #478CBF;">
-                  <svg viewBox="0 0 24 24" fill="white"><path d="M9.5598.683c-1.096.244-2.1812.5831-3.1983 1.0951.023.8981.081 1.7582.199 2.6323-.395.253-.81.47-1.178.766-.375.288-.7581.564-1.0971.9011-.6781-.448-1.3962-.869-2.1352-1.2411C1.3532 5.6934.608 6.6186 0 7.6546c.458.7411.936 1.4352 1.4521 2.0942h.014v6.3565c.012 0 .023 0 .035.003l3.8963.376c.204.02.364.184.378.3891l.12 1.7201 3.3994.242.234-1.587c.03-.206.207-.358.415-.358h4.1114c.208 0 .385.152.415.358l.234 1.587 3.3993-.242.12-1.72a.4196.4196 0 01.378-.3891l3.8954-.376c.012 0 .023-.003.035-.003v-.5071h.002V9.7498h.014c.516-.659.994-1.3531 1.4521-2.0942-.608-1.036-1.3541-1.9611-2.1512-2.8192-.739.372-1.4571.793-2.1352 1.2411-.339-.337-.721-.613-1.096-.901-.369-.296-.7841-.5131-1.1781-.7661.117-.8741.175-1.7342.199-2.6323-1.0171-.512-2.1012-.851-3.1983-1.095-.438.736-.838 1.533-1.1871 2.3121-.414-.069-.829-.094-1.2461-.099h-.016c-.417.005-.832.03-1.2461.099-.349-.779-.749-1.576-1.1881-2.3121l.001-.001zM6.4765 9.9889c1.2971 0 2.3492 1.0511 2.3492 2.3482s-1.052 2.3482-2.3492 2.3482c-1.296 0-2.3482-1.051-2.3482-2.3482 0-1.297 1.0511-2.3482 2.3482-2.3482zm11.049 0c1.296 0 2.3482 1.0511 2.3482 2.3482s-1.0511 2.3482-2.3482 2.3482-2.3492-1.051-2.3492-2.3482c0-1.297 1.051-2.3482 2.3492-2.3482zm-10.824.9301c-.861 0-1.559.698-1.559 1.5591s.698 1.5582 1.559 1.5582c.8611 0 1.5592-.698 1.5592-1.5582 0-.86-.697-1.559-1.5591-1.559zm10.598 0c-.8611 0-1.5582.698-1.5582 1.5591s.697 1.5582 1.5581 1.5582c.8611 0 1.5592-.698 1.5592-1.5582 0-.86-.697-1.559-1.5592-1.559zm-5.2985.453c.417 0 .757.308.757.6871v2.1622c0 .379-.339.687-.757.687s-.756-.308-.756-.687V12.059c0-.379.339-.687.756-.687zM1.4601 16.9464c.002.377.006.789.006.871 0 3.7014 4.6944 5.4795 10.5269 5.5005h.014c5.8325-.02 10.5259-1.7991 10.5259-5.5004 0-.084.005-.495.007-.871l-3.5023.338-.121 1.729a.421.421 0 01-.389.3901l-4.1814.296a.4203.4203 0 01-.415-.358l-.238-1.6141h-3.3863l-.238 1.6141a.4192.4192 0 01-.4451.357l-4.1513-.296c-.208-.015-.375-.181-.389-.389l-.12-1.7292-3.5044-.337z"/></svg>
-                </span>
-                <div>
-                  <span class="resource-badge">RECOMMENDED</span>
-                  <h4>Godot</h4>
-                </div>
-              </div>
-              <p>Open source, lightweight, and powerful. Great documentation, active community. Our top pick for 2D games.</p>
-            </a>
-            <a href="https://www.yoyogames.com/gamemaker" target="_blank" rel="noopener noreferrer" class="resource-card">
-              <div class="card-header">
-                <span class="resource-logo resource-logo-svg" style="background: #8BC34A;">
-                  <svg viewBox="0 0 24 24" fill="white"><path d="M.012 11.994 12.006 0l11.982 12.006h-6.831l-5.163-5.151-5.151 5.151 5.163 5.151v-5.151h5.151v6.903L12.006 24z"/></svg>
-                </span>
-                <div>
-                  <span class="resource-badge">2D FOCUSED</span>
-                  <h4>GameMaker</h4>
-                </div>
-              </div>
-              <p>Industry-proven for 2D games. Free tier available. Made Undertale, Hyper Light Drifter, and more.</p>
-            </a>
-            <a href="https://love2d.org/" target="_blank" rel="noopener noreferrer" class="resource-card">
-              <div class="card-header">
-                <span class="resource-logo resource-logo-svg" style="background: #E74A8E;">
-                  <svg viewBox="0 0 128 128" fill="white"><path d="M64 0c35.323 0 64 28.677 64 64s-28.677 64-64 64S0 99.323 0 64 28.677 0 64 0Zm-.074 98.715-.023.013h.045zm0 0c55.886-32.209 29.426-58.095 16.754-61.13-8.49-2.032-14.024 3.276-16.754 7.004-2.73-3.728-8.265-9.036-16.754-7.004C34.5 40.619 8.038 66.506 63.926 98.715Z"/></svg>
-                </span>
-                <div>
-                  <span class="resource-badge">LUA</span>
-                  <h4>LÖVE</h4>
-                </div>
-              </div>
-              <p>Lightweight framework for 2D games in Lua. Simple, fast, and great for retro-style games.</p>
-            </a>
-          </div>
-        </div>
-
-        <div class="resource-category">
-          <h3 class="category-title advanced">Advanced</h3>
-          <div class="resource-grid">
-            <a href="https://unity.com/" target="_blank" rel="noopener noreferrer" class="resource-card">
-              <div class="card-header">
-                <span class="resource-logo resource-logo-svg" style="background: #222;">
-                  <svg viewBox="0 0 24 24" fill="white"><path d="m12.9288 4.2939 3.7997 2.1929c.1366.077.1415.2905 0 .3675l-4.515 2.6076a.4192.4192 0 0 1-.4246 0L7.274 6.8543c-.139-.0745-.1415-.293 0-.3675l3.7972-2.193V0L1.3758 5.5977V16.793l3.7177-2.1456v-4.3858c-.0025-.1565.1813-.2682.318-.1838l4.5148 2.6076a.4252.4252 0 0 1 .2136.3676v5.2127c.0025.1565-.1813.2682-.3179.1838l-3.7996-2.1929-3.7178 2.1457L12 24l9.6954-5.5977-3.7178-2.1457-3.7996 2.1929c-.1341.082-.3229-.0248-.3179-.1838V13.053c0-.1565.087-.2956.2136-.3676l4.5149-2.6076c.134-.082.3228.0224.3179.1838v4.3858l3.7177 2.1456V5.5977L12.9288 0Z"/></svg>
-                </span>
-                <div>
-                  <span class="resource-badge">INDUSTRY STANDARD</span>
-                  <h4>Unity</h4>
-                </div>
-              </div>
-              <p>Massive asset store, tons of tutorials. Great for 3D. Free for small projects.</p>
-            </a>
-            <a href="https://www.unrealengine.com/" target="_blank" rel="noopener noreferrer" class="resource-card">
-              <div class="card-header">
-                <span class="resource-logo resource-logo-svg" style="background: #0E1128;">
-                  <svg viewBox="0 0 24 24" fill="white"><path d="M12 0a12 12 0 1012 12A12 12 0 0012 0zm0 23.52A11.52 11.52 0 1123.52 12 11.52 11.52 0 0112 23.52zm7.13-9.791c-.206.997-1.126 3.557-4.06 4.942l-1.179-1.325-1.988 2a7.338 7.338 0 01-5.804-2.978 2.859 2.859 0 00.65.123c.326.006.678-.114.678-.66v-5.394a.89.89 0 00-1.116-.89c-.92.212-1.656 2.509-1.656 2.509a7.304 7.304 0 012.528-5.597 7.408 7.408 0 013.73-1.721c-1.006.573-1.57 1.507-1.57 2.29 0 1.262.76 1.109.984.923v7.28a1.157 1.157 0 00.148.256 1.075 1.075 0 00.88.445c.76 0 1.747-.868 1.747-.868V9.172c0-.6-.452-1.324-.905-1.572 0 0 .838-.149 1.484.346a5.537 5.537 0 01.387-.425c1.508-1.48 2.929-1.902 4.112-2.112 0 0-2.151 1.69-2.151 3.96 0 1.687.043 5.801.043 5.801.799.771 1.986-.342 3.059-1.441Z"/></svg>
-                </span>
-                <div>
-                  <span class="resource-badge">AAA QUALITY</span>
-                  <h4>Unreal Engine</h4>
-                </div>
-              </div>
-              <p>Stunning visuals out of the box. Blueprint visual scripting makes it approachable. Free to use.</p>
-            </a>
-          </div>
+        <div class="tab-buttons">
+          <button class="tab-btn active" data-tab="engines">
+            <Icon name="gamepad" size={16} />
+            <span>Engines</span>
+          </button>
+          <button class="tab-btn" data-tab="code">
+            <Icon name="code" size={16} />
+            <span>Code</span>
+          </button>
+          <button class="tab-btn" data-tab="art">
+            <Icon name="image" size={16} />
+            <span>Art</span>
+          </button>
+          <button class="tab-btn" data-tab="audio">
+            <Icon name="volume" size={16} />
+            <span>Audio</span>
+          </button>
+          <button class="tab-btn" data-tab="catholic">
+            <CrossIcon size={16} />
+            <span>Catholic</span>
+          </button>
+          <button class="tab-btn" data-tab="ai">
+            <Icon name="zap" size={16} />
+            <span>AI & Agents</span>
+          </button>
+          <button class="tab-btn" data-tab="tools">
+            <Icon name="briefcase" size={16} />
+            <span>Tools</span>
+          </button>
+          <button class="tab-btn" data-tab="learn">
+            <Icon name="book-open" size={16} />
+            <span>Learning</span>
+          </button>
         </div>
       </div>
-    </section>
+    </nav>
 
-    <!-- Programming Frameworks -->
-    <section class="section section-alt" id="frameworks">
-      <div class="container">
-        <h2>Programming Frameworks</h2>
-        <p class="section-intro">For coders who prefer writing code over visual editors. Libraries and frameworks for various languages.</p>
+    <!-- Tab Content -->
+    <div class="tab-content">
+      <!-- Game Engines Tab -->
+      <section class="tab-panel active" id="engines">
+        <div class="container">
+          <h2>Game Engines</h2>
+          <p class="section-intro">Choose your weapon. All of these are free and beginner-friendly.</p>
 
-        <div class="resource-category">
-          <h3 class="category-title intermediate">Cross-Platform</h3>
-          <div class="resource-grid">
-            <a href="https://www.monogame.net/" target="_blank" rel="noopener noreferrer" class="resource-card">
-              <div class="card-header">
-                <span class="resource-logo resource-logo-img" style="background: #1a1a2e;">
-                  <img src="/images/logos/monogame.png" alt="MonoGame" />
-                </span>
-                <div>
-                  <span class="resource-badge">C#</span>
-                  <h4>MonoGame</h4>
+          <div class="resource-category">
+            <h3 class="category-title beginner">Beginner Friendly</h3>
+            <div class="resource-grid">
+              <a href="https://www.renpy.org/" target="_blank" rel="noopener noreferrer" class="resource-card">
+                <div class="card-header">
+                  <span class="resource-logo resource-logo-svg" style="background: #FF7F7F;">
+                    <svg viewBox="0 0 24 24" fill="white"><path d="M10.166 0S6.908 1.035 6.25 4.744C4.885 5.647 4.194 6.368 4.19 6.66c0 .023.02.042.031.063.115-.054 5.565-2.614 9.422-2.967a8.31 8.31 0 01.707-.03c1.8-.007 4.532.365 4.569.37-.063-.269-1.722-1.02-2.817-1.217C13.504.009 10.166 0 10.166 0zm8.754 4.096c-.039-.003-3.665-.261-5.342-.096-3.94.388-9.242 2.675-9.356 2.725.16.27 1.288.38 1.848.384-.085 1.63-.804 4.532-.674 4.553.09.014.295-.547.295-.547s-.105.322-.201.692c.404-.02.597-.04.851-.018.057.005.143.01.184.078.134-.26.137-.494.137-.494s.056.211.043.494c.096-.082.209-.316.209-.316s-.009.201-.018.324c.08.048.213.033.213.033a6.8 6.8 0 01-.092.592c-.062.312-.16.488-.4.803-.297.002-.617.244-.748.57-.02.17.246.37.246.37l-.39 1.896a1.743 1.743 0 00-.583.937s-.078.912-.013 1.23c.04.202 1 .846 1.671.89.397.025 1.19-.618 1.19-.618l.506-.049c.276.346.528.441.931.553l.11.34s-.182.149-.182.26c0 .11.197.214.197.214s-1.108.156-1.074 1.53c.018.728 1.01 1.074 1.824 1.105.855.033 2.012-.513 2.012-.513s.184.066.412.048c.262-.02.549-.205.549-.205s-.426.331-.436 1.268c-.002.25.172.537.364.7.114.095.3.17.412.171.173.001-.359-.495-.375-.813-.028-.541.69-.626 1.135-.626.471-.001 1.812.614 2.82.626 1.57.02 2.583-1.212 2.613-2.16.037-1.14-.951-1.834-1.304-2.21-.052-.233-.324-.722-.604-.782-.487-.104-.963.09-.963.09s-.112-.03-.223-.088c.794-1.087.876-1.977.887-2.728.032-2.214-1.539-3.268-1.762-3.39.371-.38.53-.64.622-.847a27.5 27.5 0 00-.18 1.051l.369-.326v.379s.44-.45.504-.914c.039.377.021.914.021.914s.552-.561.737-1.92c.035.862.066 1.508.066 1.508s.29-1.837.192-3.75c-.048-.928-.144-2.02-.47-2.746.825-.647 1.245-.959 1.227-1.16 0-.004-.007-.009-.007-.012z"/></svg>
+                  </span>
+                  <div>
+                    <span class="resource-badge">VISUAL NOVELS</span>
+                    <h4>Ren'Py</h4>
+                  </div>
                 </div>
-              </div>
-              <p>Open source C# framework. Spiritual successor to XNA. Made Celeste, Stardew Valley, and more.</p>
-            </a>
-            <a href="https://libgdx.com/" target="_blank" rel="noopener noreferrer" class="resource-card">
-              <div class="card-header">
-                <span class="resource-logo resource-logo-img" style="background: #E74B2F;">
-                  <img src="/images/logos/libgdx.png" alt="libGDX" />
-                </span>
-                <div>
-                  <span class="resource-badge">JAVA</span>
-                  <h4>libGDX</h4>
+                <p>Perfect for story-driven games. Write your narrative, add images, and you're done. Great for first-timers.</p>
+              </a>
+              <a href="https://twinery.org/" target="_blank" rel="noopener noreferrer" class="resource-card">
+                <div class="card-header">
+                  <span class="resource-logo resource-logo-svg" style="background: #59BB59;">
+                    <svg viewBox="0 0 7 8" fill="white"><path d="M 0,0 3,0 3,8 0,8 Z"/><path d="M 0,6.5 C 0,1 7,1 7,1 V 4 C 7,4 3,4 3,6.5 V 8 H 0 Z"/></svg>
+                  </span>
+                  <div>
+                    <span class="resource-badge">TEXT ADVENTURES</span>
+                    <h4>Twine</h4>
+                  </div>
                 </div>
-              </div>
-              <p>Cross-platform Java game framework. Deploy to desktop, Android, iOS, and web from one codebase.</p>
-            </a>
-            <a href="https://www.raylib.com/" target="_blank" rel="noopener noreferrer" class="resource-card">
-              <div class="card-header">
-                <span class="resource-logo resource-logo-img" style="background: #191919;">
-                  <img src="/images/logos/raylib.png" alt="raylib" />
-                </span>
-                <div>
-                  <span class="resource-badge">C/C++</span>
-                  <h4>raylib</h4>
+                <p>Create interactive fiction with zero coding. Just write your story and connect the branches.</p>
+              </a>
+              <a href="https://bitsy.org/" target="_blank" rel="noopener noreferrer" class="resource-card">
+                <div class="card-header">
+                  <span class="resource-logo resource-logo-svg" style="background: #6767b2;">
+                    <svg viewBox="0 0 80 80" fill="white"><path d="M10,20 20,20 20,30 30,30 30,20 40,20 40,50 60,50 60,80 50,80 50,70 30,70 30,80 20,80 20,60 10,60z"/><path d="M60,40 70,40 70,50 60,50z"/><path d="M70,20 80,20 80,40 70,40z"/></svg>
+                  </span>
+                  <div>
+                    <span class="resource-badge">TINY GAMES</span>
+                    <h4>Bitsy</h4>
+                  </div>
                 </div>
-              </div>
-              <p>Simple and easy-to-use library for game programming. Great for learning. Bindings for 50+ languages.</p>
-            </a>
+                <p>Make small, charming games in a simple tile-based editor. Perfect for atmospheric experiences.</p>
+              </a>
+              <a href="https://gdevelop.io/" target="_blank" rel="noopener noreferrer" class="resource-card">
+                <div class="card-header">
+                  <span class="resource-logo resource-logo-img" style="background: #4B5DC4;">
+                    <img src="/images/logos/gdevelop.png" alt="GDevelop" />
+                  </span>
+                  <div>
+                    <span class="resource-badge">NO CODE</span>
+                    <h4>GDevelop</h4>
+                  </div>
+                </div>
+                <p>Visual game builder with drag-and-drop events. Great for platformers and action games without coding.</p>
+              </a>
+            </div>
+          </div>
+
+          <div class="resource-category">
+            <h3 class="category-title intermediate">Intermediate</h3>
+            <div class="resource-grid">
+              <a href="https://godotengine.org/" target="_blank" rel="noopener noreferrer" class="resource-card">
+                <div class="card-header">
+                  <span class="resource-logo resource-logo-svg" style="background: #478CBF;">
+                    <svg viewBox="0 0 24 24" fill="white"><path d="M9.5598.683c-1.096.244-2.1812.5831-3.1983 1.0951.023.8981.081 1.7582.199 2.6323-.395.253-.81.47-1.178.766-.375.288-.7581.564-1.0971.9011-.6781-.448-1.3962-.869-2.1352-1.2411C1.3532 5.6934.608 6.6186 0 7.6546c.458.7411.936 1.4352 1.4521 2.0942h.014v6.3565c.012 0 .023 0 .035.003l3.8963.376c.204.02.364.184.378.3891l.12 1.7201 3.3994.242.234-1.587c.03-.206.207-.358.415-.358h4.1114c.208 0 .385.152.415.358l.234 1.587 3.3993-.242.12-1.72a.4196.4196 0 01.378-.3891l3.8954-.376c.012 0 .023-.003.035-.003v-.5071h.002V9.7498h.014c.516-.659.994-1.3531 1.4521-2.0942-.608-1.036-1.3541-1.9611-2.1512-2.8192-.739.372-1.4571.793-2.1352 1.2411-.339-.337-.721-.613-1.096-.901-.369-.296-.7841-.5131-1.1781-.7661.117-.8741.175-1.7342.199-2.6323-1.0171-.512-2.1012-.851-3.1983-1.095-.438.736-.838 1.533-1.1871 2.3121-.414-.069-.829-.094-1.2461-.099h-.016c-.417.005-.832.03-1.2461.099-.349-.779-.749-1.576-1.1881-2.3121l.001-.001zM6.4765 9.9889c1.2971 0 2.3492 1.0511 2.3492 2.3482s-1.052 2.3482-2.3492 2.3482c-1.296 0-2.3482-1.051-2.3482-2.3482 0-1.297 1.0511-2.3482 2.3482-2.3482zm11.049 0c1.296 0 2.3482 1.0511 2.3482 2.3482s-1.0511 2.3482-2.3482 2.3482-2.3492-1.051-2.3492-2.3482c0-1.297 1.051-2.3482 2.3492-2.3482zm-10.824.9301c-.861 0-1.559.698-1.559 1.5591s.698 1.5582 1.559 1.5582c.8611 0 1.5592-.698 1.5592-1.5582 0-.86-.697-1.559-1.5591-1.559zm10.598 0c-.8611 0-1.5582.698-1.5582 1.5591s.697 1.5582 1.5581 1.5582c.8611 0 1.5592-.698 1.5592-1.5582 0-.86-.697-1.559-1.5592-1.559zm-5.2985.453c.417 0 .757.308.757.6871v2.1622c0 .379-.339.687-.757.687s-.756-.308-.756-.687V12.059c0-.379.339-.687.756-.687zM1.4601 16.9464c.002.377.006.789.006.871 0 3.7014 4.6944 5.4795 10.5269 5.5005h.014c5.8325-.02 10.5259-1.7991 10.5259-5.5004 0-.084.005-.495.007-.871l-3.5023.338-.121 1.729a.421.421 0 01-.389.3901l-4.1814.296a.4203.4203 0 01-.415-.358l-.238-1.6141h-3.3863l-.238 1.6141a.4192.4192 0 01-.4451.357l-4.1513-.296c-.208-.015-.375-.181-.389-.389l-.12-1.7292-3.5044-.337z"/></svg>
+                  </span>
+                  <div>
+                    <span class="resource-badge">RECOMMENDED</span>
+                    <h4>Godot</h4>
+                  </div>
+                </div>
+                <p>Open source, lightweight, and powerful. Great documentation, active community. Our top pick for 2D games.</p>
+              </a>
+              <a href="https://www.yoyogames.com/gamemaker" target="_blank" rel="noopener noreferrer" class="resource-card">
+                <div class="card-header">
+                  <span class="resource-logo resource-logo-svg" style="background: #8BC34A;">
+                    <svg viewBox="0 0 24 24" fill="white"><path d="M.012 11.994 12.006 0l11.982 12.006h-6.831l-5.163-5.151-5.151 5.151 5.163 5.151v-5.151h5.151v6.903L12.006 24z"/></svg>
+                  </span>
+                  <div>
+                    <span class="resource-badge">2D FOCUSED</span>
+                    <h4>GameMaker</h4>
+                  </div>
+                </div>
+                <p>Industry-proven for 2D games. Free tier available. Made Undertale, Hyper Light Drifter, and more.</p>
+              </a>
+              <a href="https://love2d.org/" target="_blank" rel="noopener noreferrer" class="resource-card">
+                <div class="card-header">
+                  <span class="resource-logo resource-logo-svg" style="background: #E74A8E;">
+                    <svg viewBox="0 0 128 128" fill="white"><path d="M64 0c35.323 0 64 28.677 64 64s-28.677 64-64 64S0 99.323 0 64 28.677 0 64 0Zm-.074 98.715-.023.013h.045zm0 0c55.886-32.209 29.426-58.095 16.754-61.13-8.49-2.032-14.024 3.276-16.754 7.004-2.73-3.728-8.265-9.036-16.754-7.004C34.5 40.619 8.038 66.506 63.926 98.715Z"/></svg>
+                  </span>
+                  <div>
+                    <span class="resource-badge">LUA</span>
+                    <h4>LÖVE</h4>
+                  </div>
+                </div>
+                <p>Lightweight framework for 2D games in Lua. Simple, fast, and great for retro-style games.</p>
+              </a>
+            </div>
+          </div>
+
+          <div class="resource-category">
+            <h3 class="category-title advanced">Advanced</h3>
+            <div class="resource-grid">
+              <a href="https://unity.com/" target="_blank" rel="noopener noreferrer" class="resource-card">
+                <div class="card-header">
+                  <span class="resource-logo resource-logo-svg" style="background: #222;">
+                    <svg viewBox="0 0 24 24" fill="white"><path d="m12.9288 4.2939 3.7997 2.1929c.1366.077.1415.2905 0 .3675l-4.515 2.6076a.4192.4192 0 0 1-.4246 0L7.274 6.8543c-.139-.0745-.1415-.293 0-.3675l3.7972-2.193V0L1.3758 5.5977V16.793l3.7177-2.1456v-4.3858c-.0025-.1565.1813-.2682.318-.1838l4.5148 2.6076a.4252.4252 0 0 1 .2136.3676v5.2127c.0025.1565-.1813.2682-.3179.1838l-3.7996-2.1929-3.7178 2.1457L12 24l9.6954-5.5977-3.7178-2.1457-3.7996 2.1929c-.1341.082-.3229-.0248-.3179-.1838V13.053c0-.1565.087-.2956.2136-.3676l4.5149-2.6076c.134-.082.3228.0224.3179.1838v4.3858l3.7177 2.1456V5.5977L12.9288 0Z"/></svg>
+                  </span>
+                  <div>
+                    <span class="resource-badge">INDUSTRY STANDARD</span>
+                    <h4>Unity</h4>
+                  </div>
+                </div>
+                <p>Massive asset store, tons of tutorials. Great for 3D. Free for small projects.</p>
+              </a>
+              <a href="https://www.unrealengine.com/" target="_blank" rel="noopener noreferrer" class="resource-card">
+                <div class="card-header">
+                  <span class="resource-logo resource-logo-svg" style="background: #0E1128;">
+                    <svg viewBox="0 0 24 24" fill="white"><path d="M12 0a12 12 0 1012 12A12 12 0 0012 0zm0 23.52A11.52 11.52 0 1123.52 12 11.52 11.52 0 0112 23.52zm7.13-9.791c-.206.997-1.126 3.557-4.06 4.942l-1.179-1.325-1.988 2a7.338 7.338 0 01-5.804-2.978 2.859 2.859 0 00.65.123c.326.006.678-.114.678-.66v-5.394a.89.89 0 00-1.116-.89c-.92.212-1.656 2.509-1.656 2.509a7.304 7.304 0 012.528-5.597 7.408 7.408 0 013.73-1.721c-1.006.573-1.57 1.507-1.57 2.29 0 1.262.76 1.109.984.923v7.28a1.157 1.157 0 00.148.256 1.075 1.075 0 00.88.445c.76 0 1.747-.868 1.747-.868V9.172c0-.6-.452-1.324-.905-1.572 0 0 .838-.149 1.484.346a5.537 5.537 0 01.387-.425c1.508-1.48 2.929-1.902 4.112-2.112 0 0-2.151 1.69-2.151 3.96 0 1.687.043 5.801.043 5.801.799.771 1.986-.342 3.059-1.441Z"/></svg>
+                  </span>
+                  <div>
+                    <span class="resource-badge">AAA QUALITY</span>
+                    <h4>Unreal Engine</h4>
+                  </div>
+                </div>
+                <p>Stunning visuals out of the box. Blueprint visual scripting makes it approachable. Free to use.</p>
+              </a>
+            </div>
+          </div>
+
+          <div class="resource-category">
+            <h3 class="category-title tools">Starter Templates</h3>
+            <p class="category-desc">Hit the ground running. Fork these templates to skip the boring setup.</p>
+            <div class="resource-grid">
+              <a href="https://github.com/bitbrain/godot-game-template" target="_blank" rel="noopener noreferrer" class="resource-card">
+                <div class="card-header">
+                  <span class="resource-logo resource-logo-svg" style="background: #478CBF;">
+                    <svg viewBox="0 0 24 24" fill="white"><path d="M9.5598.683c-1.096.244-2.1812.5831-3.1983 1.0951.023.8981.081 1.7582.199 2.6323-.395.253-.81.47-1.178.766-.375.288-.7581.564-1.0971.9011-.6781-.448-1.3962-.869-2.1352-1.2411C1.3532 5.6934.608 6.6186 0 7.6546c.458.7411.936 1.4352 1.4521 2.0942h.014v6.3565c.012 0 .023 0 .035.003l3.8963.376c.204.02.364.184.378.3891l.12 1.7201 3.3994.242.234-1.587c.03-.206.207-.358.415-.358h4.1114c.208 0 .385.152.415.358l.234 1.587 3.3993-.242.12-1.72a.4196.4196 0 01.378-.3891l3.8954-.376c.012 0 .023-.003.035-.003v-.5071h.002V9.7498h.014c.516-.659.994-1.3531 1.4521-2.0942-.608-1.036-1.3541-1.9611-2.1512-2.8192-.739.372-1.4571.793-2.1352 1.2411-.339-.337-.721-.613-1.096-.901-.369-.296-.7841-.5131-1.1781-.7661.117-.8741.175-1.7342.199-2.6323-1.0171-.512-2.1012-.851-3.1983-1.095-.438.736-.838 1.533-1.1871 2.3121-.414-.069-.829-.094-1.2461-.099h-.016c-.417.005-.832.03-1.2461.099-.349-.779-.749-1.576-1.1881-2.3121l.001-.001z"/></svg>
+                  </span>
+                  <div>
+                    <span class="resource-badge">GODOT</span>
+                    <h4>Godot Game Template</h4>
+                  </div>
+                </div>
+                <p>Full-featured Godot 4 template with scene management, save system, settings, and more. MIT licensed.</p>
+              </a>
+              <a href="https://github.com/game-template/phaser3-typescript-template" target="_blank" rel="noopener noreferrer" class="resource-card">
+                <div class="card-header">
+                  <span class="resource-logo resource-logo-img" style="background: #1D1F24;">
+                    <img src="/images/logos/phaser.png" alt="Phaser" />
+                  </span>
+                  <div>
+                    <span class="resource-badge">PHASER</span>
+                    <h4>Phaser 3 TypeScript</h4>
+                  </div>
+                </div>
+                <p>Modern Phaser 3 setup with TypeScript, Webpack, and hot reloading. Ready for web deployment.</p>
+              </a>
+              <a href="https://github.com/kidscancode/godot3_procgen_demos" target="_blank" rel="noopener noreferrer" class="resource-card">
+                <div class="card-header">
+                  <span class="resource-logo resource-logo-svg" style="background: #478CBF;">
+                    <svg viewBox="0 0 24 24" fill="white"><path d="M9.5598.683c-1.096.244-2.1812.5831-3.1983 1.0951.023.8981.081 1.7582.199 2.6323-.395.253-.81.47-1.178.766-.375.288-.7581.564-1.0971.9011-.6781-.448-1.3962-.869-2.1352-1.2411C1.3532 5.6934.608 6.6186 0 7.6546c.458.7411.936 1.4352 1.4521 2.0942h.014v6.3565c.012 0 .023 0 .035.003l3.8963.376c.204.02.364.184.378.3891l.12 1.7201 3.3994.242.234-1.587c.03-.206.207-.358.415-.358h4.1114c.208 0 .385.152.415.358l.234 1.587 3.3993-.242.12-1.72a.4196.4196 0 01.378-.3891l3.8954-.376c.012 0 .023-.003.035-.003v-.5071h.002V9.7498h.014c.516-.659.994-1.3531 1.4521-2.0942-.608-1.036-1.3541-1.9611-2.1512-2.8192-.739.372-1.4571.793-2.1352 1.2411-.339-.337-.721-.613-1.096-.901-.369-.296-.7841-.5131-1.1781-.7661.117-.8741.175-1.7342.199-2.6323-1.0171-.512-2.1012-.851-3.1983-1.095-.438.736-.838 1.533-1.1871 2.3121-.414-.069-.829-.094-1.2461-.099h-.016c-.417.005-.832.03-1.2461.099-.349-.779-.749-1.576-1.1881-2.3121l.001-.001z"/></svg>
+                  </span>
+                  <div>
+                    <span class="resource-badge">PROCGEN</span>
+                    <h4>Procedural Gen Demos</h4>
+                  </div>
+                </div>
+                <p>Godot procedural generation examples. Dungeons, mazes, terrain. Great starting points for roguelikes.</p>
+              </a>
+              <a href="https://github.com/chtzvt/twine-monorepo-template" target="_blank" rel="noopener noreferrer" class="resource-card">
+                <div class="card-header">
+                  <span class="resource-logo resource-logo-svg" style="background: #59BB59;">
+                    <svg viewBox="0 0 7 8" fill="white"><path d="M 0,0 3,0 3,8 0,8 Z"/><path d="M 0,6.5 C 0,1 7,1 7,1 V 4 C 7,4 3,4 3,6.5 V 8 H 0 Z"/></svg>
+                  </span>
+                  <div>
+                    <span class="resource-badge">TWINE</span>
+                    <h4>Twine Monorepo</h4>
+                  </div>
+                </div>
+                <p>Organized Twine project structure with custom macros and styling. Perfect for narrative games.</p>
+              </a>
+            </div>
           </div>
         </div>
+      </section>
 
-        <div class="resource-category">
-          <h3 class="category-title rust">Rust</h3>
-          <div class="resource-grid">
-            <a href="https://bevyengine.org/" target="_blank" rel="noopener noreferrer" class="resource-card">
-              <div class="card-header">
-                <span class="resource-logo resource-logo-img" style="background: #232326;">
-                  <img src="/images/logos/bevy.png" alt="Bevy" />
-                </span>
-                <div>
-                  <span class="resource-badge">ECS</span>
-                  <h4>Bevy</h4>
+      <!-- Programming Frameworks Tab -->
+      <section class="tab-panel" id="code">
+        <div class="container">
+          <h2>Programming Frameworks</h2>
+          <p class="section-intro">For coders who prefer writing code over visual editors. Libraries and frameworks for various languages.</p>
+
+          <div class="resource-category">
+            <h3 class="category-title intermediate">Cross-Platform</h3>
+            <div class="resource-grid">
+              <a href="https://www.monogame.net/" target="_blank" rel="noopener noreferrer" class="resource-card">
+                <div class="card-header">
+                  <span class="resource-logo resource-logo-img" style="background: #1a1a2e;">
+                    <img src="/images/logos/monogame.png" alt="MonoGame" />
+                  </span>
+                  <div>
+                    <span class="resource-badge">C#</span>
+                    <h4>MonoGame</h4>
+                  </div>
                 </div>
-              </div>
-              <p>Data-driven game engine in Rust. Fast compile times, ECS architecture. Growing rapidly.</p>
-            </a>
-            <a href="https://macroquad.rs/" target="_blank" rel="noopener noreferrer" class="resource-card">
-              <div class="card-header">
-                <span class="resource-logo resource-logo-img" style="background: #3776AB;">
-                  <img src="/images/logos/macroquad.png" alt="Macroquad" />
-                </span>
-                <div>
-                  <span class="resource-badge">SIMPLE</span>
-                  <h4>Macroquad</h4>
+                <p>Open source C# framework. Spiritual successor to XNA. Made Celeste, Stardew Valley, and more.</p>
+              </a>
+              <a href="https://libgdx.com/" target="_blank" rel="noopener noreferrer" class="resource-card">
+                <div class="card-header">
+                  <span class="resource-logo resource-logo-img" style="background: #E74B2F;">
+                    <img src="/images/logos/libgdx.png" alt="libGDX" />
+                  </span>
+                  <div>
+                    <span class="resource-badge">JAVA</span>
+                    <h4>libGDX</h4>
+                  </div>
                 </div>
-              </div>
-              <p>Simple Rust game library inspired by raylib. Compiles to WASM. Great for jam games.</p>
-            </a>
+                <p>Cross-platform Java game framework. Deploy to desktop, Android, iOS, and web from one codebase.</p>
+              </a>
+              <a href="https://www.raylib.com/" target="_blank" rel="noopener noreferrer" class="resource-card">
+                <div class="card-header">
+                  <span class="resource-logo resource-logo-img" style="background: #191919;">
+                    <img src="/images/logos/raylib.png" alt="raylib" />
+                  </span>
+                  <div>
+                    <span class="resource-badge">C/C++</span>
+                    <h4>raylib</h4>
+                  </div>
+                </div>
+                <p>Simple and easy-to-use library for game programming. Great for learning. Bindings for 50+ languages.</p>
+              </a>
+            </div>
+          </div>
+
+          <div class="resource-category">
+            <h3 class="category-title rust">Rust</h3>
+            <div class="resource-grid">
+              <a href="https://bevyengine.org/" target="_blank" rel="noopener noreferrer" class="resource-card">
+                <div class="card-header">
+                  <span class="resource-logo resource-logo-img" style="background: #232326;">
+                    <img src="/images/logos/bevy.png" alt="Bevy" />
+                  </span>
+                  <div>
+                    <span class="resource-badge">ECS</span>
+                    <h4>Bevy</h4>
+                  </div>
+                </div>
+                <p>Data-driven game engine in Rust. Fast compile times, ECS architecture. Growing rapidly.</p>
+              </a>
+              <a href="https://macroquad.rs/" target="_blank" rel="noopener noreferrer" class="resource-card">
+                <div class="card-header">
+                  <span class="resource-logo resource-logo-img" style="background: #3776AB;">
+                    <img src="/images/logos/macroquad.png" alt="Macroquad" />
+                  </span>
+                  <div>
+                    <span class="resource-badge">SIMPLE</span>
+                    <h4>Macroquad</h4>
+                  </div>
+                </div>
+                <p>Simple Rust game library inspired by raylib. Compiles to WASM. Great for jam games.</p>
+              </a>
+            </div>
+          </div>
+
+          <div class="resource-category">
+            <h3 class="category-title web">Web & Scripting</h3>
+            <div class="resource-grid">
+              <a href="https://phaser.io/" target="_blank" rel="noopener noreferrer" class="resource-card">
+                <div class="card-header">
+                  <span class="resource-logo resource-logo-img" style="background: #1D1F24;">
+                    <img src="/images/logos/phaser.png" alt="Phaser" />
+                  </span>
+                  <div>
+                    <span class="resource-badge">JAVASCRIPT</span>
+                    <h4>Phaser</h4>
+                  </div>
+                </div>
+                <p>Fast 2D HTML5 game framework. Huge community, tons of examples. Perfect for web games.</p>
+              </a>
+              <a href="https://www.pygame.org/" target="_blank" rel="noopener noreferrer" class="resource-card">
+                <div class="card-header">
+                  <span class="resource-logo resource-logo-img" style="background: #306998;">
+                    <img src="/images/logos/pygame.png" alt="Pygame" />
+                  </span>
+                  <div>
+                    <span class="resource-badge">PYTHON</span>
+                    <h4>Pygame</h4>
+                  </div>
+                </div>
+                <p>Classic Python game library. Easy to learn, great for prototypes. Huge learning community.</p>
+              </a>
+              <a href="https://kaboomjs.com/" target="_blank" rel="noopener noreferrer" class="resource-card">
+                <div class="card-header">
+                  <span class="resource-logo resource-logo-img" style="background: #6BC96D;">
+                    <img src="/images/logos/kaboom.png" alt="Kaboom" />
+                  </span>
+                  <div>
+                    <span class="resource-badge">JAVASCRIPT</span>
+                    <h4>Kaboom.js</h4>
+                  </div>
+                </div>
+                <p>Fun and fast JavaScript game library. Simple API, great docs. Perfect for quick prototypes.</p>
+              </a>
+            </div>
           </div>
         </div>
+      </section>
 
-        <div class="resource-category">
-          <h3 class="category-title web">Web & Scripting</h3>
-          <div class="resource-grid">
-            <a href="https://phaser.io/" target="_blank" rel="noopener noreferrer" class="resource-card">
-              <div class="card-header">
-                <span class="resource-logo resource-logo-img" style="background: #1D1F24;">
-                  <img src="/images/logos/phaser.png" alt="Phaser" />
-                </span>
-                <div>
-                  <span class="resource-badge">JAVASCRIPT</span>
-                  <h4>Phaser</h4>
+      <!-- Art & Graphics Tab -->
+      <section class="tab-panel" id="art">
+        <div class="container">
+          <h2>Art & Graphics</h2>
+          <p class="section-intro">Free assets and tools for creating visuals.</p>
+
+          <div class="resource-category">
+            <h3 class="category-title assets">Free Assets</h3>
+            <div class="resource-grid">
+              <a href="https://pixabay.com/" target="_blank" rel="noopener noreferrer" class="resource-card">
+                <div class="card-header">
+                  <span class="resource-logo resource-logo-svg" style="background: #2EC66D;">
+                    <svg viewBox="0 0 24 24" fill="white"><path d="M2 0a2 2 0 0 0-2 2v20a2 2 0 0 0 2 2h20a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2Zm10.193 5.5h2.499l1.967 2.872L18.854 5.5h2.482l-3.579 4.592 3.91 4.813h-2.638l-2.395-3.064-2.15 3.064h-2.579l3.579-4.813zm-5.045.004c1.32.033 2.42.49 3.3 1.371.879.881 1.335 1.986 1.37 3.317-.035 1.331-.491 2.441-1.37 3.328-.88.887-1.98 1.346-3.3 1.38H4.346v3.768H2.5v-8.476c.032-1.33.486-2.436 1.359-3.317.873-.88 1.97-1.338 3.29-1.37Zm0 1.864c-.797.02-1.46.294-1.985.823-.525.53-.797 1.196-.817 2v2.847h2.802c.808-.019 1.476-.294 2.003-.826.528-.532.8-1.206.82-2.02-.02-.805-.292-1.47-.82-2-.527-.53-1.195-.805-2.003-.824Z"/></svg>
+                  </span>
+                  <div>
+                    <span class="resource-badge">IMAGES</span>
+                    <h4>Pixabay</h4>
+                  </div>
                 </div>
-              </div>
-              <p>Fast 2D HTML5 game framework. Huge community, tons of examples. Perfect for web games.</p>
-            </a>
-            <a href="https://www.pygame.org/" target="_blank" rel="noopener noreferrer" class="resource-card">
-              <div class="card-header">
-                <span class="resource-logo resource-logo-img" style="background: #306998;">
-                  <img src="/images/logos/pygame.png" alt="Pygame" />
-                </span>
-                <div>
-                  <span class="resource-badge">PYTHON</span>
-                  <h4>Pygame</h4>
+                <p>Millions of free images, illustrations, and vectors. No attribution required.</p>
+              </a>
+              <a href="https://opengameart.org/" target="_blank" rel="noopener noreferrer" class="resource-card">
+                <div class="card-header">
+                  <span class="resource-logo resource-logo-img" style="background: #F7931E;">
+                    <img src="/images/logos/opengameart.ico" alt="OpenGameArt" />
+                  </span>
+                  <div>
+                    <span class="resource-badge">GAME ASSETS</span>
+                    <h4>OpenGameArt</h4>
+                  </div>
                 </div>
-              </div>
-              <p>Classic Python game library. Easy to learn, great for prototypes. Huge learning community.</p>
-            </a>
-            <a href="https://kaboomjs.com/" target="_blank" rel="noopener noreferrer" class="resource-card">
-              <div class="card-header">
-                <span class="resource-logo resource-logo-img" style="background: #6BC96D;">
-                  <img src="/images/logos/kaboom.png" alt="Kaboom" />
-                </span>
-                <div>
-                  <span class="resource-badge">JAVASCRIPT</span>
-                  <h4>Kaboom.js</h4>
+                <p>Sprites, tilesets, and art specifically made for games. Various licenses, check each asset.</p>
+              </a>
+              <a href="https://kenney.nl/assets" target="_blank" rel="noopener noreferrer" class="resource-card">
+                <div class="card-header">
+                  <span class="resource-logo resource-logo-img" style="background: #FF6B6B;">
+                    <img src="/images/logos/kenney.ico" alt="Kenney" />
+                  </span>
+                  <div>
+                    <span class="resource-badge">CC0</span>
+                    <h4>Kenney Assets</h4>
+                  </div>
                 </div>
-              </div>
-              <p>Fun and fast JavaScript game library. Simple API, great docs. Perfect for quick prototypes.</p>
-            </a>
+                <p>High-quality game assets, all public domain. Sprites, 3D models, UI elements, and more.</p>
+              </a>
+              <a href="https://itch.io/game-assets/free" target="_blank" rel="noopener noreferrer" class="resource-card">
+                <div class="card-header">
+                  <span class="resource-logo resource-logo-svg" style="background: #FA5C5C;">
+                    <svg viewBox="0 0 24 24" fill="white"><path d="M3.13 1.338C2.08 1.96.02 4.328 0 4.95v1.03c0 1.303 1.22 2.45 2.325 2.45 1.33 0 2.436-1.102 2.436-2.41 0 1.308 1.07 2.41 2.4 2.41 1.328 0 2.362-1.102 2.362-2.41 0 1.308 1.137 2.41 2.466 2.41h.024c1.33 0 2.466-1.102 2.466-2.41 0 1.308 1.034 2.41 2.363 2.41 1.33 0 2.4-1.102 2.4-2.41 0 1.308 1.106 2.41 2.435 2.41C22.78 8.43 24 7.282 24 5.98V4.95c-.02-.62-2.082-2.99-3.13-3.612-3.253-.114-5.508-.134-8.87-.133-3.362 0-7.945.053-8.87.133zm6.376 6.477a2.74 2.74 0 0 1-.468.602c-.5.49-1.19.795-1.947.795a2.786 2.786 0 0 1-1.95-.795c-.182-.178-.32-.37-.446-.59-.127.222-.303.412-.486.59a2.788 2.788 0 0 1-1.95.795c-.092 0-.187-.025-.264-.052-.107 1.113-.152 2.176-.168 2.95v.005l-.006 1.167c.02 2.334-.23 7.564 1.03 8.85 1.952.454 5.545.662 9.15.663 3.605 0 7.198-.21 9.15-.664 1.26-1.284 1.01-6.514 1.03-8.848l-.006-1.167v-.004c-.016-.775-.06-1.838-.168-2.95-.077.026-.172.052-.263.052a2.788 2.788 0 0 1-1.95-.795c-.184-.178-.36-.368-.486-.59-.127.22-.265.412-.447.59a2.786 2.786 0 0 1-1.95.794c-.76 0-1.446-.303-1.948-.793a2.74 2.74 0 0 1-.468-.602 2.738 2.738 0 0 1-.463.602 2.787 2.787 0 0 1-1.95.794h-.16a2.787 2.787 0 0 1-1.95-.793 2.738 2.738 0 0 1-.464-.602zm-2.004 2.59v.002c.795.002 1.5 0 2.373.953.687-.072 1.406-.108 2.125-.107.72 0 1.438.035 2.125.107.873-.953 1.578-.95 2.372-.953.376 0 1.876 0 2.92 2.934l1.123 4.028c.832 2.995-.266 3.068-1.636 3.07-2.03-.075-3.156-1.55-3.156-3.025-1.124.184-2.436.276-3.748.277-1.312 0-2.624-.093-3.748-.277 0 1.475-1.125 2.95-3.156 3.026-1.37-.004-2.468-.077-1.636-3.072l1.122-4.027c1.045-2.934 2.545-2.934 2.92-2.934zM12 12.714c-.002.002-2.14 1.964-2.523 2.662l1.4-.056v1.22c0 .056.56.033 1.123.007.562.026 1.124.05 1.124-.008v-1.22l1.4.055C14.138 14.677 12 12.713 12 12.713z"/></svg>
+                  </span>
+                  <div>
+                    <span class="resource-badge">VARIETY</span>
+                    <h4>itch.io Assets</h4>
+                  </div>
+                </div>
+                <p>Huge collection of free game assets from indie creators. Sprites, music, sound effects.</p>
+              </a>
+            </div>
+          </div>
+
+          <div class="resource-category">
+            <h3 class="category-title tools">Creation Tools</h3>
+            <div class="resource-grid">
+              <a href="https://www.piskelapp.com/" target="_blank" rel="noopener noreferrer" class="resource-card">
+                <div class="card-header">
+                  <span class="resource-logo resource-logo-img" style="background: #4FC3F7;">
+                    <img src="/images/logos/piskel.png" alt="Piskel" />
+                  </span>
+                  <div>
+                    <span class="resource-badge">PIXEL ART</span>
+                    <h4>Piskel</h4>
+                  </div>
+                </div>
+                <p>Free online pixel art editor with animation support. Perfect for retro-style sprites.</p>
+              </a>
+              <a href="https://www.aseprite.org/" target="_blank" rel="noopener noreferrer" class="resource-card">
+                <div class="card-header">
+                  <span class="resource-logo resource-logo-svg" style="background: #7B5AA6;">
+                    <svg viewBox="0 0 24 24" fill="white"><path d="M4.006 0v1.6h15.988V0zm15.988 1.6v1.6h1.6V1.6zm1.6 1.6v14.4h-1.6v1.6H4.006v-1.6h-1.6V3.2H.809v17.6h1.599v1.6h1.599V24h15.988v-1.6h1.6v-1.6h1.598V3.2zm-19.187 0h1.599V1.6h-1.6zm4.796 3.2v6.4h1.6V6.4zm7.995 0v6.4h1.599V6.4z"/></svg>
+                  </span>
+                  <div>
+                    <span class="resource-badge">PRO PIXEL ART</span>
+                    <h4>Aseprite</h4>
+                  </div>
+                </div>
+                <p>Industry-standard pixel art tool. Paid, but worth it. Or compile from source for free.</p>
+              </a>
+              <a href="https://krita.org/" target="_blank" rel="noopener noreferrer" class="resource-card">
+                <div class="card-header">
+                  <span class="resource-logo resource-logo-svg" style="background: #3DAEE9;">
+                    <svg viewBox="0 0 24 24" fill="white"><path d="M.652.76a.625.625 0 00-.5.246c-.352.448-.035.898.362 1.262.206.189 1.77 1.794 3.428 3.527a11.054 11.054 0 011.815-1.983C3.667 2.515 1.694 1.266 1.461 1.1 1.201.914.917.762.652.76zm5.105 3.052c1.848 1.148 3.786 2.332 4.693 2.84 1.469.821 3.758 2.684 4.092 4.434.535.466 2.182 1.916 2.596 2.413.698-.211 1.518.133 2.06 1.12.866 1.583.227 3.747-1.968 4.988a5.42 5.42 0 01-.296.267l.296-.267c1.14-1.468-.714-2.44-1.175-3.864a2.06 2.06 0 01-.11-.78c-.533-.282-2.11-1.452-2.795-1.965-1.801.16-4.207-1.773-5.35-3.08-.7-.802-2.32-2.517-3.858-4.123a11.052 11.052 0 00-2.046 6.393A11.052 11.052 0 1012.948 1.136c-2.64.004-5.19.954-7.19 2.676zm8.71 7.552c-.515.126-.968.831-1.118 1.306-.038.115-.04.303.066.342.802.592 1.556 1.168 2.4 1.7.162-.393.746-.963 1.096-1.2zm-11.53 1.639c.812 1.898 5.798 7.17 12.06 2.695a2.07 2.07 0 00.114.715c.46 1.42 2.36 2.427 1.238 3.89-2.135 1.364-5 1.201-6.989.528-3.558-1.204-5.914-4.332-6.424-7.828zm13.782.7a.771.771 0 00-.065.049c-.004.003-.008.008-.011.008.003-.003.007-.008.01-.008.024-.015.044-.034.066-.048z"/></svg>
+                  </span>
+                  <div>
+                    <span class="resource-badge">DIGITAL ART</span>
+                    <h4>Krita</h4>
+                  </div>
+                </div>
+                <p>Professional-grade digital painting. Free and open source. Great for concept art and illustrations.</p>
+              </a>
+              <a href="https://www.blender.org/" target="_blank" rel="noopener noreferrer" class="resource-card">
+                <div class="card-header">
+                  <span class="resource-logo resource-logo-svg" style="background: #E87D0D;">
+                    <svg viewBox="0 0 24 24" fill="white"><path d="M12.51 13.214c.046-.8.438-1.506 1.03-2.006a3.424 3.424 0 0 1 2.212-.79c.85 0 1.631.3 2.211.79.592.5.983 1.206 1.028 2.005.045.823-.285 1.586-.865 2.153a3.389 3.389 0 0 1-2.374.938 3.393 3.393 0 0 1-2.376-.938c-.58-.567-.91-1.33-.865-2.152M7.35 14.831c.006.314.106.922.256 1.398a7.372 7.372 0 0 0 1.593 2.757 8.227 8.227 0 0 0 2.787 2.001 8.947 8.947 0 0 0 3.66.76 8.964 8.964 0 0 0 3.657-.772 8.285 8.285 0 0 0 2.785-2.01 7.428 7.428 0 0 0 1.592-2.762 6.964 6.964 0 0 0 .25-3.074 7.123 7.123 0 0 0-1.016-2.779 7.764 7.764 0 0 0-1.852-2.043h.002L13.566 2.55l-.02-.015c-.492-.378-1.319-.376-1.86.002-.547.382-.609 1.015-.123 1.415l-.001.001 3.126 2.543-9.53.01h-.013c-.788.001-1.545.518-1.695 1.172-.154.665.38 1.217 1.2 1.22V8.9l4.83-.01-8.62 6.617-.034.025c-.813.622-1.075 1.658-.563 2.313.52.667 1.625.668 2.447.004L7.414 14s-.069.52-.063.831zm12.09 1.741c-.97.988-2.326 1.548-3.795 1.55-1.47.004-2.827-.552-3.797-1.538a4.51 4.51 0 0 1-1.036-1.622 4.282 4.282 0 0 1 .282-3.519 4.702 4.702 0 0 1 1.153-1.371c.942-.768 2.141-1.183 3.396-1.185 1.256-.002 2.455.41 3.398 1.175.48.391.87.854 1.152 1.367a4.28 4.28 0 0 1 .522 1.706 4.236 4.236 0 0 1-.239 1.811 4.54 4.54 0 0 1-1.035 1.626"/></svg>
+                  </span>
+                  <div>
+                    <span class="resource-badge">3D</span>
+                    <h4>Blender</h4>
+                  </div>
+                </div>
+                <p>Full 3D creation suite. Modeling, animation, rendering. Free and incredibly powerful.</p>
+              </a>
+            </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- Art & Graphics -->
-    <section class="section" id="art">
-      <div class="container">
-        <h2>Art & Graphics</h2>
-        <p class="section-intro">Free assets and tools for creating visuals.</p>
+      <!-- Audio & Music Tab -->
+      <section class="tab-panel" id="audio">
+        <div class="container">
+          <h2>Audio & Music</h2>
+          <p class="section-intro">Sounds to bring your game to life.</p>
 
-        <div class="resource-category">
-          <h3 class="category-title assets">Free Assets</h3>
-          <div class="resource-grid">
-            <a href="https://pixabay.com/" target="_blank" rel="noopener noreferrer" class="resource-card">
-              <div class="card-header">
-                <span class="resource-logo resource-logo-svg" style="background: #2EC66D;">
-                  <svg viewBox="0 0 24 24" fill="white"><path d="M2 0a2 2 0 0 0-2 2v20a2 2 0 0 0 2 2h20a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2Zm10.193 5.5h2.499l1.967 2.872L18.854 5.5h2.482l-3.579 4.592 3.91 4.813h-2.638l-2.395-3.064-2.15 3.064h-2.579l3.579-4.813zm-5.045.004c1.32.033 2.42.49 3.3 1.371.879.881 1.335 1.986 1.37 3.317-.035 1.331-.491 2.441-1.37 3.328-.88.887-1.98 1.346-3.3 1.38H4.346v3.768H2.5v-8.476c.032-1.33.486-2.436 1.359-3.317.873-.88 1.97-1.338 3.29-1.37Zm0 1.864c-.797.02-1.46.294-1.985.823-.525.53-.797 1.196-.817 2v2.847h2.802c.808-.019 1.476-.294 2.003-.826.528-.532.8-1.206.82-2.02-.02-.805-.292-1.47-.82-2-.527-.53-1.195-.805-2.003-.824Z"/></svg>
-                </span>
-                <div>
-                  <span class="resource-badge">IMAGES</span>
-                  <h4>Pixabay</h4>
+          <div class="resource-category">
+            <h3 class="category-title assets">Free Audio</h3>
+            <div class="resource-grid">
+              <a href="https://freesound.org/" target="_blank" rel="noopener noreferrer" class="resource-card">
+                <div class="card-header">
+                  <span class="resource-logo resource-logo-img" style="background: #1DB954;">
+                    <img src="/images/logos/freesound.png" alt="Freesound" />
+                  </span>
+                  <div>
+                    <span class="resource-badge">SFX</span>
+                    <h4>Freesound</h4>
+                  </div>
                 </div>
-              </div>
-              <p>Millions of free images, illustrations, and vectors. No attribution required.</p>
-            </a>
-            <a href="https://opengameart.org/" target="_blank" rel="noopener noreferrer" class="resource-card">
-              <div class="card-header">
-                <span class="resource-logo resource-logo-img" style="background: #F7931E;">
-                  <img src="/images/logos/opengameart.ico" alt="OpenGameArt" />
-                </span>
-                <div>
-                  <span class="resource-badge">GAME ASSETS</span>
-                  <h4>OpenGameArt</h4>
+                <p>Massive library of sound effects. Various licenses, most are free to use with attribution.</p>
+              </a>
+              <a href="https://incompetech.com/music/" target="_blank" rel="noopener noreferrer" class="resource-card">
+                <div class="card-header">
+                  <span class="resource-logo resource-logo-img" style="background: #9C27B0;">
+                    <img src="/images/logos/incompetech.ico" alt="Incompetech" />
+                  </span>
+                  <div>
+                    <span class="resource-badge">MUSIC</span>
+                    <h4>Incompetech</h4>
+                  </div>
                 </div>
-              </div>
-              <p>Sprites, tilesets, and art specifically made for games. Various licenses, check each asset.</p>
-            </a>
-            <a href="https://kenney.nl/assets" target="_blank" rel="noopener noreferrer" class="resource-card">
-              <div class="card-header">
-                <span class="resource-logo resource-logo-img" style="background: #FF6B6B;">
-                  <img src="/images/logos/kenney.ico" alt="Kenney" />
-                </span>
-                <div>
-                  <span class="resource-badge">CC0</span>
-                  <h4>Kenney Assets</h4>
+                <p>Kevin MacLeod's royalty-free music. Tons of genres. Attribution required but free.</p>
+              </a>
+              <a href="https://www.zapsplat.com/" target="_blank" rel="noopener noreferrer" class="resource-card">
+                <div class="card-header">
+                  <span class="resource-logo resource-logo-img" style="background: #FF9800;">
+                    <img src="/images/logos/zapsplat.ico" alt="ZapSplat" />
+                  </span>
+                  <div>
+                    <span class="resource-badge">SFX + MUSIC</span>
+                    <h4>ZapSplat</h4>
+                  </div>
                 </div>
-              </div>
-              <p>High-quality game assets, all public domain. Sprites, 3D models, UI elements, and more.</p>
-            </a>
-            <a href="https://itch.io/game-assets/free" target="_blank" rel="noopener noreferrer" class="resource-card">
-              <div class="card-header">
-                <span class="resource-logo resource-logo-svg" style="background: #FA5C5C;">
-                  <svg viewBox="0 0 24 24" fill="white"><path d="M3.13 1.338C2.08 1.96.02 4.328 0 4.95v1.03c0 1.303 1.22 2.45 2.325 2.45 1.33 0 2.436-1.102 2.436-2.41 0 1.308 1.07 2.41 2.4 2.41 1.328 0 2.362-1.102 2.362-2.41 0 1.308 1.137 2.41 2.466 2.41h.024c1.33 0 2.466-1.102 2.466-2.41 0 1.308 1.034 2.41 2.363 2.41 1.33 0 2.4-1.102 2.4-2.41 0 1.308 1.106 2.41 2.435 2.41C22.78 8.43 24 7.282 24 5.98V4.95c-.02-.62-2.082-2.99-3.13-3.612-3.253-.114-5.508-.134-8.87-.133-3.362 0-7.945.053-8.87.133zm6.376 6.477a2.74 2.74 0 0 1-.468.602c-.5.49-1.19.795-1.947.795a2.786 2.786 0 0 1-1.95-.795c-.182-.178-.32-.37-.446-.59-.127.222-.303.412-.486.59a2.788 2.788 0 0 1-1.95.795c-.092 0-.187-.025-.264-.052-.107 1.113-.152 2.176-.168 2.95v.005l-.006 1.167c.02 2.334-.23 7.564 1.03 8.85 1.952.454 5.545.662 9.15.663 3.605 0 7.198-.21 9.15-.664 1.26-1.284 1.01-6.514 1.03-8.848l-.006-1.167v-.004c-.016-.775-.06-1.838-.168-2.95-.077.026-.172.052-.263.052a2.788 2.788 0 0 1-1.95-.795c-.184-.178-.36-.368-.486-.59-.127.22-.265.412-.447.59a2.786 2.786 0 0 1-1.95.794c-.76 0-1.446-.303-1.948-.793a2.74 2.74 0 0 1-.468-.602 2.738 2.738 0 0 1-.463.602 2.787 2.787 0 0 1-1.95.794h-.16a2.787 2.787 0 0 1-1.95-.793 2.738 2.738 0 0 1-.464-.602zm-2.004 2.59v.002c.795.002 1.5 0 2.373.953.687-.072 1.406-.108 2.125-.107.72 0 1.438.035 2.125.107.873-.953 1.578-.95 2.372-.953.376 0 1.876 0 2.92 2.934l1.123 4.028c.832 2.995-.266 3.068-1.636 3.07-2.03-.075-3.156-1.55-3.156-3.025-1.124.184-2.436.276-3.748.277-1.312 0-2.624-.093-3.748-.277 0 1.475-1.125 2.95-3.156 3.026-1.37-.004-2.468-.077-1.636-3.072l1.122-4.027c1.045-2.934 2.545-2.934 2.92-2.934zM12 12.714c-.002.002-2.14 1.964-2.523 2.662l1.4-.056v1.22c0 .056.56.033 1.123.007.562.026 1.124.05 1.124-.008v-1.22l1.4.055C14.138 14.677 12 12.713 12 12.713z"/></svg>
-                </span>
-                <div>
-                  <span class="resource-badge">VARIETY</span>
-                  <h4>itch.io Assets</h4>
+                <p>Free sound effects and music. Great quality, easy to search and download.</p>
+              </a>
+            </div>
+          </div>
+
+          <div class="resource-category">
+            <h3 class="category-title tools">Creation Tools</h3>
+            <div class="resource-grid">
+              <a href="https://sfxr.me/" target="_blank" rel="noopener noreferrer" class="resource-card">
+                <div class="card-header">
+                  <span class="resource-logo resource-logo-img" style="background: #E91E63;">
+                    <img src="/images/logos/jsfxr.png" alt="jsfxr" />
+                  </span>
+                  <div>
+                    <span class="resource-badge">RETRO SFX</span>
+                    <h4>jsfxr</h4>
+                  </div>
                 </div>
-              </div>
-              <p>Huge collection of free game assets from indie creators. Sprites, music, sound effects.</p>
-            </a>
+                <p>Generate 8-bit style sound effects instantly. Perfect for retro games. Click and tweak.</p>
+              </a>
+              <a href="https://www.beepbox.co/" target="_blank" rel="noopener noreferrer" class="resource-card">
+                <div class="card-header">
+                  <span class="resource-logo resource-logo-img" style="background: #607D8B;">
+                    <img src="/images/logos/beepbox.png" alt="BeepBox" />
+                  </span>
+                  <div>
+                    <span class="resource-badge">CHIPTUNE</span>
+                    <h4>BeepBox</h4>
+                  </div>
+                </div>
+                <p>Create chiptune music in your browser. Easy to learn, surprisingly powerful.</p>
+              </a>
+              <a href="https://lmms.io/" target="_blank" rel="noopener noreferrer" class="resource-card">
+                <div class="card-header">
+                  <span class="resource-logo resource-logo-svg" style="background: #10B146;">
+                    <svg viewBox="0 0 24 24" fill="white"><path d="M1.714 0A1.71 1.71 0 000 1.714v20.572C0 23.236.765 24 1.714 24h20.572A1.71 1.71 0 0024 22.286V1.714A1.71 1.71 0 0022.286 0zM12 3l9 5.143v10.286l-3 1.714-3-1.714V15l3-1.714V9.857L12 6.43 6 9.857v3.429L9 15v3.429l-3 1.714-3-1.714V8.143Z"/></svg>
+                  </span>
+                  <div>
+                    <span class="resource-badge">DAW</span>
+                    <h4>LMMS</h4>
+                  </div>
+                </div>
+                <p>Free digital audio workstation. Full music production capabilities, cross-platform.</p>
+              </a>
+              <a href="https://www.audacityteam.org/" target="_blank" rel="noopener noreferrer" class="resource-card">
+                <div class="card-header">
+                  <span class="resource-logo resource-logo-svg" style="background: #0000CC;">
+                    <svg viewBox="0 0 24 24" fill="white"><path d="M12 2.145c-2.487 0-4.755.776-6.428 2.08-1.673 1.303-2.76 3.169-2.76 5.244v.75C1.153 11.06 0 13.268 0 15.856c0 3.312 1.884 6 4.312 6V9.468c0-1.554.805-2.984 2.186-4.06C7.879 4.331 9.829 3.643 12 3.643c2.17 0 4.12.688 5.502 1.764 1.38 1.077 2.186 2.507 2.186 4.06v12.387c2.428 0 4.312-2.687 4.312-6 0-2.587-1.152-4.795-2.813-5.636v-.75c0-2.075-1.086-3.94-2.76-5.244-1.672-1.304-3.94-2.08-6.427-2.08zm0 6.153l-1.125 8.683L9.75 9.105l-.562 6.75-.376-.75-.375-4.5-.187 4.5-.563 1.313-.374-4.5-.376 3.562-.562-.937v2.625l-.563-2.11v-4.64a1.432 1.432 0 0 0-.937-.375v11.812c.375 0 .75-.187.937-.562v-3.375l.188.187.563 1.875.187-2.25.563 2.813v-3.562l.374.937.563 2.625v-3.562l.375.374.563 3.188.562-4.313 1.24 4.86.072-2.985.375-1.124.376 4.687 1.124-4.687.375 3.937.938-4.125.938 4.5.187-3.375.562-1.125.188 4.313.938-4.125.562 1.875.188-1.688.374.75v3.375c.188.375.563.562.938.562V10.043c-.375 0-.75.188-.938.375v4.813l-.374 1-.188-3.188-.375 2.437-.375-.75-.188-2.625-.937 3.563-.188-.75L15 9.293l-.562 4.875-.376 1.5-.75-5.062-.75 4.312-.375 1.125Z"/></svg>
+                  </span>
+                  <div>
+                    <span class="resource-badge">AUDIO EDITING</span>
+                    <h4>Audacity</h4>
+                  </div>
+                </div>
+                <p>Edit and process audio files. Record voiceovers, trim sounds, add effects. Essential tool.</p>
+              </a>
+            </div>
           </div>
         </div>
+      </section>
 
-        <div class="resource-category">
-          <h3 class="category-title tools">Creation Tools</h3>
+      <!-- Catholic Resources Tab -->
+      <section class="tab-panel" id="catholic">
+        <div class="container">
+          <h2>Catholic Resources</h2>
+          <p class="section-intro">Inspiration and assets for faith-filled games.</p>
+
           <div class="resource-grid">
-            <a href="https://www.piskelapp.com/" target="_blank" rel="noopener noreferrer" class="resource-card">
+            <a href="https://commons.wikimedia.org/wiki/Category:Catholic_art" target="_blank" rel="noopener noreferrer" class="resource-card">
               <div class="card-header">
-                <span class="resource-logo resource-logo-img" style="background: #4FC3F7;">
-                  <img src="/images/logos/piskel.png" alt="Piskel" />
+                <span class="resource-logo resource-logo-svg" style="background: #006699;">
+                  <svg viewBox="0 0 24 24" fill="white"><path d="M12.09 13.119c-.936 1.932-2.217 4.548-2.853 5.728-.616 1.074-1.127.931-1.532.029-1.406-3.321-4.293-9.144-5.651-12.409-.251-.601-.441-.987-.619-1.139-.181-.15-.554-.24-1.122-.271C.103 5.033 0 4.982 0 4.898v-.455l.052-.045c.924-.005 5.401 0 5.401 0l.051.045v.434c0 .119-.075.176-.225.176l-.564.031c-.485.029-.727.164-.727.436 0 .135.053.33.166.601 1.082 2.646 4.818 10.521 4.818 10.521l.136.046 2.411-4.81-.482-1.067-1.658-3.264s-.318-.654-.428-.872c-.728-1.443-.712-1.518-1.447-1.617-.207-.023-.313-.05-.313-.149v-.468l.06-.045h4.292l.113.037v.451c0 .105-.076.15-.227.15l-.308.047c-.792.061-.661.381-.136 1.422l1.582 3.252 1.758-3.504c.293-.64.233-.801.111-.947-.07-.084-.305-.22-.812-.24l-.201-.021c-.052 0-.098-.015-.145-.051-.045-.031-.067-.076-.067-.129v-.427l.061-.045c1.247-.008 4.043 0 4.043 0l.059.045v.436c0 .121-.059.178-.193.178-.646.03-.782.095-1.023.439-.12.186-.375.589-.646 1.039l-2.301 4.273-.065.135 2.792 5.712.17.048 4.396-10.438c.154-.422.129-.722-.064-.895-.197-.172-.346-.273-.857-.295l-.42-.016c-.061 0-.105-.014-.152-.045-.043-.029-.072-.075-.072-.119v-.436l.059-.045h4.961l.041.045v.437c0 .119-.074.18-.209.18-.648.03-1.127.18-1.443.421-.314.255-.557.616-.736 1.067 0 0-4.043 9.258-5.426 12.339-.525 1.007-1.053.917-1.503-.031-.571-1.171-1.773-3.786-2.646-5.71l.053-.036z"/></svg>
                 </span>
                 <div>
-                  <span class="resource-badge">PIXEL ART</span>
-                  <h4>Piskel</h4>
+                  <span class="resource-badge">PUBLIC DOMAIN</span>
+                  <h4>Wikimedia Catholic Art</h4>
                 </div>
               </div>
-              <p>Free online pixel art editor with animation support. Perfect for retro-style sprites.</p>
+              <p>Thousands of religious paintings, icons, and artwork. Most are public domain.</p>
             </a>
-            <a href="https://www.aseprite.org/" target="_blank" rel="noopener noreferrer" class="resource-card">
+            <a href="https://www.vatican.va/various/cappelle/sistina_vr/index.html" target="_blank" rel="noopener noreferrer" class="resource-card">
               <div class="card-header">
-                <span class="resource-logo resource-logo-svg" style="background: #7B5AA6;">
-                  <svg viewBox="0 0 24 24" fill="white"><path d="M4.006 0v1.6h15.988V0zm15.988 1.6v1.6h1.6V1.6zm1.6 1.6v14.4h-1.6v1.6H4.006v-1.6h-1.6V3.2H.809v17.6h1.599v1.6h1.599V24h15.988v-1.6h1.6v-1.6h1.598V3.2zm-19.187 0h1.599V1.6h-1.6zm4.796 3.2v6.4h1.6V6.4zm7.995 0v6.4h1.599V6.4z"/></svg>
+                <span class="resource-logo resource-logo-img" style="background: #B8860B;">
+                  <img src="/images/logos/vatican.ico" alt="Vatican" />
                 </span>
                 <div>
-                  <span class="resource-badge">PRO PIXEL ART</span>
-                  <h4>Aseprite</h4>
+                  <span class="resource-badge">REFERENCE</span>
+                  <h4>Sistine Chapel VR</h4>
                 </div>
               </div>
-              <p>Industry-standard pixel art tool. Paid, but worth it. Or compile from source for free.</p>
+              <p>Virtual tour of the Sistine Chapel. Great reference for religious art and architecture.</p>
             </a>
-            <a href="https://krita.org/" target="_blank" rel="noopener noreferrer" class="resource-card">
+            <a href="https://gregorian-chant.ning.com/" target="_blank" rel="noopener noreferrer" class="resource-card">
               <div class="card-header">
-                <span class="resource-logo resource-logo-svg" style="background: #3DAEE9;">
-                  <svg viewBox="0 0 24 24" fill="white"><path d="M.652.76a.625.625 0 00-.5.246c-.352.448-.035.898.362 1.262.206.189 1.77 1.794 3.428 3.527a11.054 11.054 0 011.815-1.983C3.667 2.515 1.694 1.266 1.461 1.1 1.201.914.917.762.652.76zm5.105 3.052c1.848 1.148 3.786 2.332 4.693 2.84 1.469.821 3.758 2.684 4.092 4.434.535.466 2.182 1.916 2.596 2.413.698-.211 1.518.133 2.06 1.12.866 1.583.227 3.747-1.968 4.988a5.42 5.42 0 01-.296.267l.296-.267c1.14-1.468-.714-2.44-1.175-3.864a2.06 2.06 0 01-.11-.78c-.533-.282-2.11-1.452-2.795-1.965-1.801.16-4.207-1.773-5.35-3.08-.7-.802-2.32-2.517-3.858-4.123a11.052 11.052 0 00-2.046 6.393A11.052 11.052 0 1012.948 1.136c-2.64.004-5.19.954-7.19 2.676zm8.71 7.552c-.515.126-.968.831-1.118 1.306-.038.115-.04.303.066.342.802.592 1.556 1.168 2.4 1.7.162-.393.746-.963 1.096-1.2zm-11.53 1.639c.812 1.898 5.798 7.17 12.06 2.695a2.07 2.07 0 00.114.715c.46 1.42 2.36 2.427 1.238 3.89-2.135 1.364-5 1.201-6.989.528-3.558-1.204-5.914-4.332-6.424-7.828zm13.782.7a.771.771 0 00-.065.049c-.004.003-.008.008-.011.008.003-.003.007-.008.01-.008.024-.015.044-.034.066-.048z"/></svg>
-                </span>
-                <div>
-                  <span class="resource-badge">DIGITAL ART</span>
-                  <h4>Krita</h4>
-                </div>
-              </div>
-              <p>Professional-grade digital painting. Free and open source. Great for concept art and illustrations.</p>
-            </a>
-            <a href="https://www.blender.org/" target="_blank" rel="noopener noreferrer" class="resource-card">
-              <div class="card-header">
-                <span class="resource-logo resource-logo-svg" style="background: #E87D0D;">
-                  <svg viewBox="0 0 24 24" fill="white"><path d="M12.51 13.214c.046-.8.438-1.506 1.03-2.006a3.424 3.424 0 0 1 2.212-.79c.85 0 1.631.3 2.211.79.592.5.983 1.206 1.028 2.005.045.823-.285 1.586-.865 2.153a3.389 3.389 0 0 1-2.374.938 3.393 3.393 0 0 1-2.376-.938c-.58-.567-.91-1.33-.865-2.152M7.35 14.831c.006.314.106.922.256 1.398a7.372 7.372 0 0 0 1.593 2.757 8.227 8.227 0 0 0 2.787 2.001 8.947 8.947 0 0 0 3.66.76 8.964 8.964 0 0 0 3.657-.772 8.285 8.285 0 0 0 2.785-2.01 7.428 7.428 0 0 0 1.592-2.762 6.964 6.964 0 0 0 .25-3.074 7.123 7.123 0 0 0-1.016-2.779 7.764 7.764 0 0 0-1.852-2.043h.002L13.566 2.55l-.02-.015c-.492-.378-1.319-.376-1.86.002-.547.382-.609 1.015-.123 1.415l-.001.001 3.126 2.543-9.53.01h-.013c-.788.001-1.545.518-1.695 1.172-.154.665.38 1.217 1.2 1.22V8.9l4.83-.01-8.62 6.617-.034.025c-.813.622-1.075 1.658-.563 2.313.52.667 1.625.668 2.447.004L7.414 14s-.069.52-.063.831zm12.09 1.741c-.97.988-2.326 1.548-3.795 1.55-1.47.004-2.827-.552-3.797-1.538a4.51 4.51 0 0 1-1.036-1.622 4.282 4.282 0 0 1 .282-3.519 4.702 4.702 0 0 1 1.153-1.371c.942-.768 2.141-1.183 3.396-1.185 1.256-.002 2.455.41 3.398 1.175.48.391.87.854 1.152 1.367a4.28 4.28 0 0 1 .522 1.706 4.236 4.236 0 0 1-.239 1.811 4.54 4.54 0 0 1-1.035 1.626"/></svg>
-                </span>
-                <div>
-                  <span class="resource-badge">3D</span>
-                  <h4>Blender</h4>
-                </div>
-              </div>
-              <p>Full 3D creation suite. Modeling, animation, rendering. Free and incredibly powerful.</p>
-            </a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Audio & Music -->
-    <section class="section" id="audio">
-      <div class="container">
-        <h2>Audio & Music</h2>
-        <p class="section-intro">Sounds to bring your game to life.</p>
-
-        <div class="resource-category">
-          <h3 class="category-title assets">Free Audio</h3>
-          <div class="resource-grid">
-            <a href="https://freesound.org/" target="_blank" rel="noopener noreferrer" class="resource-card">
-              <div class="card-header">
-                <span class="resource-logo resource-logo-img" style="background: #1DB954;">
-                  <img src="/images/logos/freesound.png" alt="Freesound" />
-                </span>
-                <div>
-                  <span class="resource-badge">SFX</span>
-                  <h4>Freesound</h4>
-                </div>
-              </div>
-              <p>Massive library of sound effects. Various licenses, most are free to use with attribution.</p>
-            </a>
-            <a href="https://incompetech.com/music/" target="_blank" rel="noopener noreferrer" class="resource-card">
-              <div class="card-header">
-                <span class="resource-logo resource-logo-img" style="background: #9C27B0;">
-                  <img src="/images/logos/incompetech.ico" alt="Incompetech" />
+                <span class="resource-logo resource-logo-img" style="background: #8B4513;">
+                  <img src="/images/logos/gregorian.ico" alt="Gregorian Chant" />
                 </span>
                 <div>
                   <span class="resource-badge">MUSIC</span>
-                  <h4>Incompetech</h4>
+                  <h4>Gregorian Chant</h4>
                 </div>
               </div>
-              <p>Kevin MacLeod's royalty-free music. Tons of genres. Attribution required but free.</p>
+              <p>Resources for Gregorian chant. Perfect for atmospheric, sacred game soundtracks.</p>
             </a>
-            <a href="https://www.zapsplat.com/" target="_blank" rel="noopener noreferrer" class="resource-card">
+            <a href="https://www.newadvent.org/cathen/" target="_blank" rel="noopener noreferrer" class="resource-card">
               <div class="card-header">
-                <span class="resource-logo resource-logo-img" style="background: #FF9800;">
-                  <img src="/images/logos/zapsplat.ico" alt="ZapSplat" />
+                <span class="resource-logo resource-logo-img" style="background: #8B2942;">
+                  <img src="/images/logos/newadvent.png" alt="Catholic Encyclopedia" />
                 </span>
                 <div>
-                  <span class="resource-badge">SFX + MUSIC</span>
-                  <h4>ZapSplat</h4>
+                  <span class="resource-badge">REFERENCE</span>
+                  <h4>Catholic Encyclopedia</h4>
                 </div>
               </div>
-              <p>Free sound effects and music. Great quality, easy to search and download.</p>
+              <p>Research saints, theology, and Church history for authentic storytelling.</p>
             </a>
           </div>
-        </div>
 
-        <div class="resource-category">
-          <h3 class="category-title tools">Creation Tools</h3>
+          <div class="resource-category" style="margin-top: 2rem;">
+            <h3 class="category-title beginner">Saints & Stories</h3>
+            <div class="resource-grid">
+              <a href="https://www.catholic.org/saints/" target="_blank" rel="noopener noreferrer" class="resource-card">
+                <div class="card-header">
+                  <span class="resource-logo resource-logo-svg" style="background: #C41E3A;">
+                    <CrossIcon size={22} />
+                  </span>
+                  <div>
+                    <span class="resource-badge">SAINTS</span>
+                    <h4>Catholic.org Saints</h4>
+                  </div>
+                </div>
+                <p>Comprehensive database of saints with biographies. Great for character inspiration.</p>
+              </a>
+              <a href="https://www.vatican.va/archive/bible/index.htm" target="_blank" rel="noopener noreferrer" class="resource-card">
+                <div class="card-header">
+                  <span class="resource-logo resource-logo-svg" style="background: #DAA520;">
+                    <CrossIcon size={22} />
+                  </span>
+                  <div>
+                    <span class="resource-badge">SCRIPTURE</span>
+                    <h4>Vatican Bible</h4>
+                  </div>
+                </div>
+                <p>Official Vatican Bible archive. Source material for narrative and dialogue.</p>
+              </a>
+            </div>
+          </div>
+
+          <div class="resource-category" style="margin-top: 2rem;">
+            <h3 class="category-title tools">Catholic Games Gallery</h3>
+            <p class="category-desc">Existing Catholic games for inspiration. See how others have integrated faith into gameplay.</p>
+            <div class="resource-grid">
+              <a href="https://store.steampowered.com/app/1380020/The_You_Testament/" target="_blank" rel="noopener noreferrer" class="resource-card">
+                <div class="card-header">
+                  <span class="resource-logo resource-logo-svg" style="background: #1b2838;">
+                    <Icon name="gamepad" size={22} />
+                  </span>
+                  <div>
+                    <span class="resource-badge">STEAM</span>
+                    <h4>The You Testament</h4>
+                  </div>
+                </div>
+                <p>Open-world game set in biblical times. Follow or change the story of Jesus through your choices.</p>
+              </a>
+              <a href="https://www.eternal.gg/" target="_blank" rel="noopener noreferrer" class="resource-card">
+                <div class="card-header">
+                  <span class="resource-logo resource-logo-svg" style="background: #4a2c2a;">
+                    <CrossIcon size={22} />
+                  </span>
+                  <div>
+                    <span class="resource-badge">MOBILE</span>
+                    <h4>Guardians: Legend of the Rose</h4>
+                  </div>
+                </div>
+                <p>Catholic fantasy RPG with turn-based combat. Rich narrative exploring virtues and spiritual warfare.</p>
+              </a>
+              <a href="https://store.steampowered.com/app/614570/Lamplight_City/" target="_blank" rel="noopener noreferrer" class="resource-card">
+                <div class="card-header">
+                  <span class="resource-logo resource-logo-svg" style="background: #2a4a6a;">
+                    <Icon name="search" size={22} />
+                  </span>
+                  <div>
+                    <span class="resource-badge">ADVENTURE</span>
+                    <h4>Pentiment</h4>
+                  </div>
+                </div>
+                <p>Obsidian's narrative mystery set in 16th century Bavaria. Deep exploration of medieval Catholic life.</p>
+              </a>
+              <a href="https://itch.io/games/tag-catholic" target="_blank" rel="noopener noreferrer" class="resource-card">
+                <div class="card-header">
+                  <span class="resource-logo resource-logo-svg" style="background: #fa5c5c;">
+                    <Icon name="coin" size={22} />
+                  </span>
+                  <div>
+                    <span class="resource-badge">INDIE</span>
+                    <h4>itch.io Catholic Games</h4>
+                  </div>
+                </div>
+                <p>Browse indie Catholic games on itch.io. Many are jam entries—great for seeing what's possible in a week.</p>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- AI & Agents Tab -->
+      <section class="tab-panel" id="ai">
+        <div class="container">
+          <h2>AI & Vibe Coding</h2>
+          <p class="section-intro">AI tools to accelerate your game jam. Code faster, generate assets, and prototype rapidly.</p>
+
+          <div class="ai-notice">
+            <Icon name="alert" size={20} />
+            <p><strong>Licensing reminder:</strong> When using AI-generated content, verify you have full rights to release under MIT license. Check each tool's terms of service. Many AI tools grant commercial rights to outputs.</p>
+          </div>
+
+          <div class="resource-category">
+            <h3 class="category-title vibe">AI Coding Assistants</h3>
+            <p class="category-desc">These tools understand your code and help you build faster. "Vibe coding" means describing what you want in natural language and letting AI help implement it.</p>
+            <div class="resource-grid">
+              <a href="https://claude.ai/code" target="_blank" rel="noopener noreferrer" class="resource-card featured">
+                <div class="card-header">
+                  <span class="resource-logo resource-logo-svg" style="background: #D97757;">
+                    <svg viewBox="0 0 24 24" fill="white"><path d="M4.709 15.955l4.72-2.647.08-.08 2.726-1.133.08-.16-6.134-3.78c-2.648 3.14-2.408 5.788-1.472 7.8zm6.033-6.033L4.95 6.382C2.622 8.79 1.686 11.438 2.302 14.246l8.44-4.324zm3.94-.56L10.9 5.51l-.16.08-1.933.8-.08.08-2.807 1.613 6.134 3.78.16-.08 2.487-2.407-.02-.014zm-1.76-4.96l-.56 2.487-2.647 1.053 4.88 3.06 5.12-1.773.16-.08c-1.426-2.888-3.713-4.56-6.953-4.747zM3 16.524c1.128 2.257 3.254 3.574 6.354 3.574l-2.007-4.32-4.347.746zm15.755-5.15L15.395 9.6l-2.808 2.807-.08.08.24 1.293.08.08 1.213 2.567c2.887-.4 5.055-2.167 5.855-4.8l-.16-.08-.98-.173zm-2.967 6.274L12.99 12.78l-1.053 2.647 2.487.56c-.08.08 1.364 1.581 1.364 1.661zM8.79 20.258c2.408.32 4.24-.4 5.708-2.007l-4.32-2.007-1.388 4.014zm5.95-2.726l.08.08 4.24.64c.72-1.128.96-2.807.56-4.88l-4.88 4.16z"/></svg>
+                  </span>
+                  <div>
+                    <span class="resource-badge">RECOMMENDED</span>
+                    <h4>Claude Code</h4>
+                  </div>
+                </div>
+                <p>Anthropic's AI coding agent. Runs in your terminal, understands your entire codebase, and can make multi-file changes. Excellent for game development.</p>
+              </a>
+              <a href="https://github.com/features/copilot" target="_blank" rel="noopener noreferrer" class="resource-card">
+                <div class="card-header">
+                  <span class="resource-logo resource-logo-svg" style="background: #000;">
+                    <svg viewBox="0 0 24 24" fill="white"><path d="M12 0c6.623 0 12 5.377 12 12s-5.377 12-12 12S0 18.623 0 12 5.377 0 12 0zm0 1.5C6.201 1.5 1.5 6.201 1.5 12S6.201 22.5 12 22.5 22.5 17.799 22.5 12 17.799 1.5 12 1.5zM10.5 6a4.5 4.5 0 0 1 3 7.875V18a1.5 1.5 0 0 1-3 0v-4.125A4.5 4.5 0 0 1 10.5 6zm1.5 3a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3z"/></svg>
+                  </span>
+                  <div>
+                    <span class="resource-badge">IDE PLUGIN</span>
+                    <h4>GitHub Copilot</h4>
+                  </div>
+                </div>
+                <p>AI pair programmer that integrates with VS Code, JetBrains, and more. Great autocomplete and chat features. Free for students.</p>
+              </a>
+              <a href="https://cursor.sh/" target="_blank" rel="noopener noreferrer" class="resource-card">
+                <div class="card-header">
+                  <span class="resource-logo resource-logo-img" style="background: #1a1a2e;">
+                    <img src="/images/logos/cursor.png" alt="Cursor" />
+                  </span>
+                  <div>
+                    <span class="resource-badge">AI-NATIVE IDE</span>
+                    <h4>Cursor</h4>
+                  </div>
+                </div>
+                <p>VS Code fork with AI deeply integrated. Cmd+K to edit code, chat understands your project. Popular for rapid prototyping.</p>
+              </a>
+              <a href="https://codeium.com/windsurf" target="_blank" rel="noopener noreferrer" class="resource-card">
+                <div class="card-header">
+                  <span class="resource-logo resource-logo-img" style="background: #09B6A2;">
+                    <img src="/images/logos/windsurf.png" alt="Windsurf" />
+                  </span>
+                  <div>
+                    <span class="resource-badge">FREE TIER</span>
+                    <h4>Windsurf</h4>
+                  </div>
+                </div>
+                <p>AI-powered IDE by Codeium with generous free tier. Cascade feature handles multi-file tasks. Good Cursor alternative.</p>
+              </a>
+            </div>
+          </div>
+
+          <div class="resource-category">
+            <h3 class="category-title assets">AI Art Generation</h3>
+            <p class="category-desc">Generate sprites, textures, and concept art. Always verify licensing terms allow MIT-compatible commercial use.</p>
+            <div class="resource-grid">
+              <a href="https://www.recraft.ai/" target="_blank" rel="noopener noreferrer" class="resource-card">
+                <div class="card-header">
+                  <span class="resource-logo resource-logo-img" style="background: #1a1a1a;">
+                    <img src="/images/logos/recraft.png" alt="Recraft" />
+                  </span>
+                  <div>
+                    <span class="resource-badge">VECTORS & ICONS</span>
+                    <h4>Recraft</h4>
+                  </div>
+                </div>
+                <p>Generate vector illustrations, icons, and pixel art. Style control lets you match your game's aesthetic. Commercial use allowed.</p>
+              </a>
+              <a href="https://www.pixellab.ai/" target="_blank" rel="noopener noreferrer" class="resource-card">
+                <div class="card-header">
+                  <span class="resource-logo resource-logo-img" style="background: #6366F1;">
+                    <img src="/images/logos/pixellab.ico" alt="PixelLab" />
+                  </span>
+                  <div>
+                    <span class="resource-badge">PIXEL ART</span>
+                    <h4>PixelLab</h4>
+                  </div>
+                </div>
+                <p>AI-powered pixel art generation. Create characters with multiple directions and animations. Perfect for retro-style games.</p>
+              </a>
+              <a href="https://www.midjourney.com/" target="_blank" rel="noopener noreferrer" class="resource-card">
+                <div class="card-header">
+                  <span class="resource-logo resource-logo-img" style="background: #1a1a2e;">
+                    <img src="/images/logos/midjourney.ico" alt="Midjourney" />
+                  </span>
+                  <div>
+                    <span class="resource-badge">CONCEPT ART</span>
+                    <h4>Midjourney</h4>
+                  </div>
+                </div>
+                <p>Industry-leading image generation. Great for concept art and reference images. Check license terms for game assets.</p>
+              </a>
+              <a href="https://www.remove.bg/" target="_blank" rel="noopener noreferrer" class="resource-card">
+                <div class="card-header">
+                  <span class="resource-logo resource-logo-img" style="background: #0F9D58;">
+                    <img src="/images/logos/removebg.png" alt="Remove.bg" />
+                  </span>
+                  <div>
+                    <span class="resource-badge">UTILITY</span>
+                    <h4>Remove.bg</h4>
+                  </div>
+                </div>
+                <p>AI-powered background removal. Essential for turning AI-generated images into usable game sprites.</p>
+              </a>
+            </div>
+          </div>
+
+          <div class="resource-category">
+            <h3 class="category-title tools">AI Audio</h3>
+            <p class="category-desc">Generate music and sound effects. Check each tool's terms for commercial/MIT compatibility.</p>
+            <div class="resource-grid">
+              <a href="https://suno.com/" target="_blank" rel="noopener noreferrer" class="resource-card">
+                <div class="card-header">
+                  <span class="resource-logo resource-logo-img" style="background: #000;">
+                    <img src="/images/logos/suno.ico" alt="Suno" />
+                  </span>
+                  <div>
+                    <span class="resource-badge">MUSIC</span>
+                    <h4>Suno</h4>
+                  </div>
+                </div>
+                <p>AI music generation from text prompts. Create original soundtracks in any style. Pro plan grants commercial rights.</p>
+              </a>
+              <a href="https://www.udio.com/" target="_blank" rel="noopener noreferrer" class="resource-card">
+                <div class="card-header">
+                  <span class="resource-logo resource-logo-img" style="background: #5B21B6;">
+                    <img src="/images/logos/udio.ico" alt="Udio" />
+                  </span>
+                  <div>
+                    <span class="resource-badge">MUSIC</span>
+                    <h4>Udio</h4>
+                  </div>
+                </div>
+                <p>Another excellent AI music generator. Great for chiptune, orchestral, and ambient tracks.</p>
+              </a>
+              <a href="https://elevenlabs.io/" target="_blank" rel="noopener noreferrer" class="resource-card">
+                <div class="card-header">
+                  <span class="resource-logo resource-logo-img" style="background: #1a1a2e;">
+                    <img src="/images/logos/elevenlabs.ico" alt="ElevenLabs" />
+                  </span>
+                  <div>
+                    <span class="resource-badge">VOICE</span>
+                    <h4>ElevenLabs</h4>
+                  </div>
+                </div>
+                <p>AI voice generation and text-to-speech. Perfect for NPC dialogue and narration. Check commercial terms.</p>
+              </a>
+              <a href="https://www.stableaudio.com/" target="_blank" rel="noopener noreferrer" class="resource-card">
+                <div class="card-header">
+                  <span class="resource-logo resource-logo-svg" style="background: #7C3AED;">
+                    <svg viewBox="0 0 24 24" fill="white"><path d="M14 12c0 1.1-.9 2-2 2s-2-.9-2-2 .9-2 2-2 2 .9 2 2zm-2-9c-4.97 0-9 4.03-9 9H0l4 4 4-4H5c0-3.87 3.13-7 7-7s7 3.13 7 7-3.13 7-7 7c-1.51 0-2.91-.49-4.06-1.3l-1.42 1.44C8.04 20.3 9.94 21 12 21c4.97 0 9-4.03 9-9s-4.03-9-9-9z"/></svg>
+                  </span>
+                  <div>
+                    <span class="resource-badge">SFX</span>
+                    <h4>Stable Audio</h4>
+                  </div>
+                </div>
+                <p>Generate sound effects and ambient audio. From Stability AI. Good for game audio prototyping.</p>
+              </a>
+            </div>
+          </div>
+
+          <div class="resource-category">
+            <h3 class="category-title intermediate">Pro Tips for AI Game Dev</h3>
+            <div class="tips-compact">
+              <div class="tip-item">
+                <strong>1. Start with AI, refine by hand</strong>
+                <p>Use AI to generate base assets quickly, then polish in traditional tools for consistency.</p>
+              </div>
+              <div class="tip-item">
+                <strong>2. Use AI for prototyping</strong>
+                <p>Generate placeholder art and music to test gameplay. Replace with final assets later if needed.</p>
+              </div>
+              <div class="tip-item">
+                <strong>3. Keep prompts in your README</strong>
+                <p>Document the prompts you used so others can reproduce or iterate on your AI-generated assets.</p>
+              </div>
+              <div class="tip-item">
+                <strong>4. Verify licensing before submission</strong>
+                <p>Screenshot or save the terms of service that grant you MIT-compatible rights to AI outputs.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Tools Tab -->
+      <section class="tab-panel" id="tools">
+        <div class="container">
+          <h2>Workflow Tools</h2>
+          <p class="section-intro">Tools to publish, collaborate, and ship your game.</p>
+
+          <div class="resource-category">
+            <h3 class="category-title advanced">Publishing & Deployment</h3>
+            <p class="category-desc">Get your game in front of players. These platforms make distribution easy.</p>
+            <div class="resource-grid">
+              <a href="https://itch.io/" target="_blank" rel="noopener noreferrer" class="resource-card featured">
+                <div class="card-header">
+                  <span class="resource-logo resource-logo-img" style="background: #1a1a1a;">
+                    <img src="/images/logos/itch.ico" alt="itch.io" />
+                  </span>
+                  <div>
+                    <span class="resource-badge">RECOMMENDED</span>
+                    <h4>itch.io</h4>
+                  </div>
+                </div>
+                <p>The premier platform for indie games. Easy uploads, web builds, and pay-what-you-want. This is where you'll submit your jam entry.</p>
+              </a>
+              <a href="https://pages.github.com/" target="_blank" rel="noopener noreferrer" class="resource-card">
+                <div class="card-header">
+                  <span class="resource-logo resource-logo-svg" style="background: #24292e;">
+                    <svg viewBox="0 0 24 24" fill="white"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                  </span>
+                  <div>
+                    <span class="resource-badge">WEB</span>
+                    <h4>GitHub Pages</h4>
+                  </div>
+                </div>
+                <p>Free hosting for web games. Push to GitHub, it deploys automatically. Great for HTML5/JavaScript games.</p>
+              </a>
+              <a href="https://www.netlify.com/" target="_blank" rel="noopener noreferrer" class="resource-card">
+                <div class="card-header">
+                  <span class="resource-logo resource-logo-img" style="background: #0e1e25;">
+                    <img src="/images/logos/netlify.ico" alt="Netlify" />
+                  </span>
+                  <div>
+                    <span class="resource-badge">WEB</span>
+                    <h4>Netlify</h4>
+                  </div>
+                </div>
+                <p>Drag-and-drop deployment for web games. Generous free tier with instant deploys.</p>
+              </a>
+              <a href="https://newgrounds.com/" target="_blank" rel="noopener noreferrer" class="resource-card">
+                <div class="card-header">
+                  <span class="resource-logo resource-logo-svg" style="background: #FFC600;">
+                    <Icon name="gamepad" size={22} />
+                  </span>
+                  <div>
+                    <span class="resource-badge">COMMUNITY</span>
+                    <h4>Newgrounds</h4>
+                  </div>
+                </div>
+                <p>Classic indie game platform with active community. Great for Flash-style web games.</p>
+              </a>
+            </div>
+          </div>
+
+          <div class="resource-category" style="margin-top: 3rem;">
+            <h3 class="category-title intermediate">Collaboration</h3>
+            <p class="category-desc">Working with a team? These tools help coordinate your jam.</p>
+            <div class="resource-grid">
+              <a href="https://discord.com/" target="_blank" rel="noopener noreferrer" class="resource-card">
+                <div class="card-header">
+                  <span class="resource-logo resource-logo-img" style="background: #5865F2;">
+                    <img src="/images/logos/discord.ico" alt="Discord" />
+                  </span>
+                  <div>
+                    <span class="resource-badge">CHAT</span>
+                    <h4>Discord</h4>
+                  </div>
+                </div>
+                <p>Voice chat, screen sharing, and text channels. Create a private server for your team. Join ours for jam support!</p>
+              </a>
+              <a href="https://github.com/" target="_blank" rel="noopener noreferrer" class="resource-card">
+                <div class="card-header">
+                  <span class="resource-logo resource-logo-svg" style="background: #24292e;">
+                    <svg viewBox="0 0 24 24" fill="white"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                  </span>
+                  <div>
+                    <span class="resource-badge">VERSION CONTROL</span>
+                    <h4>GitHub</h4>
+                  </div>
+                </div>
+                <p>Essential for team projects. Track changes, resolve conflicts, and never lose work. Free for public repos.</p>
+              </a>
+              <a href="https://trello.com/" target="_blank" rel="noopener noreferrer" class="resource-card">
+                <div class="card-header">
+                  <span class="resource-logo resource-logo-img" style="background: #0079BF;">
+                    <img src="/images/logos/trello.ico" alt="Trello" />
+                  </span>
+                  <div>
+                    <span class="resource-badge">TASKS</span>
+                    <h4>Trello</h4>
+                  </div>
+                </div>
+                <p>Visual task boards. Track what needs doing, what's in progress, and what's done. Great for jam scope management.</p>
+              </a>
+              <a href="https://www.figma.com/" target="_blank" rel="noopener noreferrer" class="resource-card">
+                <div class="card-header">
+                  <span class="resource-logo resource-logo-img" style="background: #F24E1E;">
+                    <img src="/images/logos/figma.ico" alt="Figma" />
+                  </span>
+                  <div>
+                    <span class="resource-badge">DESIGN</span>
+                    <h4>Figma</h4>
+                  </div>
+                </div>
+                <p>Collaborative design tool. Mockup UI, create sprites, plan layouts. Free tier is generous.</p>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Learning Tab -->
+      <section class="tab-panel" id="learn">
+        <div class="container">
+          <h2>Level Up Your Skills</h2>
+          <p class="section-intro">Tutorials and guides to help you learn.</p>
+
           <div class="resource-grid">
-            <a href="https://sfxr.me/" target="_blank" rel="noopener noreferrer" class="resource-card">
+            <a href="https://www.youtube.com/@Brackeys" target="_blank" rel="noopener noreferrer" class="resource-card">
               <div class="card-header">
-                <span class="resource-logo resource-logo-img" style="background: #E91E63;">
-                  <img src="/images/logos/jsfxr.png" alt="jsfxr" />
+                <span class="resource-logo resource-logo-svg" style="background: #FF0000;">
+                  <svg viewBox="0 0 24 24" fill="white"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
                 </span>
                 <div>
-                  <span class="resource-badge">RETRO SFX</span>
-                  <h4>jsfxr</h4>
+                  <span class="resource-badge">UNITY</span>
+                  <h4>Brackeys</h4>
                 </div>
               </div>
-              <p>Generate 8-bit style sound effects instantly. Perfect for retro games. Click and tweak.</p>
+              <p>Excellent Unity tutorials. Clear explanations, great projects. Start here for Unity.</p>
             </a>
-            <a href="https://www.beepbox.co/" target="_blank" rel="noopener noreferrer" class="resource-card">
+            <a href="https://www.youtube.com/@GDQuest" target="_blank" rel="noopener noreferrer" class="resource-card">
               <div class="card-header">
-                <span class="resource-logo resource-logo-img" style="background: #607D8B;">
-                  <img src="/images/logos/beepbox.png" alt="BeepBox" />
+                <span class="resource-logo resource-logo-svg" style="background: #FF0000;">
+                  <svg viewBox="0 0 24 24" fill="white"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
                 </span>
                 <div>
-                  <span class="resource-badge">CHIPTUNE</span>
-                  <h4>BeepBox</h4>
+                  <span class="resource-badge">GODOT</span>
+                  <h4>GDQuest</h4>
                 </div>
               </div>
-              <p>Create chiptune music in your browser. Easy to learn, surprisingly powerful.</p>
+              <p>High-quality Godot tutorials. From beginner to advanced. Free and paid courses.</p>
             </a>
-            <a href="https://lmms.io/" target="_blank" rel="noopener noreferrer" class="resource-card">
+            <a href="https://www.gamedesigning.org/" target="_blank" rel="noopener noreferrer" class="resource-card">
               <div class="card-header">
-                <span class="resource-logo resource-logo-svg" style="background: #10B146;">
-                  <svg viewBox="0 0 24 24" fill="white"><path d="M1.714 0A1.71 1.71 0 000 1.714v20.572C0 23.236.765 24 1.714 24h20.572A1.71 1.71 0 0024 22.286V1.714A1.71 1.71 0 0022.286 0zM12 3l9 5.143v10.286l-3 1.714-3-1.714V15l3-1.714V9.857L12 6.43 6 9.857v3.429L9 15v3.429l-3 1.714-3-1.714V8.143Z"/></svg>
+                <span class="resource-logo resource-logo-img" style="background: #673AB7;">
+                  <img src="/images/logos/gamedesigning.png" alt="Game Designing" />
                 </span>
                 <div>
-                  <span class="resource-badge">DAW</span>
-                  <h4>LMMS</h4>
+                  <span class="resource-badge">DESIGN</span>
+                  <h4>Game Designing</h4>
                 </div>
               </div>
-              <p>Free digital audio workstation. Full music production capabilities, cross-platform.</p>
+              <p>Articles on game design principles, career advice, and industry insights.</p>
             </a>
-            <a href="https://www.audacityteam.org/" target="_blank" rel="noopener noreferrer" class="resource-card">
+            <a href="https://www.gamedeveloper.com/game-platforms/game-jam-beginner-tips-for-success" target="_blank" rel="noopener noreferrer" class="resource-card">
               <div class="card-header">
-                <span class="resource-logo resource-logo-svg" style="background: #0000CC;">
-                  <svg viewBox="0 0 24 24" fill="white"><path d="M12 2.145c-2.487 0-4.755.776-6.428 2.08-1.673 1.303-2.76 3.169-2.76 5.244v.75C1.153 11.06 0 13.268 0 15.856c0 3.312 1.884 6 4.312 6V9.468c0-1.554.805-2.984 2.186-4.06C7.879 4.331 9.829 3.643 12 3.643c2.17 0 4.12.688 5.502 1.764 1.38 1.077 2.186 2.507 2.186 4.06v12.387c2.428 0 4.312-2.687 4.312-6 0-2.587-1.152-4.795-2.813-5.636v-.75c0-2.075-1.086-3.94-2.76-5.244-1.672-1.304-3.94-2.08-6.427-2.08zm0 6.153l-1.125 8.683L9.75 9.105l-.562 6.75-.376-.75-.375-4.5-.187 4.5-.563 1.313-.374-4.5-.376 3.562-.562-.937v2.625l-.563-2.11v-4.64a1.432 1.432 0 0 0-.937-.375v11.812c.375 0 .75-.187.937-.562v-3.375l.188.187.563 1.875.187-2.25.563 2.813v-3.562l.374.937.563 2.625v-3.562l.375.374.563 3.188.562-4.313 1.24 4.86.072-2.985.375-1.124.376 4.687 1.124-4.687.375 3.937.938-4.125.938 4.5.187-3.375.562-1.125.188 4.313.938-4.125.562 1.875.188-1.688.374.75v3.375c.188.375.563.562.938.562V10.043c-.375 0-.75.188-.938.375v4.813l-.374 1-.188-3.188-.375 2.437-.375-.75-.188-2.625-.937 3.563-.188-.75L15 9.293l-.562 4.875-.376 1.5-.75-5.062-.75 4.312-.375 1.125Z"/></svg>
+                <span class="resource-logo resource-logo-img" style="background: #1a1a2e;">
+                  <img src="/images/logos/gamedeveloper.png" alt="Game Developer" />
                 </span>
                 <div>
-                  <span class="resource-badge">AUDIO EDITING</span>
-                  <h4>Audacity</h4>
+                  <span class="resource-badge">JAM TIPS</span>
+                  <h4>Game Jam Tips</h4>
                 </div>
               </div>
-              <p>Edit and process audio files. Record voiceovers, trim sounds, add effects. Essential tool.</p>
+              <p>Essential tips for game jam success. Scope management, time planning, and finishing games.</p>
             </a>
           </div>
-        </div>
-      </div>
-    </section>
 
-    <!-- Catholic Resources -->
-    <section class="section section-alt" id="catholic">
-      <div class="container">
-        <h2>Catholic Resources</h2>
-        <p class="section-intro">Inspiration and assets for faith-filled games.</p>
-
-        <div class="resource-grid">
-          <a href="https://commons.wikimedia.org/wiki/Category:Catholic_art" target="_blank" rel="noopener noreferrer" class="resource-card">
-            <div class="card-header">
-              <span class="resource-logo resource-logo-svg" style="background: #006699;">
-                <svg viewBox="0 0 24 24" fill="white"><path d="M12.09 13.119c-.936 1.932-2.217 4.548-2.853 5.728-.616 1.074-1.127.931-1.532.029-1.406-3.321-4.293-9.144-5.651-12.409-.251-.601-.441-.987-.619-1.139-.181-.15-.554-.24-1.122-.271C.103 5.033 0 4.982 0 4.898v-.455l.052-.045c.924-.005 5.401 0 5.401 0l.051.045v.434c0 .119-.075.176-.225.176l-.564.031c-.485.029-.727.164-.727.436 0 .135.053.33.166.601 1.082 2.646 4.818 10.521 4.818 10.521l.136.046 2.411-4.81-.482-1.067-1.658-3.264s-.318-.654-.428-.872c-.728-1.443-.712-1.518-1.447-1.617-.207-.023-.313-.05-.313-.149v-.468l.06-.045h4.292l.113.037v.451c0 .105-.076.15-.227.15l-.308.047c-.792.061-.661.381-.136 1.422l1.582 3.252 1.758-3.504c.293-.64.233-.801.111-.947-.07-.084-.305-.22-.812-.24l-.201-.021c-.052 0-.098-.015-.145-.051-.045-.031-.067-.076-.067-.129v-.427l.061-.045c1.247-.008 4.043 0 4.043 0l.059.045v.436c0 .121-.059.178-.193.178-.646.03-.782.095-1.023.439-.12.186-.375.589-.646 1.039l-2.301 4.273-.065.135 2.792 5.712.17.048 4.396-10.438c.154-.422.129-.722-.064-.895-.197-.172-.346-.273-.857-.295l-.42-.016c-.061 0-.105-.014-.152-.045-.043-.029-.072-.075-.072-.119v-.436l.059-.045h4.961l.041.045v.437c0 .119-.074.18-.209.18-.648.03-1.127.18-1.443.421-.314.255-.557.616-.736 1.067 0 0-4.043 9.258-5.426 12.339-.525 1.007-1.053.917-1.503-.031-.571-1.171-1.773-3.786-2.646-5.71l.053-.036z"/></svg>
-              </span>
-              <div>
-                <span class="resource-badge">PUBLIC DOMAIN</span>
-                <h4>Wikimedia Catholic Art</h4>
+          <div class="resource-category" style="margin-top: 3rem;">
+            <h3 class="category-title intermediate">Pro Tips for the Jam</h3>
+            <div class="tips-list">
+              <div class="tip-card">
+                <span class="tip-number">1</span>
+                <div class="tip-content">
+                  <strong>Start Small</strong>
+                  <p>Your first game jam isn't about making a masterpiece—it's about finishing something. A tiny complete game beats an ambitious incomplete one.</p>
+                </div>
               </div>
-            </div>
-            <p>Thousands of religious paintings, icons, and artwork. Most are public domain.</p>
-          </a>
-          <a href="https://www.vatican.va/various/cappelle/sistina_vr/index.html" target="_blank" rel="noopener noreferrer" class="resource-card">
-            <div class="card-header">
-              <span class="resource-logo resource-logo-img" style="background: #B8860B;">
-                <img src="/images/logos/vatican.ico" alt="Vatican" />
-              </span>
-              <div>
-                <span class="resource-badge">REFERENCE</span>
-                <h4>Sistine Chapel VR</h4>
+              <div class="tip-card">
+                <span class="tip-number">2</span>
+                <div class="tip-content">
+                  <strong>Use What You Know</strong>
+                  <p>A jam isn't the time to learn a new engine from scratch. Stick with tools you're comfortable with.</p>
+                </div>
               </div>
-            </div>
-            <p>Virtual tour of the Sistine Chapel. Great reference for religious art and architecture.</p>
-          </a>
-          <a href="https://gregorian-chant.ning.com/" target="_blank" rel="noopener noreferrer" class="resource-card">
-            <div class="card-header">
-              <span class="resource-logo resource-logo-img" style="background: #8B4513;">
-                <img src="/images/logos/gregorian.ico" alt="Gregorian Chant" />
-              </span>
-              <div>
-                <span class="resource-badge">MUSIC</span>
-                <h4>Gregorian Chant</h4>
+              <div class="tip-card">
+                <span class="tip-number">3</span>
+                <div class="tip-content">
+                  <strong>Get Playable Early</strong>
+                  <p>Have something you can play within the first few hours. Then iterate and polish from there.</p>
+                </div>
               </div>
-            </div>
-            <p>Resources for Gregorian chant. Perfect for atmospheric, sacred game soundtracks.</p>
-          </a>
-          <a href="https://www.newadvent.org/cathen/" target="_blank" rel="noopener noreferrer" class="resource-card">
-            <div class="card-header">
-              <span class="resource-logo resource-logo-img" style="background: #8B2942;">
-                <img src="/images/logos/newadvent.png" alt="Catholic Encyclopedia" />
-              </span>
-              <div>
-                <span class="resource-badge">REFERENCE</span>
-                <h4>Catholic Encyclopedia</h4>
+              <div class="tip-card">
+                <span class="tip-number">4</span>
+                <div class="tip-content">
+                  <strong>Sleep and Eat</strong>
+                  <p>Seriously. A tired brain makes bad games and worse decisions. Take breaks, stay healthy.</p>
+                </div>
               </div>
-            </div>
-            <p>Research saints, theology, and Church history for authentic storytelling.</p>
-          </a>
-        </div>
-      </div>
-    </section>
-
-    <!-- Learning -->
-    <section class="section" id="learn">
-      <div class="container">
-        <h2>Level Up Your Skills</h2>
-        <p class="section-intro">Tutorials and guides to help you learn.</p>
-
-        <div class="resource-grid">
-          <a href="https://www.youtube.com/@Brackeys" target="_blank" rel="noopener noreferrer" class="resource-card">
-            <div class="card-header">
-              <span class="resource-logo resource-logo-svg" style="background: #FF0000;">
-                <svg viewBox="0 0 24 24" fill="white"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
-              </span>
-              <div>
-                <span class="resource-badge">UNITY</span>
-                <h4>Brackeys</h4>
+              <div class="tip-card">
+                <span class="tip-number">5</span>
+                <div class="tip-content">
+                  <strong>Submit Early</strong>
+                  <p>Finish an hour before the deadline. Something always goes wrong at the last minute. Always.</p>
+                </div>
               </div>
-            </div>
-            <p>Excellent Unity tutorials. Clear explanations, great projects. Start here for Unity.</p>
-          </a>
-          <a href="https://www.youtube.com/@GDQuest" target="_blank" rel="noopener noreferrer" class="resource-card">
-            <div class="card-header">
-              <span class="resource-logo resource-logo-svg" style="background: #FF0000;">
-                <svg viewBox="0 0 24 24" fill="white"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
-              </span>
-              <div>
-                <span class="resource-badge">GODOT</span>
-                <h4>GDQuest</h4>
-              </div>
-            </div>
-            <p>High-quality Godot tutorials. From beginner to advanced. Free and paid courses.</p>
-          </a>
-          <a href="https://www.gamedesigning.org/" target="_blank" rel="noopener noreferrer" class="resource-card">
-            <div class="card-header">
-              <span class="resource-logo resource-logo-img" style="background: #673AB7;">
-                <img src="/images/logos/gamedesigning.png" alt="Game Designing" />
-              </span>
-              <div>
-                <span class="resource-badge">DESIGN</span>
-                <h4>Game Designing</h4>
-              </div>
-            </div>
-            <p>Articles on game design principles, career advice, and industry insights.</p>
-          </a>
-          <a href="https://www.gamedeveloper.com/game-platforms/game-jam-beginner-tips-for-success" target="_blank" rel="noopener noreferrer" class="resource-card">
-            <div class="card-header">
-              <span class="resource-logo resource-logo-img" style="background: #1a1a2e;">
-                <img src="/images/logos/gamedeveloper.png" alt="Game Developer" />
-              </span>
-              <div>
-                <span class="resource-badge">JAM TIPS</span>
-                <h4>Game Jam Tips</h4>
-              </div>
-            </div>
-            <p>Essential tips for game jam success. Scope management, time planning, and finishing games.</p>
-          </a>
-        </div>
-      </div>
-    </section>
-
-    <!-- Pro Tips -->
-    <section class="section section-alt" id="tips">
-      <div class="container">
-        <h2>Pro Tips for the Jam</h2>
-        <div class="tips-list">
-          <div class="tip-card">
-            <span class="tip-number">1</span>
-            <div class="tip-content">
-              <strong>Start Small</strong>
-              <p>Your first game jam isn't about making a masterpiece—it's about finishing something. A tiny complete game beats an ambitious incomplete one.</p>
             </div>
           </div>
-          <div class="tip-card">
-            <span class="tip-number">2</span>
-            <div class="tip-content">
-              <strong>Use What You Know</strong>
-              <p>A jam isn't the time to learn a new engine from scratch. Stick with tools you're comfortable with.</p>
-            </div>
-          </div>
-          <div class="tip-card">
-            <span class="tip-number">3</span>
-            <div class="tip-content">
-              <strong>Get Playable Early</strong>
-              <p>Have something you can play within the first few hours. Then iterate and polish from there.</p>
-            </div>
-          </div>
-          <div class="tip-card">
-            <span class="tip-number">4</span>
-            <div class="tip-content">
-              <strong>Sleep and Eat</strong>
-              <p>Seriously. A tired brain makes bad games and worse decisions. Take breaks, stay healthy.</p>
-            </div>
-          </div>
-          <div class="tip-card">
-            <span class="tip-number">5</span>
-            <div class="tip-content">
-              <strong>Submit Early</strong>
-              <p>Finish an hour before the deadline. Something always goes wrong at the last minute. Always.</p>
+
+          <div class="resource-category" style="margin-top: 3rem;">
+            <h3 class="category-title beginner">Accessibility Resources</h3>
+            <p class="category-desc">Make your game playable by everyone. Good design is inclusive design.</p>
+            <div class="resource-grid">
+              <a href="https://gameaccessibilityguidelines.com/" target="_blank" rel="noopener noreferrer" class="resource-card featured">
+                <div class="card-header">
+                  <span class="resource-logo resource-logo-svg" style="background: #4CAF50;">
+                    <Icon name="heart" size={22} />
+                  </span>
+                  <div>
+                    <span class="resource-badge">ESSENTIAL</span>
+                    <h4>Game Accessibility Guidelines</h4>
+                  </div>
+                </div>
+                <p>Comprehensive checklist of accessibility features. Sorted by effort level—start with the basics.</p>
+              </a>
+              <a href="https://accessible.games/" target="_blank" rel="noopener noreferrer" class="resource-card">
+                <div class="card-header">
+                  <span class="resource-logo resource-logo-svg" style="background: #2196F3;">
+                    <Icon name="user" size={22} />
+                  </span>
+                  <div>
+                    <span class="resource-badge">DATABASE</span>
+                    <h4>Accessible Games Database</h4>
+                  </div>
+                </div>
+                <p>Reviews of games by accessibility features. Good research for what works and what doesn't.</p>
+              </a>
+              <a href="https://www.color-blindness.com/coblis-color-blindness-simulator/" target="_blank" rel="noopener noreferrer" class="resource-card">
+                <div class="card-header">
+                  <span class="resource-logo resource-logo-svg" style="background: #9C27B0;">
+                    <Icon name="drop" size={22} />
+                  </span>
+                  <div>
+                    <span class="resource-badge">TOOL</span>
+                    <h4>Color Blindness Simulator</h4>
+                  </div>
+                </div>
+                <p>Test your game's colors for color blindness. Upload screenshots to see what 8% of players see.</p>
+              </a>
+              <a href="https://webaim.org/resources/contrastchecker/" target="_blank" rel="noopener noreferrer" class="resource-card">
+                <div class="card-header">
+                  <span class="resource-logo resource-logo-img" style="background: #003366;">
+                    <img src="/images/logos/webaim.ico" alt="WebAIM" />
+                  </span>
+                  <div>
+                    <span class="resource-badge">TOOL</span>
+                    <h4>Contrast Checker</h4>
+                  </div>
+                </div>
+                <p>Check if your text is readable. Paste your colors to ensure sufficient contrast.</p>
+              </a>
             </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </div>
 
     <!-- CTA -->
-    <section class="section" id="cta">
+    <section class="section cta-section" id="cta">
       <div class="container cta-container">
         <h2>Ready to Begin?</h2>
         <p>Pick your tools, gather your party, and prepare for the quest.</p>
@@ -681,6 +1234,53 @@ import CrossIcon from '../components/CrossIcon.astro';
     </footer>
   </main>
 </Layout>
+
+<script>
+  // Tab functionality
+  document.addEventListener('DOMContentLoaded', () => {
+    const tabButtons = document.querySelectorAll('.tab-btn');
+    const tabPanels = document.querySelectorAll('.tab-panel');
+    const tabNav = document.getElementById('tab-nav');
+
+    // Handle tab clicks
+    tabButtons.forEach(button => {
+      button.addEventListener('click', () => {
+        const targetTab = button.dataset.tab;
+
+        // Update active states
+        tabButtons.forEach(btn => btn.classList.remove('active'));
+        tabPanels.forEach(panel => panel.classList.remove('active'));
+
+        button.classList.add('active');
+        document.getElementById(targetTab)?.classList.add('active');
+
+        // Update URL hash
+        history.replaceState(null, '', `#${targetTab}`);
+
+        // Scroll to top of content
+        tabNav?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      });
+    });
+
+    // Handle initial hash
+    const hash = window.location.hash.slice(1);
+    if (hash) {
+      const targetButton = document.querySelector(`.tab-btn[data-tab="${hash}"]`);
+      if (targetButton) {
+        targetButton.click();
+      }
+    }
+
+    // Handle hash changes
+    window.addEventListener('hashchange', () => {
+      const newHash = window.location.hash.slice(1);
+      const targetButton = document.querySelector(`.tab-btn[data-tab="${newHash}"]`);
+      if (targetButton && !targetButton.classList.contains('active')) {
+        targetButton.click();
+      }
+    });
+  });
+</script>
 
 <style>
   .resources-page {
@@ -729,16 +1329,77 @@ import CrossIcon from '../components/CrossIcon.astro';
     margin: 0 auto;
   }
 
-  /* Sections */
-  .section {
-    padding: 4rem 0;
+  /* Tab Navigation */
+  .tab-nav {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: var(--color-bg);
+    border-bottom: 4px solid var(--color-text);
+    padding: 0;
   }
 
-  .section-alt {
-    background: linear-gradient(135deg, #F5F5F4 0%, #E7E5E4 100%);
+  .tab-buttons {
+    display: flex;
+    gap: 0;
+    overflow-x: auto;
+    scrollbar-width: thin;
+    -webkit-overflow-scrolling: touch;
   }
 
-  .section h2 {
+  .tab-btn {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 1rem 1.25rem;
+    font-family: var(--font-pixel);
+    font-size: 0.55rem;
+    background: transparent;
+    border: none;
+    border-bottom: 4px solid transparent;
+    color: var(--color-text-muted);
+    cursor: pointer;
+    transition: all 0.2s;
+    white-space: nowrap;
+    flex-shrink: 0;
+  }
+
+  .tab-btn:hover {
+    background: rgba(0, 0, 0, 0.05);
+    color: var(--color-text);
+  }
+
+  .tab-btn.active {
+    color: var(--color-accent);
+    border-bottom-color: var(--color-accent);
+    background: rgba(200, 155, 18, 0.1);
+  }
+
+  .tab-btn :global(svg) {
+    flex-shrink: 0;
+  }
+
+  /* Tab Content */
+  .tab-content {
+    min-height: 60vh;
+  }
+
+  .tab-panel {
+    display: none;
+    padding: 3rem 0;
+    animation: fadeIn 0.3s ease;
+  }
+
+  .tab-panel.active {
+    display: block;
+  }
+
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  .tab-panel h2 {
     font-family: var(--font-pixel);
     font-size: clamp(1rem, 3vw, 1.5rem);
     color: var(--color-text);
@@ -763,8 +1424,14 @@ import CrossIcon from '../components/CrossIcon.astro';
     font-size: 0.7rem;
     padding: 0.5rem 1rem;
     display: inline-block;
-    margin-bottom: 1.5rem;
+    margin-bottom: 1rem;
     border: 3px solid var(--color-text);
+  }
+
+  .category-desc {
+    color: var(--color-text-muted);
+    margin-bottom: 1.5rem;
+    font-size: 0.95rem;
   }
 
   .category-title.beginner {
@@ -802,6 +1469,11 @@ import CrossIcon from '../components/CrossIcon.astro';
     color: #1a1a2e;
   }
 
+  .category-title.vibe {
+    background: linear-gradient(135deg, #D97757 0%, #6366F1 100%);
+    color: white;
+  }
+
   /* Resource Grid */
   .resource-grid {
     display: grid;
@@ -836,6 +1508,11 @@ import CrossIcon from '../components/CrossIcon.astro';
 
   .resource-card:hover::after {
     opacity: 1;
+  }
+
+  .resource-card.featured {
+    border-color: var(--color-accent);
+    background: linear-gradient(135deg, #FFFBEB 0%, #FEF3C7 100%);
   }
 
   .resource-badge {
@@ -902,6 +1579,29 @@ import CrossIcon from '../components/CrossIcon.astro';
     line-height: 1.5;
   }
 
+  /* AI Notice */
+  .ai-notice {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    background: #FEF3C7;
+    border: 3px solid var(--color-accent);
+    padding: 1rem 1.5rem;
+    margin-bottom: 2rem;
+  }
+
+  .ai-notice :global(svg) {
+    flex-shrink: 0;
+    color: var(--color-accent);
+  }
+
+  .ai-notice p {
+    font-size: 0.9rem;
+    color: var(--color-text);
+    line-height: 1.5;
+    margin: 0;
+  }
+
   /* Tips */
   .tips-list {
     display: flex;
@@ -951,12 +1651,47 @@ import CrossIcon from '../components/CrossIcon.astro';
     line-height: 1.5;
   }
 
+  /* Compact Tips for AI section */
+  .tips-compact {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 1rem;
+  }
+
+  .tip-item {
+    background: white;
+    border: 3px solid var(--color-text);
+    padding: 1.25rem;
+  }
+
+  .tip-item strong {
+    display: block;
+    font-family: var(--font-pixel);
+    font-size: 0.6rem;
+    color: var(--color-text);
+    margin-bottom: 0.5rem;
+  }
+
+  .tip-item p {
+    font-size: 0.9rem;
+    color: var(--color-text-muted);
+    line-height: 1.5;
+    margin: 0;
+  }
+
   /* CTA */
+  .cta-section {
+    background: linear-gradient(135deg, #F5F5F4 0%, #E7E5E4 100%);
+    padding: 4rem 0;
+  }
+
   .cta-container {
     text-align: center;
   }
 
   .cta-container h2 {
+    font-family: var(--font-pixel);
+    font-size: clamp(1rem, 3vw, 1.5rem);
     margin-bottom: 0.5rem;
   }
 
@@ -1039,7 +1774,20 @@ import CrossIcon from '../components/CrossIcon.astro';
     color: rgba(255, 255, 255, 0.6);
   }
 
-  @media (max-width: 600px) {
+  @media (max-width: 768px) {
+    .tab-buttons {
+      padding: 0 0.5rem;
+    }
+
+    .tab-btn {
+      padding: 0.75rem 1rem;
+      font-size: 0.5rem;
+    }
+
+    .tab-btn span:last-child {
+      display: none;
+    }
+
     .resource-grid {
       grid-template-columns: 1fr;
     }
