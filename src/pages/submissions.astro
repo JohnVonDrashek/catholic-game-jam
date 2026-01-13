@@ -29,7 +29,7 @@ const jamEnd = new Date('2026-01-31T18:00:00-06:00');
     <!-- Submission Form -->
     <section class="section" id="submit">
       <div class="container">
-        <div id="submission-form-container" class="form-container locked">
+        <div id="submission-form-container" class="form-container">
           <div class="lock-overlay" id="lock-overlay">
             <div class="lock-icon">🔒</div>
             <h2>Submissions Not Yet Open</h2>
@@ -40,7 +40,11 @@ const jamEnd = new Date('2026-01-31T18:00:00-06:00');
           <div class="submission-form">
             <h2>Game Details</h2>
 
-            <form id="submission-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+            <form id="submission-form" action="https://formsubmit.co/johnvondrashek+catholicgamejam@gmail.com" method="POST">
+              <!-- Formsubmit config -->
+              <input type="hidden" name="_subject" value="New Game Submission!" />
+              <input type="hidden" name="_captcha" value="false" />
+              <input type="hidden" name="_template" value="table" />
               <div class="form-group">
                 <label for="game-title">Game Title *</label>
                 <input type="text" id="game-title" name="game-title" required placeholder="Enter your game's title" />
@@ -52,8 +56,15 @@ const jamEnd = new Date('2026-01-31T18:00:00-06:00');
               </div>
 
               <div class="form-group">
-                <label for="game-link">Game Link (itch.io, GitHub, etc.) *</label>
-                <input type="url" id="game-link" name="game-link" required placeholder="https://your-game.itch.io/game" />
+                <label for="github-repo">GitHub Repository *</label>
+                <input type="url" id="github-repo" name="github-repo" required placeholder="https://github.com/username/your-game" pattern="https://github\.com/.+/.+" />
+                <span class="field-hint" id="github-hint">Must be a GitHub URL (https://github.com/username/repo)</span>
+                <span class="field-error" id="github-error"></span>
+              </div>
+
+              <div class="form-group">
+                <label for="showcase-link">Showcase Page (optional)</label>
+                <input type="url" id="showcase-link" name="showcase-link" placeholder="https://your-game.itch.io or custom page" />
               </div>
 
               <div class="form-group">
@@ -127,7 +138,7 @@ const jamEnd = new Date('2026-01-31T18:00:00-06:00');
           <div class="tip-card">
             <span class="tip-icon">📸</span>
             <h3>Add Screenshots</h3>
-            <p>Include at least one screenshot or GIF showing your game in action.</p>
+            <p>Include at least one screenshot or GIF in your README showing your game in action.</p>
           </div>
           <div class="tip-card">
             <span class="tip-icon">✝️</span>
@@ -357,6 +368,32 @@ const jamEnd = new Date('2026-01-31T18:00:00-06:00');
     margin-top: 2px;
   }
 
+  .field-hint {
+    display: block;
+    font-size: 0.8rem;
+    color: #666;
+    margin-top: 0.25rem;
+  }
+
+  .field-error {
+    display: none;
+    font-size: 0.8rem;
+    color: #f44336;
+    margin-top: 0.25rem;
+  }
+
+  .field-error.show {
+    display: block;
+  }
+
+  .form-group input:invalid:not(:placeholder-shown) {
+    border-color: #f44336;
+  }
+
+  .form-group input:valid:not(:placeholder-shown) {
+    border-color: #4CAF50;
+  }
+
   .submit-button {
     display: flex;
     align-items: center;
@@ -440,8 +477,14 @@ const jamEnd = new Date('2026-01-31T18:00:00-06:00');
   /* Tips Grid */
   .tips-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-columns: repeat(2, 1fr);
     gap: 1.5rem;
+  }
+
+  @media (max-width: 600px) {
+    .tips-grid {
+      grid-template-columns: 1fr;
+    }
   }
 
   .tip-card {
@@ -528,4 +571,51 @@ const jamEnd = new Date('2026-01-31T18:00:00-06:00');
   // Run immediately and update every second
   updateStatus();
   setInterval(updateStatus, 1000);
+
+  // GitHub URL validation with helpful messages
+  const githubInput = document.getElementById('github-repo');
+  const githubError = document.getElementById('github-error');
+
+  function validateGitHub() {
+    let value = githubInput.value.trim();
+    if (!value) {
+      githubError.textContent = '';
+      githubError.classList.remove('show');
+      return;
+    }
+
+    // Auto-add https:// if missing
+    if (value && !value.startsWith('http')) {
+      if (value.startsWith('github.com')) {
+        value = 'https://' + value;
+        githubInput.value = value;
+      } else if (value.includes('github.com')) {
+        value = 'https://' + value.substring(value.indexOf('github.com'));
+        githubInput.value = value;
+      }
+    }
+
+    let errorMsg = '';
+
+    if (!value.startsWith('http')) {
+      errorMsg = 'URL must start with https://';
+    } else if (!value.includes('github.com')) {
+      errorMsg = 'Must be a GitHub URL (github.com)';
+    } else if (!value.match(/github\.com\/[^\/]+\/[^\/]+/)) {
+      errorMsg = 'Include username and repo: github.com/username/repo';
+    } else if (value.includes(' ')) {
+      errorMsg = 'URL cannot contain spaces';
+    }
+
+    if (errorMsg) {
+      githubError.textContent = errorMsg;
+      githubError.classList.add('show');
+    } else {
+      githubError.textContent = '';
+      githubError.classList.remove('show');
+    }
+  }
+
+  githubInput.addEventListener('input', validateGitHub);
+  githubInput.addEventListener('blur', validateGitHub);
 </script>
