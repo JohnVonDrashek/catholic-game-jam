@@ -22,3 +22,12 @@ pnpm-debug.log*
 
 # jetbrains setting folder
 .idea/
+
+# Playwright MCP
+.playwright-mcp/
+
+# Claude memory files
+**/CLAUDE.md
+
+# VSCode
+.vscode/
