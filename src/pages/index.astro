@@ -271,29 +271,55 @@ const jamEnd = new Date('2026-02-14T18:00:00-06:00');
           <li>
             <span class="rule-number">1</span>
             <div class="rule-content">
-              <strong>Thou mayest build on the shoulders of giants</strong>
-              <p>Templates, repos, asset packs—feel free to use them. Or start from scratch. Both paths are blessed.</p>
+              <strong>Thou shalt use only free/open-source assets</strong>
+              <p>All assets (art, music, code, fonts) must be free and MIT-compatible so others can fork your game and build sequels. Sources like OpenGameArt, CC0/CC-BY content, and itch.io freebies are great. Paid asset packs are not allowed.</p>
+              <p class="rule-detail"><strong>Prior work:</strong> You can use your own pre-existing code/assets, as long as they're MIT-licensed.</p>
+              <p class="rule-detail"><strong>AI tools:</strong> Allowed if the generator grants you full rights to release output under MIT license.</p>
+              <p class="rule-example"><strong>OK:</strong> OpenGameArt sprites, Kenney assets, Google Fonts, your own pixel art, Suno AI music (check terms).<br/><strong>Not OK:</strong> Unity Asset Store purchases, stock photo subscriptions, ripped game sprites, fonts that say "personal use only."</p>
             </div>
           </li>
           <li>
             <span class="rule-number">2</span>
             <div class="rule-content">
-              <strong>Thou shalt share thy code (MIT license)</strong>
-              <p>What you receive freely, give freely. Your game becomes someone else's starting point.</p>
+              <strong>Thou shalt release under MIT license</strong>
+              <p>Your entire project—code and assets—must be MIT-licensed so future jammers can build on your work freely. No GPL, no "non-commercial only," no restrictive licenses. Include a LICENSE file in your repo.</p>
+              <p class="rule-detail"><strong>Why MIT?</strong> It's simple, permissive, and lets anyone use your work for anything—including commercial projects. The goal is growing a commons of Catholic games that anyone can build on.</p>
+              <p class="rule-example"><strong>OK:</strong> MIT, CC0, Unlicense, public domain.<br/><strong>Not OK:</strong> GPL (viral, forces same license), CC-BY-NC (no commercial), CC-BY-SA (share-alike), "All rights reserved," no license at all.</p>
             </div>
           </li>
           <li>
             <span class="rule-number">3</span>
             <div class="rule-content">
-              <strong>Thou shalt keep it holy</strong>
-              <p>Make something that would make your guardian angel proud. Ad maiorem Dei gloriam.</p>
+              <strong>Thou shalt keep it holy (T for Teen)</strong>
+              <p>Content rating: T for Teen / PG-13. Fantasy violence, mild peril, and intensity are fine (think Zelda or strategy games). No gore, no sexual content, no profanity. Treat the faith with respect—humor and creative takes welcome, mockery of sacraments or Church teaching is not. AMDG.</p>
+              <p class="rule-example"><strong>OK:</strong> Defeating demons with a holy sword, a tense exorcism scene, martyrdom depicted respectfully, funny saints doing funny things.<br/><strong>Not OK:</strong> Graphic torture, crude jokes about the Eucharist, portraying priests as villains because they're priests, excessive blood/dismemberment.</p>
             </div>
           </li>
           <li>
             <span class="rule-number">4</span>
             <div class="rule-content">
-              <strong>Thou shalt host thy creation on GitHub</strong>
-              <p>Upload your project with a solid README—include a download link or playable build so others can experience your work.</p>
+              <strong>Thou shalt make it playable</strong>
+              <p>Your game must be accessible without dev tools. Provide a web build, downloadable executable, or dead-simple install instructions. "Clone repo and run npm install" is fine; requiring Unity Editor is not.</p>
+              <p class="rule-detail"><strong>Game definition:</strong> Anything interactive counts—traditional games, visual novels, interactive fiction, toys, sandboxes. If a player can engage with it, it qualifies.</p>
+              <p class="rule-example"><strong>OK:</strong> Web game on GitHub Pages, .exe/.app download, "run `npm start` and open localhost:3000", HTML file you double-click.<br/><strong>Not OK:</strong> "Open in Unity and press Play," raw Python script with 10 dependencies, "compile from source with special flags."</p>
+            </div>
+          </li>
+          <li>
+            <span class="rule-number">5</span>
+            <div class="rule-content">
+              <strong>Thou shalt host on GitHub with a README</strong>
+              <p>Upload your project to GitHub with documentation: what the game is, how to play, how to run it, and credits for any assets used. This is how your work joins the commons.</p>
+              <p class="rule-detail"><strong>README must include:</strong> Game title and description, how to play/controls, how to run it (link to play or install steps), credits listing all third-party assets with sources, and screenshots or a gameplay GIF.</p>
+              <p class="rule-example"><strong>Good README:</strong> "St. Michael's Quest - A roguelike where you battle demons. WASD to move, Space to attack. Play at [link] or run `npm start`. Music: 'Epic Battle' by ComposerName (OpenGameArt, CC0)."<br/><strong>Bad README:</strong> "my game" with no instructions, missing credits, or no way to actually play it.</p>
+            </div>
+          </li>
+          <li>
+            <span class="rule-number">6</span>
+            <div class="rule-content">
+              <strong>Thou shalt submit by the deadline</strong>
+              <p>Judging is based on your repo state at jam end (Feb 14, 6PM CST). You can keep working after—the repo lives on—but judges score the deadline snapshot. Submit as many games as you want. No team size limits.</p>
+              <p class="rule-detail"><strong>Late submissions:</strong> Accepted but scored with a penalty.</p>
+              <p class="rule-detail"><strong>Rule violations:</strong> Disqualified from judging entirely.</p>
             </div>
           </li>
         </ol>
@@ -304,13 +330,15 @@ const jamEnd = new Date('2026-02-14T18:00:00-06:00');
     <section class="section section-alt" id="judging">
       <div class="container">
         <h2>How We Judge</h2>
-        <p class="section-intro">Every game gets scored on three criteria. Top scores win glory.</p>
+        <p class="section-intro">Every game gets scored on four criteria. Top scores win glory.</p>
+        <p class="judge-note">Judges may submit games but recuse themselves from scoring their own entries. Results announced within one week of jam end.</p>
 
         <div class="judging-grid">
           <div class="judging-card">
             <div class="judging-icon"><CrossIcon size={48} /></div>
             <h3>Catholic Integration</h3>
             <p>Is the faith woven into gameplay, or just decoration? We're looking for games where Catholicism shapes the experience.</p>
+            <p class="judging-example"><strong>5:</strong> Mechanics based on sacraments, prayer as game system, theological choices matter.<br/><strong>3:</strong> Saints as characters, rosary as inventory, church setting.<br/><strong>1:</strong> Cross on the title screen, generic game with "Catholic" in the name.</p>
             <div class="score-scale">
               <span class="score-label">5 = Essential</span>
               <span class="score-label">3 = Thematic</span>
@@ -322,6 +350,7 @@ const jamEnd = new Date('2026-02-14T18:00:00-06:00');
             <div class="judging-icon"><Icon name="gamepad" size={48} /></div>
             <h3>Gameplay/Fun</h3>
             <p>Is it enjoyable to play? Clear goals, satisfying loop, makes you want to keep going.</p>
+            <p class="judging-example"><strong>5:</strong> "One more run" feeling, clear objectives, rewarding progression, tight controls.<br/><strong>3:</strong> Functional gameplay, some fun moments, a few rough edges.<br/><strong>1:</strong> Confusing goals, frustrating controls, nothing to do, or softlocked.</p>
             <div class="score-scale">
               <span class="score-label">5 = Addictive</span>
               <span class="score-label">3 = Solid</span>
@@ -333,10 +362,23 @@ const jamEnd = new Date('2026-02-14T18:00:00-06:00');
             <div class="judging-icon"><Icon name="sun" size={48} /></div>
             <h3>Polish/Completeness</h3>
             <p>Does it feel finished? No major bugs, clear instructions, playable from start to end.</p>
+            <p class="judging-example"><strong>5:</strong> Title screen, clear UI, sound effects, win/lose states, no bugs, feels complete.<br/><strong>3:</strong> Playable start to finish, some placeholder art or missing sounds, minor bugs.<br/><strong>1:</strong> Crashes, no end state, placeholder everything, clearly unfinished.</p>
             <div class="score-scale">
               <span class="score-label">5 = Polished</span>
               <span class="score-label">3 = Playable</span>
               <span class="score-label">1 = Prototype</span>
+            </div>
+          </div>
+
+          <div class="judging-card">
+            <div class="judging-icon"><Icon name="notes" size={48} /></div>
+            <h3>Documentation</h3>
+            <p>Can the next jammer build on your work? Clear README, commented code, easy to understand and extend.</p>
+            <p class="judging-example"><strong>5:</strong> Great README with screenshots/GIF, code comments, clear file structure, easy to extend.<br/><strong>3:</strong> Basic README with instructions, code is readable but sparse comments, no visuals.<br/><strong>1:</strong> No README, cryptic variable names, impossible to understand or extend.</p>
+            <div class="score-scale">
+              <span class="score-label">5 = Exemplary</span>
+              <span class="score-label">3 = Adequate</span>
+              <span class="score-label">1 = Missing</span>
             </div>
           </div>
         </div>
@@ -355,6 +397,10 @@ const jamEnd = new Date('2026-02-14T18:00:00-06:00');
             <div class="award-badge award-fun">
               <span class="award-icon"><Icon name="gamepad" size={24} /></span>
               <span class="award-name">Best Gameplay</span>
+            </div>
+            <div class="award-badge award-docs">
+              <span class="award-icon"><Icon name="notes" size={24} /></span>
+              <span class="award-name">Best Documentation</span>
             </div>
             <div class="award-badge award-special">
               <span class="award-icon"><Icon name="moon-star" size={24} /></span>
@@ -462,17 +508,57 @@ const jamEnd = new Date('2026-02-14T18:00:00-06:00');
 
           <details class="faq-item">
             <summary>Do I HAVE to use existing code?</summary>
-            <p>Nope! Use a template if it helps you ship, or start from scratch if that's your style. No wrong answers here.</p>
+            <p>Nope! Use a template if it helps you ship, or start from scratch if that's your style. Just remember: all assets must be free/open-source and MIT-compatible. No paid asset packs.</p>
+          </details>
+
+          <details class="faq-item">
+            <summary>Can I use AI tools?</summary>
+            <p>Yes—for code, art, music, whatever—as long as the AI generator grants you full rights to release the output under MIT license. Check your tool's terms of service.</p>
           </details>
 
           <details class="faq-item">
             <summary>How do I submit my game?</summary>
-            <p>We'll drop the submission portal link to all registered players before the jam starts. Stay tuned!</p>
+            <p>Host your project on GitHub with a README, then submit the link through our submission portal (opens when the jam starts). Include a playable build or dead-simple install instructions.</p>
           </details>
 
           <details class="faq-item">
             <summary>What's the prize?</summary>
             <p>Eternal glory. And the joy of contributing to the Catholic game commons. No cash prizes—just the satisfaction of a quest completed.</p>
+          </details>
+
+          <details class="faq-item">
+            <summary>Can I use Unity/Godot/Unreal?</summary>
+            <p>Yes. Engine licenses are separate from your game's license. Your code and assets must be MIT, but the engine itself can have its own terms.</p>
+          </details>
+
+          <details class="faq-item">
+            <summary>Can I fork someone else's jam submission?</summary>
+            <p>Absolutely—that's the whole point of MIT licensing. Build on others' work, give credit, and keep the chain going.</p>
+          </details>
+
+          <details class="faq-item">
+            <summary>Can I submit the same game to other jams?</summary>
+            <p>Yes. MIT means your game is free to use anywhere. Enter as many jams as you like.</p>
+          </details>
+
+          <details class="faq-item">
+            <summary>How specific do credits need to be?</summary>
+            <p>List what you used and where it came from. "Music: 'Epic Battle' by ComposerName from OpenGameArt (CC0)" is perfect. A simple credits section in your README works great.</p>
+          </details>
+
+          <details class="faq-item">
+            <summary>Can I sell my game after the jam?</summary>
+            <p>Yes! MIT license means you (and anyone else) can use the code commercially. Build a business, release on Steam, go wild. The commons grows either way.</p>
+          </details>
+
+          <details class="faq-item">
+            <summary>Is there an age requirement?</summary>
+            <p>You must be 13 or older to participate (COPPA compliance). Minors should have parental permission.</p>
+          </details>
+
+          <details class="faq-item">
+            <summary>Can I stream my development?</summary>
+            <p>Yes, and we encourage it! Stream on Twitch, post devlogs, share progress on social media. Tag us and use #CatholicGameJam. Building in public builds community.</p>
           </details>
         </div>
       </div>
@@ -1354,7 +1440,9 @@ const jamEnd = new Date('2026-02-14T18:00:00-06:00');
   .rules-list li:nth-child(1)::after { border-color: var(--color-accent); }
   .rules-list li:nth-child(2)::after { border-color: var(--color-green); }
   .rules-list li:nth-child(3)::after { border-color: var(--color-red); }
-  .rules-list li:nth-child(4)::after { border-color: var(--color-blue); }
+  .rules-list li:nth-child(4)::after { border-color: var(--color-purple); }
+  .rules-list li:nth-child(5)::after { border-color: var(--color-blue); }
+  .rules-list li:nth-child(6)::after { border-color: #00BCD4; }
 
   .rules-list li:hover {
     transform: translateX(4px);
@@ -1401,11 +1489,27 @@ const jamEnd = new Date('2026-02-14T18:00:00-06:00');
   }
 
   .rules-list li:nth-child(4) .rule-number {
+    background: var(--color-purple);
+    color: white;
+    box-shadow:
+      inset -2px -2px 0 0 #3D2963,
+      inset 2px 2px 0 0 #8B6BB3;
+  }
+
+  .rules-list li:nth-child(5) .rule-number {
     background: var(--color-blue);
     color: white;
     box-shadow:
       inset -2px -2px 0 0 #0F2847,
       inset 2px 2px 0 0 #3A5A7F;
+  }
+
+  .rules-list li:nth-child(6) .rule-number {
+    background: #00BCD4;
+    color: white;
+    box-shadow:
+      inset -2px -2px 0 0 #00838F,
+      inset 2px 2px 0 0 #4DD0E1;
   }
 
   .rules-list li:hover .rule-number {
@@ -1426,6 +1530,39 @@ const jamEnd = new Date('2026-02-14T18:00:00-06:00');
     font-size: 0.9rem;
   }
 
+  .rule-content .rule-detail {
+    margin-top: 0.5rem;
+    font-size: 0.85rem;
+  }
+
+  .rule-content .rule-detail:first-of-type {
+    margin-top: 0.75rem;
+    padding-top: 0.75rem;
+    border-top: 1px dashed rgba(0, 0, 0, 0.15);
+  }
+
+  .rule-content .rule-detail strong {
+    display: inline;
+    font-size: inherit;
+    margin-bottom: 0;
+    color: var(--color-text);
+  }
+
+  .rule-content .rule-example {
+    margin-top: 0.75rem;
+    padding: 0.75rem;
+    background: rgba(0, 0, 0, 0.03);
+    border-left: 3px solid var(--color-accent);
+    font-size: 0.8rem;
+    line-height: 1.6;
+  }
+
+  .rule-content .rule-example strong {
+    display: inline;
+    font-size: inherit;
+    margin-bottom: 0;
+  }
+
   /* Judging */
   #judging {
     text-align: center;
@@ -1438,6 +1575,13 @@ const jamEnd = new Date('2026-02-14T18:00:00-06:00');
 
   #judging .section-intro {
     color: var(--color-text-muted);
+    margin-bottom: 0.5rem;
+  }
+
+  #judging .judge-note {
+    font-size: 0.85rem;
+    color: var(--color-text-muted);
+    font-style: italic;
     margin-bottom: 2rem;
   }
 
@@ -1451,18 +1595,9 @@ const jamEnd = new Date('2026-02-14T18:00:00-06:00');
     margin-right: auto;
   }
 
-  .judging-grid .judging-card:first-child {
-    grid-column: 1 / -1;
-    max-width: 340px;
-    margin: 0 auto;
-  }
-
   @media (max-width: 600px) {
     .judging-grid {
       grid-template-columns: 1fr;
-    }
-    .judging-grid .judging-card:first-child {
-      max-width: 100%;
     }
   }
 
@@ -1501,6 +1636,14 @@ const jamEnd = new Date('2026-02-14T18:00:00-06:00');
     line-height: 1.5;
   }
 
+  .judging-card .judging-example {
+    font-size: 0.75rem;
+    background: rgba(0, 0, 0, 0.03);
+    padding: 0.5rem 0.75rem;
+    border-left: 3px solid var(--color-accent);
+    text-align: left;
+  }
+
   .score-scale {
     display: flex;
     justify-content: space-between;
@@ -1529,9 +1672,18 @@ const jamEnd = new Date('2026-02-14T18:00:00-06:00');
     margin: 0 auto;
   }
 
+  .awards-grid .award-badge:last-child:nth-child(odd) {
+    grid-column: 1 / -1;
+    max-width: 240px;
+    margin: 0 auto;
+  }
+
   @media (max-width: 500px) {
     .awards-grid {
       grid-template-columns: 1fr;
+    }
+    .awards-grid .award-badge:last-child:nth-child(odd) {
+      max-width: 100%;
     }
   }
 
@@ -1562,6 +1714,11 @@ const jamEnd = new Date('2026-02-14T18:00:00-06:00');
 
   .award-fun {
     background: linear-gradient(135deg, #4CAF50, #2E7D32);
+    color: white;
+  }
+
+  .award-docs {
+    background: linear-gradient(135deg, #00BCD4, #0097A7);
     color: white;
   }
 
@@ -1789,8 +1946,16 @@ const jamEnd = new Date('2026-02-14T18:00:00-06:00');
   .faq-item:nth-child(1)::before { background: var(--color-blue); }
   .faq-item:nth-child(2)::before { background: var(--color-red); }
   .faq-item:nth-child(3)::before { background: var(--color-green); }
-  .faq-item:nth-child(4)::before { background: var(--color-purple); }
-  .faq-item:nth-child(5)::before { background: var(--color-accent); }
+  .faq-item:nth-child(4)::before { background: #00BCD4; }
+  .faq-item:nth-child(5)::before { background: var(--color-purple); }
+  .faq-item:nth-child(6)::before { background: var(--color-accent); }
+  .faq-item:nth-child(7)::before { background: var(--color-blue); }
+  .faq-item:nth-child(8)::before { background: var(--color-green); }
+  .faq-item:nth-child(9)::before { background: var(--color-red); }
+  .faq-item:nth-child(10)::before { background: var(--color-purple); }
+  .faq-item:nth-child(11)::before { background: var(--color-accent); }
+  .faq-item:nth-child(12)::before { background: #00BCD4; }
+  .faq-item:nth-child(13)::before { background: var(--color-green); }
 
   .faq-item summary {
     padding: 1rem 1.25rem 1rem 1.5rem;
