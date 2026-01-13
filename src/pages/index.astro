@@ -124,7 +124,16 @@ const jamEnd = new Date('2026-01-31T18:00:00-06:00');
           </div>
         </div>
       </div>
+      <!-- Background Music -->
+      <audio id="jam-music" loop muted>
+        <source src="/catholic-game-jam/audio/jam-music.mp3" type="audio/mpeg">
+      </audio>
+
       <div class="hero-content">
+        <button id="sound-toggle" class="sound-toggle" aria-label="Toggle music" title="Toggle music">
+          <span class="sound-icon sound-off">🔇</span>
+          <span class="sound-icon sound-on">🔊</span>
+        </button>
         <img src="/catholic-game-jam/logo.webp" alt="Catholic Game Jam Logo" class="hero-logo" />
         <h1>Catholic Game Jam</h1>
         <p class="tagline">Build something beautiful. Build on what came before.</p>
@@ -148,22 +157,37 @@ const jamEnd = new Date('2026-01-31T18:00:00-06:00');
           </div>
         </div>
 
-        <a href="#register" class="cta-button">
-          <span>Register Now</span>
-          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M5 12h14M12 5l7 7-7 7"/>
-          </svg>
-        </a>
+        <!-- NES-style Progress Bar -->
+        <div class="nes-progress-container">
+          <span class="progress-label">HYPE LEVEL</span>
+          <div class="nes-progress">
+            <div class="nes-progress-bar" id="hype-bar"></div>
+          </div>
+          <span class="progress-value">MAX</span>
+        </div>
+
+        <div class="hero-buttons">
+          <a href="#register" class="cta-button">
+            <span>Register Now</span>
+            <span class="pixel-arrow">▶</span>
+          </a>
+          <a href="https://discord.gg/8wh5x9m8" target="_blank" rel="noopener noreferrer" class="cta-button cta-button-discord">
+            <svg class="discord-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M20.317 4.37a19.791 19.791 0 0 0-4.885-1.515.074.074 0 0 0-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 0 0-5.487 0 12.64 12.64 0 0 0-.617-1.25.077.077 0 0 0-.079-.037A19.736 19.736 0 0 0 3.677 4.37a.07.07 0 0 0-.032.027C.533 9.046-.32 13.58.099 18.057a.082.082 0 0 0 .031.057 19.9 19.9 0 0 0 5.993 3.03.078.078 0 0 0 .084-.028 14.09 14.09 0 0 0 1.226-1.994.076.076 0 0 0-.041-.106 13.107 13.107 0 0 1-1.872-.892.077.077 0 0 1-.008-.128 10.2 10.2 0 0 0 .372-.292.074.074 0 0 1 .077-.01c3.928 1.793 8.18 1.793 12.062 0a.074.074 0 0 1 .078.01c.12.098.246.198.373.292a.077.077 0 0 1-.006.127 12.299 12.299 0 0 1-1.873.892.077.077 0 0 0-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 0 0 .084.028 19.839 19.839 0 0 0 6.002-3.03.077.077 0 0 0 .032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 0 0-.031-.03zM8.02 15.33c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.956-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.956 2.418-2.157 2.418zm7.975 0c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.955-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.946 2.418-2.157 2.418z"/>
+            </svg>
+            <span>Join Discord</span>
+          </a>
+        </div>
       </div>
     </section>
 
     <!-- Decorative Divider -->
     <div class="section-divider">
-      <span class="divider-dot"></span>
-      <span class="divider-dot"></span>
+      <span class="pixel-heart">♥</span>
+      <span class="pixel-heart">♥</span>
       <span class="divider-cross">✝</span>
-      <span class="divider-dot"></span>
-      <span class="divider-dot"></span>
+      <span class="pixel-heart">♥</span>
+      <span class="pixel-heart">♥</span>
     </div>
 
     <!-- About Section -->
@@ -188,14 +212,7 @@ const jamEnd = new Date('2026-01-31T18:00:00-06:00');
         <h2>Details</h2>
         <div class="details-grid">
           <div class="detail-card">
-            <div class="detail-icon">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
-                <line x1="16" y1="2" x2="16" y2="6"></line>
-                <line x1="8" y1="2" x2="8" y2="6"></line>
-                <line x1="3" y1="10" x2="21" y2="10"></line>
-              </svg>
-            </div>
+            <div class="detail-icon pixel-icon">⏰</div>
             <h3>When</h3>
             <p><strong>January 30, 2026</strong><br/>6:00 PM CST</p>
             <p class="detail-arrow">↓</p>
@@ -204,36 +221,21 @@ const jamEnd = new Date('2026-01-31T18:00:00-06:00');
           </div>
 
           <div class="detail-card">
-            <div class="detail-icon">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
-              </svg>
-            </div>
+            <div class="detail-icon pixel-icon">★</div>
             <h3>Theme</h3>
             <p>Make a <strong>recognizably Catholic</strong> game.</p>
             <p class="detail-note">Saints, sacraments, scripture, tradition—the faith is rich with inspiration.</p>
           </div>
 
           <div class="detail-card">
-            <div class="detail-icon">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
-                <circle cx="9" cy="7" r="4"></circle>
-                <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
-                <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
-              </svg>
-            </div>
+            <div class="detail-icon pixel-icon">👥</div>
             <h3>Teams</h3>
             <p>Solo or team—your choice.</p>
             <p class="detail-note">Any size, any composition.</p>
           </div>
 
           <div class="detail-card">
-            <div class="detail-icon">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"></path>
-              </svg>
-            </div>
+            <div class="detail-icon pixel-icon">🎮</div>
             <h3>Tools</h3>
             <p>Any engine, any language, any assets.</p>
             <p class="detail-note">Respect licenses. Build on foundations.</p>
@@ -279,11 +281,7 @@ const jamEnd = new Date('2026-01-31T18:00:00-06:00');
         <p class="register-intro">Join us for 24 hours of creation, collaboration, and Catholic game-making.</p>
         <a href="https://tally.so" target="_blank" rel="noopener noreferrer" class="cta-button cta-button-large">
           <span>Register on Tally</span>
-          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
-            <polyline points="15 3 21 3 21 9"></polyline>
-            <line x1="10" y1="14" x2="21" y2="3"></line>
-          </svg>
+          <span class="pixel-arrow">↗</span>
         </a>
       </div>
     </section>
@@ -325,17 +323,25 @@ const jamEnd = new Date('2026-01-31T18:00:00-06:00');
     <footer class="footer">
       <div class="container">
         <div class="footer-content">
+          <a href="https://discord.gg/8wh5x9m8" target="_blank" rel="noopener noreferrer" class="footer-link">
+            <svg class="footer-icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M20.317 4.37a19.791 19.791 0 0 0-4.885-1.515.074.074 0 0 0-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 0 0-5.487 0 12.64 12.64 0 0 0-.617-1.25.077.077 0 0 0-.079-.037A19.736 19.736 0 0 0 3.677 4.37a.07.07 0 0 0-.032.027C.533 9.046-.32 13.58.099 18.057a.082.082 0 0 0 .031.057 19.9 19.9 0 0 0 5.993 3.03.078.078 0 0 0 .084-.028 14.09 14.09 0 0 0 1.226-1.994.076.076 0 0 0-.041-.106 13.107 13.107 0 0 1-1.872-.892.077.077 0 0 1-.008-.128 10.2 10.2 0 0 0 .372-.292.074.074 0 0 1 .077-.01c3.928 1.793 8.18 1.793 12.062 0a.074.074 0 0 1 .078.01c.12.098.246.198.373.292a.077.077 0 0 1-.006.127 12.299 12.299 0 0 1-1.873.892.077.077 0 0 0-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 0 0 .084.028 19.839 19.839 0 0 0 6.002-3.03.077.077 0 0 0 .032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 0 0-.031-.03zM8.02 15.33c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.956-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.956 2.418-2.157 2.418zm7.975 0c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.955-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.946 2.418-2.157 2.418z"/>
+            </svg>
+            Discord
+          </a>
           <a href="https://github.com/JohnVonDrashek/catholic-game-jam" target="_blank" rel="noopener noreferrer" class="footer-link">
-            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+            <svg class="footer-icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
               <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
             </svg>
             GitHub
           </a>
           <a href="https://github.com/JohnVonDrashek/catholic-game-jam/blob/main/CODE_OF_CONDUCT.md" target="_blank" rel="noopener noreferrer" class="footer-link">
+            <span class="footer-icon">📜</span>
             Code of Conduct
           </a>
         </div>
         <p class="footer-credit">Made with ✝ by <a href="https://github.com/JohnVonDrashek">John VonDrashek</a></p>
+        <p class="footer-tagline">PRESS START TO JAM</p>
       </div>
     </footer>
   </main>
@@ -422,38 +428,65 @@ const jamEnd = new Date('2026-01-31T18:00:00-06:00');
     100% { transform: translateX(0); }
   }
 
+  /* Sound Toggle Button */
+  .sound-toggle {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    width: 40px;
+    height: 40px;
+    background: rgba(255, 255, 255, 0.9);
+    border: 3px solid var(--color-text);
+    border-radius: 0;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.25rem;
+    z-index: 10;
+    transition: all 0.1s ease;
+    box-shadow:
+      inset -2px -2px 0 0 #AAAAAA,
+      inset 2px 2px 0 0 #FFFFFF;
+  }
+
+  .sound-toggle:hover {
+    background: rgba(255, 255, 255, 1);
+    transform: scale(1.05);
+  }
+
+  .sound-toggle:active {
+    transform: scale(0.95);
+    box-shadow:
+      inset 2px 2px 0 0 #AAAAAA,
+      inset -2px -2px 0 0 #FFFFFF;
+  }
+
+  .sound-icon {
+    display: none;
+  }
+
+  .sound-toggle.muted .sound-off {
+    display: block;
+  }
+
+  .sound-toggle:not(.muted) .sound-on {
+    display: block;
+  }
+
   .hero-content {
     max-width: var(--max-width);
     position: relative;
     z-index: 1;
-    background: rgba(250, 250, 249, 0.95);
-    padding: 3rem;
-    border-radius: 24px;
+    background: rgba(250, 250, 249, 0.98);
+    padding: 2.5rem;
+    border-radius: 0;
     backdrop-filter: blur(12px);
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15), 0 0 0 1px rgba(255, 255, 255, 0.2);
-    overflow: hidden;
-  }
-
-  .hero-content::before {
-    content: '';
-    position: absolute;
-    top: -50%;
-    left: -50%;
-    width: 200%;
-    height: 200%;
-    background: linear-gradient(
-      45deg,
-      transparent 40%,
-      rgba(255, 255, 255, 0.3) 50%,
-      transparent 60%
-    );
-    animation: shimmer 8s ease-in-out infinite;
-    pointer-events: none;
-  }
-
-  @keyframes shimmer {
-    0% { transform: translateX(-100%) rotate(0deg); }
-    100% { transform: translateX(100%) rotate(0deg); }
+    /* NES-style border */
+    border: 4px solid var(--color-text);
+    box-shadow:
+      inset 0 0 0 2px white,
+      inset 0 0 0 4px var(--color-accent);
   }
 
   .hero-logo {
@@ -529,17 +562,27 @@ const jamEnd = new Date('2026-01-31T18:00:00-06:00');
   }
 
   .countdown-item {
-    background: rgba(255, 255, 255, 0.5);
-    padding: 1rem;
-    border-radius: 12px;
-    min-width: 80px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 0.75rem 1rem;
+    border-radius: 0;
+    min-width: 70px;
+    transition: transform 0.2s ease;
     cursor: default;
+    /* NES-style border */
+    border: 3px solid var(--color-text);
+    position: relative;
+  }
+
+  .countdown-item::after {
+    content: '';
+    position: absolute;
+    inset: 1px;
+    border: 2px solid var(--color-accent);
+    pointer-events: none;
   }
 
   .countdown-item:hover {
-    transform: translateY(-4px) scale(1.05);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    transform: translateY(-2px);
   }
 
   .countdown-item:nth-child(1) { animation: bounce-in 0.5s ease 0.1s both; }
@@ -553,45 +596,156 @@ const jamEnd = new Date('2026-01-31T18:00:00-06:00');
     100% { transform: scale(1); opacity: 1; }
   }
 
-  /* CTA Button */
+  /* NES Progress Bar */
+  .nes-progress-container {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 2rem;
+    justify-content: center;
+  }
+
+  .progress-label,
+  .progress-value {
+    font-family: var(--font-pixel);
+    font-size: 0.5rem;
+    color: var(--color-text-muted);
+  }
+
+  .progress-value {
+    color: var(--color-red);
+  }
+
+  .nes-progress {
+    width: 150px;
+    height: 20px;
+    background: white;
+    border: 4px solid var(--color-text);
+    position: relative;
+  }
+
+  .nes-progress::before {
+    content: '';
+    position: absolute;
+    inset: 2px;
+    border: 2px solid var(--color-border);
+  }
+
+  .nes-progress-bar {
+    height: 100%;
+    width: 85%;
+    background: linear-gradient(90deg,
+      var(--color-green) 0%,
+      var(--color-green) 33%,
+      var(--color-accent) 33%,
+      var(--color-accent) 66%,
+      var(--color-red) 66%,
+      var(--color-red) 100%
+    );
+    animation: progress-fill 2s ease-out forwards, progress-pulse 1s ease-in-out 2s infinite;
+  }
+
+  @keyframes progress-fill {
+    0% { width: 0%; }
+    100% { width: 85%; }
+  }
+
+  @keyframes progress-pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.7; }
+  }
+
+  /* Hero Buttons Container */
+  .hero-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  /* CTA Button - NES Style */
   .cta-button {
     display: inline-flex;
     align-items: center;
     gap: 0.75rem;
-    background: linear-gradient(135deg, var(--color-accent) 0%, #D4A017 100%);
+    background: var(--color-accent);
     color: white;
-    padding: 1rem 2rem;
-    border-radius: 8px;
-    font-weight: 600;
-    font-size: 1rem;
-    transition: all 0.3s ease;
-    box-shadow: 0 4px 14px rgba(184, 134, 11, 0.3);
-    animation: pulse-glow 2s ease-in-out infinite;
-  }
-
-  @keyframes pulse-glow {
-    0%, 100% { box-shadow: 0 4px 14px rgba(184, 134, 11, 0.3); }
-    50% { box-shadow: 0 4px 24px rgba(184, 134, 11, 0.5); }
+    padding: 1rem 1.5rem;
+    border-radius: 0;
+    font-family: var(--font-pixel);
+    font-weight: 400;
+    font-size: 0.7rem;
+    transition: all 0.1s ease;
+    position: relative;
+    border: none;
+    /* NES-style pixelated border */
+    box-shadow:
+      inset -4px -4px 0 0 #7A5A08,
+      inset 4px 4px 0 0 #E8B825;
+    image-rendering: pixelated;
   }
 
   .cta-button:hover {
-    background: var(--color-accent-hover);
+    background: #D4A017;
     color: white;
-    transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(184, 134, 11, 0.4);
+    transform: translateY(2px);
+    box-shadow:
+      inset -2px -2px 0 0 #7A5A08,
+      inset 2px 2px 0 0 #E8B825;
+  }
+
+  .cta-button:active {
+    transform: translateY(4px);
+    box-shadow:
+      inset 4px 4px 0 0 #7A5A08,
+      inset -4px -4px 0 0 #E8B825;
   }
 
   .cta-button svg {
-    transition: transform 0.3s ease;
+    transition: transform 0.1s ease;
+    width: 16px;
+    height: 16px;
   }
 
   .cta-button:hover svg {
-    transform: translateX(4px);
+    transform: translateX(2px);
   }
 
   .cta-button-large {
-    padding: 1.25rem 2.5rem;
-    font-size: 1.1rem;
+    padding: 1.25rem 2rem;
+    font-size: 0.75rem;
+  }
+
+  /* Discord Button - Purple variant */
+  .cta-button-discord {
+    background: #5865F2;
+    box-shadow:
+      inset -4px -4px 0 0 #4752C4,
+      inset 4px 4px 0 0 #7289DA;
+  }
+
+  .cta-button-discord:hover {
+    background: #6B77F5;
+    box-shadow:
+      inset -2px -2px 0 0 #4752C4,
+      inset 2px 2px 0 0 #7289DA;
+  }
+
+  .cta-button-discord:active {
+    box-shadow:
+      inset 4px 4px 0 0 #4752C4,
+      inset -4px -4px 0 0 #7289DA;
+  }
+
+  /* Pixel Arrow */
+  .pixel-arrow {
+    font-size: 0.8rem;
+    animation: arrow-bounce 0.6s ease-in-out infinite;
+  }
+
+  @keyframes arrow-bounce {
+    0%, 100% { transform: translateX(0); }
+    50% { transform: translateX(4px); }
   }
 
   /* Decorative Divider */
@@ -599,35 +753,50 @@ const jamEnd = new Date('2026-01-31T18:00:00-06:00');
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 1rem;
+    gap: 0.75rem;
     padding: 2rem 0;
     background: var(--color-bg);
   }
 
-  .divider-dot {
-    width: 8px;
-    height: 8px;
-    border-radius: 50%;
-    background: var(--color-accent);
-    opacity: 0.6;
+  .pixel-heart {
+    font-family: var(--font-pixel);
+    font-size: 0.8rem;
+    color: var(--color-red);
+    animation: heart-beat 1s ease-in-out infinite;
   }
 
-  .divider-dot:first-child,
-  .divider-dot:last-child {
-    width: 6px;
-    height: 6px;
-    opacity: 0.4;
+  .pixel-heart:nth-child(1) { animation-delay: 0s; }
+  .pixel-heart:nth-child(2) { animation-delay: 0.1s; }
+  .pixel-heart:nth-child(4) { animation-delay: 0.1s; }
+  .pixel-heart:nth-child(5) { animation-delay: 0s; }
+
+  @keyframes heart-beat {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.2); }
   }
 
   .divider-cross {
-    font-size: 1.5rem;
+    font-family: var(--font-pixel);
+    font-size: 1.2rem;
     color: var(--color-accent);
     animation: sparkle 2s ease-in-out infinite;
   }
 
   @keyframes sparkle {
-    0%, 100% { transform: scale(1); opacity: 1; }
-    50% { transform: scale(1.2); opacity: 0.8; }
+    0%, 100% { transform: scale(1) rotate(0deg); opacity: 1; }
+    50% { transform: scale(1.3) rotate(10deg); opacity: 0.9; }
+  }
+
+  /* NES-style Container */
+  .nes-container {
+    position: relative;
+    padding: 1.5rem;
+    background: white;
+    /* Pixelated border using box-shadow */
+    box-shadow:
+      0 0 0 4px white,
+      0 0 0 8px var(--color-text),
+      0 0 0 12px white;
   }
 
   /* Sections */
@@ -658,9 +827,12 @@ const jamEnd = new Date('2026-01-31T18:00:00-06:00');
   }
 
   .section h2 {
-    font-size: clamp(2rem, 5vw, 2.75rem);
-    margin-bottom: 2rem;
+    font-family: var(--font-pixel);
+    font-size: clamp(1rem, 3vw, 1.5rem);
+    font-weight: 400;
+    margin-bottom: 2.5rem;
     text-align: center;
+    line-height: 1.4;
   }
 
   #about h2 {
@@ -697,17 +869,27 @@ const jamEnd = new Date('2026-01-31T18:00:00-06:00');
 
   .philosophy {
     background: white;
-    padding: 2rem;
-    border-radius: 12px;
-    border-left: 4px solid var(--color-green);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    padding: 1.5rem 2rem;
+    border-radius: 0;
     text-align: left;
+    position: relative;
+    /* NES-style double border */
+    border: 4px solid var(--color-text);
+    box-shadow:
+      inset 0 0 0 2px white,
+      inset 0 0 0 4px var(--color-green);
   }
 
   .philosophy h3 {
-    font-size: 1.35rem;
+    font-family: var(--font-pixel);
+    font-size: 0.7rem;
     margin-bottom: 1rem;
     color: var(--color-green);
+    display: inline-block;
+    background: white;
+    padding: 0 0.5rem;
+    position: relative;
+    top: -0.5rem;
   }
 
   .philosophy p {
@@ -728,63 +910,62 @@ const jamEnd = new Date('2026-01-31T18:00:00-06:00');
   .detail-card {
     background: white;
     padding: 1.75rem;
-    border-radius: 12px;
-    border: 2px solid transparent;
+    border-radius: 0;
     text-align: center;
-    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+    transition: transform 0.2s ease;
+    /* NES-style border */
+    border: 4px solid var(--color-text);
+    position: relative;
+  }
+
+  .detail-card::before {
+    content: '';
+    position: absolute;
+    inset: 2px;
+    border: 2px solid var(--color-border);
+    pointer-events: none;
   }
 
   .detail-card:hover {
-    transform: translateY(-8px) scale(1.02);
-    box-shadow: 0 16px 32px rgba(0, 0, 0, 0.12);
+    transform: translateY(-4px);
   }
 
-  .detail-card:nth-child(1):hover { border-color: var(--color-blue); box-shadow: 0 16px 32px rgba(30, 58, 95, 0.2); }
-  .detail-card:nth-child(2):hover { border-color: var(--color-accent); box-shadow: 0 16px 32px rgba(184, 134, 11, 0.2); }
-  .detail-card:nth-child(3):hover { border-color: var(--color-green); box-shadow: 0 16px 32px rgba(45, 90, 61, 0.2); }
-  .detail-card:nth-child(4):hover { border-color: var(--color-purple); box-shadow: 0 16px 32px rgba(74, 48, 104, 0.2); }
+  .detail-card:nth-child(1)::before { border-color: var(--color-blue); }
+  .detail-card:nth-child(2)::before { border-color: var(--color-accent); }
+  .detail-card:nth-child(3)::before { border-color: var(--color-green); }
+  .detail-card:nth-child(4)::before { border-color: var(--color-purple); }
 
   .detail-card:hover .detail-icon {
-    transform: scale(1.1) rotate(5deg);
+    transform: scale(1.2);
+    animation: icon-bounce 0.3s ease;
+  }
+
+  @keyframes icon-bounce {
+    0%, 100% { transform: scale(1.2); }
+    50% { transform: scale(1.4); }
   }
 
   .detail-icon {
-    transition: transform 0.3s ease;
+    transition: transform 0.2s ease;
   }
 
-  .detail-icon {
-    width: 48px;
-    height: 48px;
-    border-radius: 12px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  .pixel-icon {
+    font-size: 2rem;
     margin: 0 auto 1rem;
+    display: block;
+    text-align: center;
   }
 
-  .detail-card:nth-child(1) .detail-icon {
-    background: linear-gradient(135deg, #E8F4FD 0%, #D1E9FA 100%);
-    color: var(--color-blue);
-  }
-
-  .detail-card:nth-child(2) .detail-icon {
-    background: linear-gradient(135deg, #FEF3C7 0%, #FDE68A 100%);
-    color: var(--color-accent);
-  }
-
-  .detail-card:nth-child(3) .detail-icon {
-    background: linear-gradient(135deg, #E8F5E9 0%, #C8E6C9 100%);
-    color: var(--color-green);
-  }
-
-  .detail-card:nth-child(4) .detail-icon {
-    background: linear-gradient(135deg, #F3E8FD 0%, #E1D1FA 100%);
-    color: var(--color-purple);
-  }
+  .detail-card:nth-child(1) .pixel-icon { color: var(--color-blue); }
+  .detail-card:nth-child(2) .pixel-icon { color: var(--color-accent); }
+  .detail-card:nth-child(3) .pixel-icon { color: var(--color-green); }
+  .detail-card:nth-child(4) .pixel-icon { color: var(--color-purple); }
 
   .detail-card h3 {
-    font-size: 1.1rem;
+    font-family: var(--font-pixel);
+    font-size: 0.65rem;
     margin-bottom: 0.75rem;
+    text-transform: uppercase;
   }
 
   .detail-card:nth-child(1) h3 { color: var(--color-blue); }
@@ -899,13 +1080,24 @@ const jamEnd = new Date('2026-01-31T18:00:00-06:00');
   #register .cta-button {
     background: white;
     color: var(--color-red);
+    box-shadow:
+      inset -4px -4px 0 0 #CCCCCC,
+      inset 4px 4px 0 0 #FFFFFF;
   }
 
   #register .cta-button:hover {
     background: #F5F5F4;
     color: var(--color-red);
-    transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+    transform: translateY(2px);
+    box-shadow:
+      inset -2px -2px 0 0 #CCCCCC,
+      inset 2px 2px 0 0 #FFFFFF;
+  }
+
+  #register .cta-button:active {
+    box-shadow:
+      inset 4px 4px 0 0 #CCCCCC,
+      inset -4px -4px 0 0 #FFFFFF;
   }
 
   /* FAQ */
@@ -917,31 +1109,44 @@ const jamEnd = new Date('2026-01-31T18:00:00-06:00');
 
   .faq-item {
     background: white;
-    border: 2px solid var(--color-border);
-    border-radius: 12px;
+    border: 3px solid var(--color-text);
+    border-radius: 0;
     overflow: hidden;
-    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    transition: transform 0.2s ease;
+    position: relative;
+  }
+
+  .faq-item::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 6px;
+    pointer-events: none;
   }
 
   .faq-item:hover {
-    border-color: var(--color-accent);
-    box-shadow: 0 4px 12px rgba(184, 134, 11, 0.15);
+    transform: translateX(4px);
   }
 
-  .faq-item:nth-child(1) { border-left: 4px solid var(--color-blue); }
-  .faq-item:nth-child(2) { border-left: 4px solid var(--color-red); }
-  .faq-item:nth-child(3) { border-left: 4px solid var(--color-green); }
-  .faq-item:nth-child(4) { border-left: 4px solid var(--color-purple); }
-  .faq-item:nth-child(5) { border-left: 4px solid var(--color-accent); }
+  .faq-item:nth-child(1)::before { background: var(--color-blue); }
+  .faq-item:nth-child(2)::before { background: var(--color-red); }
+  .faq-item:nth-child(3)::before { background: var(--color-green); }
+  .faq-item:nth-child(4)::before { background: var(--color-purple); }
+  .faq-item:nth-child(5)::before { background: var(--color-accent); }
 
   .faq-item summary {
-    padding: 1.25rem 1.5rem;
+    padding: 1rem 1.25rem 1rem 1.5rem;
     cursor: pointer;
-    font-weight: 600;
+    font-family: var(--font-pixel);
+    font-size: 0.55rem;
+    font-weight: 400;
     display: flex;
     justify-content: space-between;
     align-items: center;
     list-style: none;
+    line-height: 1.6;
   }
 
   .faq-item summary::-webkit-details-marker {
@@ -949,26 +1154,49 @@ const jamEnd = new Date('2026-01-31T18:00:00-06:00');
   }
 
   .faq-item summary::after {
-    content: '+';
-    font-size: 1.5rem;
+    content: '▶';
+    font-size: 0.7rem;
     color: var(--color-accent);
-    transition: transform 0.3s ease;
+    transition: transform 0.2s ease;
+    margin-left: 1rem;
   }
 
   .faq-item[open] summary::after {
-    transform: rotate(45deg);
+    transform: rotate(90deg);
   }
 
   .faq-item p {
     padding: 0 1.5rem 1.25rem;
     color: var(--color-text-muted);
+    font-size: 0.9rem;
   }
 
-  /* Footer */
+  /* Footer - NES Style */
   .footer {
     padding: 3rem 2rem;
-    background: var(--color-blue);
+    background: var(--color-text);
     color: white;
+    position: relative;
+  }
+
+  .footer::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: repeating-linear-gradient(
+      90deg,
+      var(--color-accent) 0px,
+      var(--color-accent) 8px,
+      var(--color-red) 8px,
+      var(--color-red) 16px,
+      var(--color-green) 16px,
+      var(--color-green) 24px,
+      var(--color-blue) 24px,
+      var(--color-blue) 32px
+    );
   }
 
   .footer-content {
@@ -983,22 +1211,51 @@ const jamEnd = new Date('2026-01-31T18:00:00-06:00');
     display: flex;
     align-items: center;
     gap: 0.5rem;
-    color: rgba(255, 255, 255, 0.8);
-    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.9);
+    font-family: var(--font-pixel);
+    font-size: 0.55rem;
+    padding: 0.5rem 0.75rem;
+    border: 2px solid transparent;
+    transition: all 0.1s ease;
   }
 
   .footer-link:hover {
     color: var(--color-accent);
+    border-color: var(--color-accent);
+    background: rgba(184, 134, 11, 0.1);
+  }
+
+  .footer-icon {
+    font-size: 1rem;
   }
 
   .footer-credit {
     text-align: center;
-    font-size: 0.875rem;
+    font-family: var(--font-pixel);
+    font-size: 0.45rem;
     color: rgba(255, 255, 255, 0.7);
+    margin-bottom: 1rem;
   }
 
   .footer-credit a {
     color: var(--color-accent);
+  }
+
+  .footer-credit a:hover {
+    text-decoration: underline;
+  }
+
+  .footer-tagline {
+    text-align: center;
+    font-family: var(--font-pixel);
+    font-size: 0.5rem;
+    color: var(--color-accent);
+    animation: blink 1s step-end infinite;
+  }
+
+  @keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
   }
 
   /* Mobile adjustments */
@@ -1043,4 +1300,28 @@ const jamEnd = new Date('2026-01-31T18:00:00-06:00');
 
   updateCountdown();
   setInterval(updateCountdown, 1000);
+
+  // Sound Toggle
+  const audio = document.getElementById('jam-music') as HTMLAudioElement;
+  const soundToggle = document.getElementById('sound-toggle')!;
+
+  // Start with muted class
+  soundToggle.classList.add('muted');
+
+  // Try to start playing (will be muted)
+  audio.play().catch(() => {
+    // Autoplay blocked, will play on first interaction
+  });
+
+  soundToggle.addEventListener('click', () => {
+    if (audio.muted) {
+      audio.muted = false;
+      soundToggle.classList.remove('muted');
+      // If not playing yet, start now
+      audio.play();
+    } else {
+      audio.muted = true;
+      soundToggle.classList.add('muted');
+    }
+  });
 </script>
