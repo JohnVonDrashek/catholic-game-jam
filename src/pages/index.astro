@@ -138,6 +138,11 @@ const jamEnd = new Date('2026-01-31T18:00:00-06:00');
         <h1>Catholic Game Jam</h1>
         <p class="tagline">24 hours. Infinite grace. One epic quest to make games for the glory of God.</p>
 
+        <div class="jam-date">
+          <span class="date-label">QUEST BEGINS</span>
+          <span class="date-value">JAN 30-31, 2026</span>
+        </div>
+
         <div class="countdown" id="countdown">
           <div class="countdown-item">
             <span class="countdown-value" id="days">--</span>
@@ -279,10 +284,78 @@ const jamEnd = new Date('2026-01-31T18:00:00-06:00');
       <div class="container">
         <h2>Join the Party</h2>
         <p class="register-intro">Ready, player? Lock in your spot and prepare for 24 hours of caffeinated creativity.</p>
-        <a href="https://tally.so" target="_blank" rel="noopener noreferrer" class="cta-button cta-button-large">
-          <span>Insert Coin to Play</span>
-          <span class="pixel-arrow">↗</span>
-        </a>
+
+        <form class="nes-form" action="https://formsubmit.co/johnvondrashek+catholicgamejam@gmail.com" method="POST">
+          <!-- Formsubmit config -->
+          <input type="hidden" name="_subject" value="New Catholic Game Jam Registration!">
+          <input type="hidden" name="_captcha" value="true">
+          <input type="hidden" name="_template" value="table">
+          <input type="text" name="_honey" style="display:none">
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="name" class="form-label">PLAYER NAME *</label>
+              <input type="text" id="name" name="name" required class="nes-input" placeholder="Enter your name">
+            </div>
+            <div class="form-group">
+              <label for="email" class="form-label">EMAIL *</label>
+              <input type="email" id="email" name="email" required class="nes-input" placeholder="your@email.com">
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="team" class="form-label">GUILD NAME</label>
+              <input type="text" id="team" name="team" class="nes-input" placeholder="Team name (optional)">
+            </div>
+            <div class="form-group">
+              <label for="experience" class="form-label">EXP LEVEL</label>
+              <select id="experience" name="experience" class="nes-select">
+                <option value="">Select level...</option>
+                <option value="novice">Novice (First jam)</option>
+                <option value="apprentice">Apprentice (1-2 jams)</option>
+                <option value="journeyman">Journeyman (3-5 jams)</option>
+                <option value="master">Master (5+ jams)</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label">CHARACTER CLASS (select all that apply)</label>
+            <div class="checkbox-group">
+              <label class="nes-checkbox-label">
+                <input type="checkbox" name="class[]" value="developer" class="nes-checkbox">
+                <span>Developer</span>
+              </label>
+              <label class="nes-checkbox-label">
+                <input type="checkbox" name="class[]" value="artist" class="nes-checkbox">
+                <span>Artist</span>
+              </label>
+              <label class="nes-checkbox-label">
+                <input type="checkbox" name="class[]" value="musician" class="nes-checkbox">
+                <span>Musician</span>
+              </label>
+              <label class="nes-checkbox-label">
+                <input type="checkbox" name="class[]" value="writer" class="nes-checkbox">
+                <span>Writer</span>
+              </label>
+              <label class="nes-checkbox-label">
+                <input type="checkbox" name="class[]" value="designer" class="nes-checkbox">
+                <span>Designer</span>
+              </label>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="message" class="form-label">BATTLE CRY (optional)</label>
+            <textarea id="message" name="message" class="nes-textarea" rows="3" placeholder="Anything else you want us to know?"></textarea>
+          </div>
+
+          <button type="submit" class="cta-button cta-button-large submit-btn">
+            <span>Insert Coin to Play</span>
+            <span class="pixel-arrow">▶</span>
+          </button>
+        </form>
       </div>
     </section>
 
@@ -523,8 +596,37 @@ const jamEnd = new Date('2026-01-31T18:00:00-06:00');
   .tagline {
     font-size: clamp(1.1rem, 3vw, 1.35rem);
     color: var(--color-text-muted);
-    margin-bottom: 3rem;
+    margin-bottom: 1.5rem;
     font-style: italic;
+  }
+
+  /* Jam Date */
+  .jam-date {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 2rem;
+    padding: 1rem 2rem;
+    background: var(--color-accent);
+    border: 4px solid var(--color-text);
+    box-shadow:
+      inset -4px -4px 0 0 #7A5A08,
+      inset 4px 4px 0 0 #E8B825;
+  }
+
+  .date-label {
+    font-family: var(--font-pixel);
+    font-size: 0.6rem;
+    color: rgba(255, 255, 255, 0.8);
+    letter-spacing: 0.1em;
+  }
+
+  .date-value {
+    font-family: var(--font-pixel);
+    font-size: clamp(1rem, 4vw, 1.4rem);
+    color: white;
+    text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.3);
   }
 
   /* Countdown */
@@ -1132,6 +1234,127 @@ const jamEnd = new Date('2026-01-31T18:00:00-06:00');
     box-shadow:
       inset 4px 4px 0 0 #CCCCCC,
       inset -4px -4px 0 0 #FFFFFF;
+  }
+
+  /* NES Form */
+  .nes-form {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: left;
+  }
+
+  .form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  @media (max-width: 600px) {
+    .form-row {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .form-group {
+    margin-bottom: 1rem;
+  }
+
+  .form-label {
+    display: block;
+    font-family: var(--font-pixel);
+    font-size: 0.6rem;
+    color: white;
+    margin-bottom: 0.5rem;
+    letter-spacing: 0.05em;
+  }
+
+  .nes-input,
+  .nes-select,
+  .nes-textarea {
+    width: 100%;
+    padding: 0.75rem;
+    font-family: var(--font-sans);
+    font-size: 1rem;
+    background: white;
+    border: 4px solid var(--color-text);
+    border-radius: 0;
+    box-shadow:
+      inset -4px -4px 0 0 #E7E5E4,
+      inset 4px 4px 0 0 #A8A29E;
+    outline: none;
+    transition: box-shadow 0.1s;
+  }
+
+  .nes-input:focus,
+  .nes-select:focus,
+  .nes-textarea:focus {
+    box-shadow:
+      inset -4px -4px 0 0 #FDE68A,
+      inset 4px 4px 0 0 #B8860B;
+    border-color: var(--color-accent);
+  }
+
+  .nes-input::placeholder,
+  .nes-textarea::placeholder {
+    color: #A8A29E;
+  }
+
+  .nes-select {
+    cursor: pointer;
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%231C1917' d='M2 4l4 4 4-4z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 0.75rem center;
+    padding-right: 2.5rem;
+  }
+
+  .nes-textarea {
+    resize: vertical;
+    min-height: 80px;
+  }
+
+  .checkbox-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+  }
+
+  .nes-checkbox-label {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 0.75rem;
+    background: white;
+    border: 3px solid var(--color-text);
+    cursor: pointer;
+    font-family: var(--font-sans);
+    font-size: 0.9rem;
+    color: var(--color-text);
+    transition: all 0.1s;
+  }
+
+  .nes-checkbox-label:hover {
+    background: #F5F5F4;
+  }
+
+  .nes-checkbox {
+    width: 18px;
+    height: 18px;
+    accent-color: var(--color-accent);
+    cursor: pointer;
+  }
+
+  .nes-checkbox-label:has(.nes-checkbox:checked) {
+    background: var(--color-accent);
+    color: white;
+    border-color: var(--color-text);
+  }
+
+  .submit-btn {
+    width: 100%;
+    margin-top: 1.5rem;
+    justify-content: center;
   }
 
   /* FAQ */
