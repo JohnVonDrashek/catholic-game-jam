@@ -1167,6 +1167,7 @@ const jamEnd = new Date('2026-01-31T18:00:00-06:00');
   .rules-list li:nth-child(1)::after { border-color: var(--color-accent); }
   .rules-list li:nth-child(2)::after { border-color: var(--color-green); }
   .rules-list li:nth-child(3)::after { border-color: var(--color-red); }
+  .rules-list li:nth-child(4)::after { border-color: var(--color-blue); }
 
   .rules-list li:hover {
     transform: translateX(4px);
@@ -1210,6 +1211,14 @@ const jamEnd = new Date('2026-01-31T18:00:00-06:00');
     box-shadow:
       inset -2px -2px 0 0 #5B1932,
       inset 2px 2px 0 0 #AB4962;
+  }
+
+  .rules-list li:nth-child(4) .rule-number {
+    background: var(--color-blue);
+    color: white;
+    box-shadow:
+      inset -2px -2px 0 0 #0F2847,
+      inset 2px 2px 0 0 #3A5A7F;
   }
 
   .rules-list li:hover .rule-number {
