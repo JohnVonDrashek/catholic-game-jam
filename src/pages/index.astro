@@ -130,10 +130,13 @@ const jamEnd = new Date('2026-01-31T18:00:00-06:00');
       </audio>
 
       <div class="hero-content">
-        <button id="sound-toggle" class="sound-toggle muted" aria-label="Toggle music" title="Toggle music">
-          <span class="sound-icon sound-off">♪✕</span>
-          <span class="sound-icon sound-on">♪♫</span>
-        </button>
+        <div class="sound-container">
+          <button id="sound-toggle" class="sound-toggle muted" aria-label="Toggle music" title="Toggle music">
+            <span class="sound-icon sound-off">♪✕</span>
+            <span class="sound-icon sound-on">♪♫</span>
+          </button>
+          <span class="sound-hint">◄ CLICK FOR MUSIC</span>
+        </div>
         <img src="/catholic-game-jam/logo.webp" alt="Catholic Game Jam Logo" class="hero-logo" />
         <h1>Catholic Game Jam</h1>
         <p class="tagline">24 hours. Infinite grace. One epic quest to make games for the glory of God.</p>
@@ -273,6 +276,13 @@ const jamEnd = new Date('2026-01-31T18:00:00-06:00');
             <div class="rule-content">
               <strong>Thou shalt keep it holy</strong>
               <p>Make something that would make your guardian angel proud. Ad maiorem Dei gloriam.</p>
+            </div>
+          </li>
+          <li>
+            <span class="rule-number">4</span>
+            <div class="rule-content">
+              <strong>Thou shalt host thy creation on GitHub</strong>
+              <p>Upload your project with a solid README—include a download link or playable build so others can experience your work.</p>
             </div>
           </li>
         </ol>
@@ -502,10 +512,34 @@ const jamEnd = new Date('2026-01-31T18:00:00-06:00');
   }
 
   /* Sound Toggle Button */
-  .sound-toggle {
+  .sound-container {
     position: absolute;
     top: 1rem;
     left: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .sound-hint {
+    font-family: var(--font-pixel);
+    font-size: 0.5rem;
+    color: var(--color-accent);
+    animation: blink 1s infinite;
+    white-space: nowrap;
+    transition: opacity 0.3s;
+  }
+
+  .sound-container.playing .sound-hint {
+    display: none;
+  }
+
+  @keyframes blink {
+    0%, 50% { opacity: 1; }
+    51%, 100% { opacity: 0; }
+  }
+
+  .sound-toggle {
     width: 44px;
     height: 44px;
     background: var(--color-accent);
@@ -1561,6 +1595,7 @@ const jamEnd = new Date('2026-01-31T18:00:00-06:00');
   // Sound Toggle
   const audio = document.getElementById('jam-music') as HTMLAudioElement;
   const soundToggle = document.getElementById('sound-toggle')!;
+  const soundContainer = soundToggle.parentElement!;
 
   soundToggle.addEventListener('click', () => {
     if (audio.paused) {
@@ -1568,6 +1603,7 @@ const jamEnd = new Date('2026-01-31T18:00:00-06:00');
       audio.muted = false;
       audio.play();
       soundToggle.classList.remove('muted');
+      soundContainer.classList.add('playing');
     } else if (audio.muted) {
       // Currently muted - unmute
       audio.muted = false;
