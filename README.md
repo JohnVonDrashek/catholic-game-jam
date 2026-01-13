@@ -6,7 +6,9 @@
 
 A week-long game jam for creators who want to make games that glorify God. February 7-14, 2026.
 
-**Live site:** [johnvondrashek.github.io/catholic-game-jam](https://johnvondrashek.github.io/catholic-game-jam)
+**Live site:** [catholicgamejam.com](https://catholicgamejam.com)
+
+![Site Preview](public/images/site-preview.gif)
 
 **Discord:** [Join the community](https://discord.gg/8wh5x9m8)
 
@@ -22,17 +24,19 @@ What you make here becomes part of that same commons. Future jams build on your 
 
 ### Judging Criteria
 
-Games are scored on three criteria (1-5 scale):
+Games are scored on four criteria (1-5 scale):
 
 - **Catholic Integration** - Is the faith woven into gameplay, or just decoration?
 - **Gameplay/Fun** - Is it enjoyable to play with clear goals and satisfying loops?
 - **Polish/Completeness** - Does it feel finished and playable from start to end?
+- **Documentation** - Can the next jammer build on your work?
 
 ### Awards
 
 - Best Overall
 - Best Catholic Integration
 - Best Gameplay
+- Best Documentation
 - Honorable Mention
 
 ## Features
