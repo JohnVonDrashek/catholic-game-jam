@@ -189,6 +189,11 @@ const jamEnd = new Date('2026-01-31T18:00:00-06:00');
             </svg>
             <span>Join Discord</span>
           </a>
+          <a href="/catholic-game-jam/submissions" id="submit-game-btn" class="cta-button cta-button-submit cta-button-locked">
+            <span class="lock-icon">🔒</span>
+            <span class="submit-text">Submit Game</span>
+            <span class="submit-status">(Opens at jam start)</span>
+          </a>
         </div>
       </div>
     </section>
@@ -903,6 +908,93 @@ const jamEnd = new Date('2026-01-31T18:00:00-06:00');
       inset -4px -4px 0 0 #4D8A5D;
   }
 
+  /* Submit Button */
+  .cta-button-submit {
+    background: #4CAF50;
+    flex-direction: column;
+    gap: 0.25rem;
+    box-shadow:
+      inset -4px -4px 0 0 #2D6A30,
+      inset 4px 4px 0 0 #6FCF73;
+  }
+
+  .cta-button-submit .lock-icon {
+    display: none;
+  }
+
+  .cta-button-submit .submit-status {
+    font-size: 0.5rem;
+    opacity: 0.8;
+  }
+
+  .cta-button-submit:hover {
+    background: #45A049;
+    box-shadow:
+      inset -2px -2px 0 0 #2D6A30,
+      inset 2px 2px 0 0 #6FCF73;
+  }
+
+  .cta-button-submit:active {
+    box-shadow:
+      inset 4px 4px 0 0 #2D6A30,
+      inset -4px -4px 0 0 #6FCF73;
+  }
+
+  /* Locked State */
+  .cta-button-submit.cta-button-locked {
+    background: #666;
+    cursor: not-allowed;
+    pointer-events: none;
+    box-shadow:
+      inset -4px -4px 0 0 #444,
+      inset 4px 4px 0 0 #888;
+  }
+
+  .cta-button-submit.cta-button-locked .lock-icon {
+    display: inline;
+  }
+
+  .cta-button-submit.cta-button-locked .submit-status {
+    color: #ccc;
+  }
+
+  /* Open State */
+  .cta-button-submit.cta-button-open {
+    pointer-events: auto;
+    cursor: pointer;
+    animation: pulse-submit 2s infinite;
+  }
+
+  .cta-button-submit.cta-button-open .submit-status {
+    display: none;
+  }
+
+  @keyframes pulse-submit {
+    0%, 100% { box-shadow: inset -4px -4px 0 0 #2D6A30, inset 4px 4px 0 0 #6FCF73, 0 0 0 0 rgba(76,175,80,0.4); }
+    50% { box-shadow: inset -4px -4px 0 0 #2D6A30, inset 4px 4px 0 0 #6FCF73, 0 0 20px 5px rgba(76,175,80,0.2); }
+  }
+
+  /* Closed State */
+  .cta-button-submit.cta-button-closed {
+    background: #9E9E9E;
+    pointer-events: none;
+    box-shadow:
+      inset -4px -4px 0 0 #666,
+      inset 4px 4px 0 0 #bbb;
+  }
+
+  .cta-button-submit.cta-button-closed .lock-icon {
+    display: none;
+  }
+
+  .cta-button-submit.cta-button-closed .submit-text::after {
+    content: ' (Closed)';
+  }
+
+  .cta-button-submit.cta-button-closed .submit-status {
+    display: none;
+  }
+
   /* Pixel Arrow */
   .pixel-arrow {
     font-size: 0.8rem;
@@ -1605,6 +1697,34 @@ const jamEnd = new Date('2026-01-31T18:00:00-06:00');
 
 <script>
   const jamStart = new Date('2026-01-30T18:00:00-06:00');
+  const jamEnd = new Date('2026-01-31T18:00:00-06:00');
+
+  // Update submit button state based on time
+  function updateSubmitButton() {
+    const now = Date.now();
+    const btn = document.getElementById('submit-game-btn');
+    if (!btn) return;
+
+    const startTime = jamStart.getTime();
+    const endTime = jamEnd.getTime();
+
+    if (now < startTime) {
+      // Before jam - locked
+      btn.classList.remove('cta-button-open', 'cta-button-closed');
+      btn.classList.add('cta-button-locked');
+    } else if (now >= startTime && now <= endTime) {
+      // During jam - open!
+      btn.classList.remove('cta-button-locked', 'cta-button-closed');
+      btn.classList.add('cta-button-open');
+    } else {
+      // After jam - closed
+      btn.classList.remove('cta-button-locked', 'cta-button-open');
+      btn.classList.add('cta-button-closed');
+    }
+  }
+
+  updateSubmitButton();
+  setInterval(updateSubmitButton, 1000);
 
   function updateCountdown() {
     const now = new Date();
