@@ -1,5 +1,7 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import Icon from '../components/Icon.astro';
+import CrossIcon from '../components/CrossIcon.astro';
 
 const jamStart = new Date('2026-02-07T18:00:00-06:00');
 const jamEnd = new Date('2026-02-14T18:00:00-06:00');
@@ -139,7 +141,7 @@ const jamEnd = new Date('2026-02-14T18:00:00-06:00');
         </div>
         <img src="/catholic-game-jam/logo.webp" alt="Catholic Game Jam Logo" class="hero-logo" />
         <h1>Catholic Game Jam</h1>
-        <p class="tagline">24 hours. Infinite grace. One epic quest to make games for the glory of God.</p>
+        <p class="tagline">7 days. Infinite grace. One epic quest to make games for the glory of God.</p>
 
         <div class="jam-date">
           <span class="date-label">QUEST BEGINS</span>
@@ -181,7 +183,7 @@ const jamEnd = new Date('2026-02-14T18:00:00-06:00');
           </a>
           <a href="/catholic-game-jam/resources" class="cta-button cta-button-resources">
             <span>Resources</span>
-            <span class="pixel-arrow">📦</span>
+            <Icon name="gift" size={18} />
           </a>
           <a href="https://discord.gg/8wh5x9m8" target="_blank" rel="noopener noreferrer" class="cta-button cta-button-discord">
             <svg class="discord-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
@@ -190,7 +192,7 @@ const jamEnd = new Date('2026-02-14T18:00:00-06:00');
             <span>Join Discord</span>
           </a>
           <a href="/catholic-game-jam/submissions" id="submit-game-btn" class="cta-button cta-button-submit cta-button-locked">
-            <span class="lock-icon">🔒</span>
+            <span class="lock-icon"><Icon name="lock" size={16} /></span>
             <span class="submit-text">Submit Game</span>
             <span class="submit-status">(Opens at jam start)</span>
           </a>
@@ -200,11 +202,11 @@ const jamEnd = new Date('2026-02-14T18:00:00-06:00');
 
     <!-- Decorative Divider -->
     <div class="section-divider">
-      <span class="pixel-heart">♥</span>
-      <span class="pixel-heart">♥</span>
-      <span class="divider-cross">✝</span>
-      <span class="pixel-heart">♥</span>
-      <span class="pixel-heart">♥</span>
+      <span class="pixel-heart"><Icon name="heart" size={20} /></span>
+      <span class="pixel-heart"><Icon name="heart" size={20} /></span>
+      <span class="divider-cross"><CrossIcon size={28} /></span>
+      <span class="pixel-heart"><Icon name="heart" size={20} /></span>
+      <span class="pixel-heart"><Icon name="heart" size={20} /></span>
     </div>
 
     <!-- About Section -->
@@ -229,30 +231,30 @@ const jamEnd = new Date('2026-02-14T18:00:00-06:00');
         <h2>Game Stats</h2>
         <div class="details-grid">
           <div class="detail-card">
-            <div class="detail-icon pixel-icon">⏰</div>
+            <div class="detail-icon pixel-icon"><Icon name="clock" size={48} /></div>
             <h3>When</h3>
             <p><strong>February 7, 2026</strong><br/>6:00 PM CST</p>
             <p class="detail-arrow">↓</p>
             <p><strong>February 14, 2026</strong><br/>6:00 PM CST</p>
-            <p class="detail-duration">24-hour sprint!</p>
+            <p class="detail-duration">One week quest!</p>
           </div>
 
           <div class="detail-card">
-            <div class="detail-icon pixel-icon">★</div>
+            <div class="detail-icon pixel-icon"><Icon name="moon-star" size={48} /></div>
             <h3>Theme</h3>
             <p>Make it <strong>unmistakably Catholic</strong>.</p>
             <p class="detail-note">Saints, sacraments, scripture, miracles—2,000 years of epic material awaits.</p>
           </div>
 
           <div class="detail-card">
-            <div class="detail-icon pixel-icon">👥</div>
+            <div class="detail-icon pixel-icon"><Icon name="users" size={48} /></div>
             <h3>Party Size</h3>
             <p>Go solo or assemble your guild.</p>
             <p class="detail-note">Lone wolves and raid parties both welcome.</p>
           </div>
 
           <div class="detail-card">
-            <div class="detail-icon pixel-icon">🎮</div>
+            <div class="detail-icon pixel-icon"><Icon name="gamepad" size={48} /></div>
             <h3>Loadout</h3>
             <p>Bring whatever weapons you've got.</p>
             <p class="detail-note">Any engine, any language. Just respect the licenses.</p>
@@ -306,7 +308,7 @@ const jamEnd = new Date('2026-02-14T18:00:00-06:00');
 
         <div class="judging-grid">
           <div class="judging-card">
-            <div class="judging-icon">✝️</div>
+            <div class="judging-icon"><CrossIcon size={48} /></div>
             <h3>Catholic Integration</h3>
             <p>Is the faith woven into gameplay, or just decoration? We're looking for games where Catholicism shapes the experience.</p>
             <div class="score-scale">
@@ -317,7 +319,7 @@ const jamEnd = new Date('2026-02-14T18:00:00-06:00');
           </div>
 
           <div class="judging-card">
-            <div class="judging-icon">🎮</div>
+            <div class="judging-icon"><Icon name="gamepad" size={48} /></div>
             <h3>Gameplay/Fun</h3>
             <p>Is it enjoyable to play? Clear goals, satisfying loop, makes you want to keep going.</p>
             <div class="score-scale">
@@ -328,7 +330,7 @@ const jamEnd = new Date('2026-02-14T18:00:00-06:00');
           </div>
 
           <div class="judging-card">
-            <div class="judging-icon">✨</div>
+            <div class="judging-icon"><Icon name="sun" size={48} /></div>
             <h3>Polish/Completeness</h3>
             <p>Does it feel finished? No major bugs, clear instructions, playable from start to end.</p>
             <div class="score-scale">
@@ -343,19 +345,19 @@ const jamEnd = new Date('2026-02-14T18:00:00-06:00');
           <h3>Awards</h3>
           <div class="awards-grid">
             <div class="award-badge award-gold">
-              <span class="award-icon">🏆</span>
+              <span class="award-icon"><Icon name="trophy" size={24} /></span>
               <span class="award-name">Best Overall</span>
             </div>
             <div class="award-badge award-faith">
-              <span class="award-icon">⛪</span>
+              <span class="award-icon"><Icon name="book-open" size={24} /></span>
               <span class="award-name">Best Catholic Integration</span>
             </div>
             <div class="award-badge award-fun">
-              <span class="award-icon">🕹️</span>
+              <span class="award-icon"><Icon name="gamepad" size={24} /></span>
               <span class="award-name">Best Gameplay</span>
             </div>
             <div class="award-badge award-special">
-              <span class="award-icon">⭐</span>
+              <span class="award-icon"><Icon name="moon-star" size={24} /></span>
               <span class="award-name">Honorable Mention</span>
             </div>
           </div>
@@ -367,7 +369,7 @@ const jamEnd = new Date('2026-02-14T18:00:00-06:00');
     <section class="section section-alt" id="register">
       <div class="container">
         <h2>Join the Party</h2>
-        <p class="register-intro">Ready, player? Lock in your spot and prepare for 24 hours of caffeinated creativity.</p>
+        <p class="register-intro">Ready, player? Lock in your spot and prepare for a week of caffeinated creativity.</p>
 
         <form class="nes-form" action="https://formsubmit.co/johnvondrashek+catholicgamejam@gmail.com" method="POST">
           <!-- Formsubmit config -->
@@ -493,15 +495,15 @@ const jamEnd = new Date('2026-02-14T18:00:00-06:00');
             GitHub
           </a>
           <a href="/catholic-game-jam/resources" class="footer-link">
-            <span class="footer-icon">📦</span>
+            <span class="footer-icon"><Icon name="gift" size={18} /></span>
             Resources
           </a>
           <a href="https://github.com/JohnVonDrashek/catholic-game-jam/blob/main/CODE_OF_CONDUCT.md" target="_blank" rel="noopener noreferrer" class="footer-link">
-            <span class="footer-icon">📜</span>
+            <span class="footer-icon"><Icon name="notes" size={18} /></span>
             Code of Conduct
           </a>
         </div>
-        <p class="footer-credit">Made with ✝ by <a href="https://github.com/JohnVonDrashek">John VonDrashek</a></p>
+        <p class="footer-credit">Made with <CrossIcon size={12} /> by <a href="https://github.com/JohnVonDrashek">John VonDrashek</a></p>
         <p class="footer-tagline">PRESS START TO JAM</p>
       </div>
     </footer>

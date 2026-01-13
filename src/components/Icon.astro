@@ -1,0 +1,38 @@
+---
+import fs from 'node:fs';
+import path from 'node:path';
+
+interface Props {
+  name: string;
+  size?: number;
+  class?: string;
+}
+
+const { name, size = 24, class: className = '' } = Astro.props;
+
+// Read the SVG content at build time
+const iconPath = path.resolve('node_modules/pixelarticons/svg', `${name}.svg`);
+const svgContent = fs.readFileSync(iconPath, 'utf-8');
+
+// Extract the path element(s) from the SVG
+const pathMatch = svgContent.match(/<path[^>]*\/>/g);
+const paths = pathMatch ? pathMatch.join('') : '';
+---
+
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  viewBox="0 0 24 24"
+  fill="currentColor"
+  width={size}
+  height={size}
+  class:list={['pixel-icon-svg', className]}
+  aria-hidden="true"
+  set:html={paths}
+/>
+
+<style>
+  .pixel-icon-svg {
+    display: inline-block;
+    vertical-align: middle;
+  }
+</style>

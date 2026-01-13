@@ -1,5 +1,7 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import Icon from '../components/Icon.astro';
+import CrossIcon from '../components/CrossIcon.astro';
 
 const jamStart = new Date('2026-02-07T18:00:00-06:00');
 const jamEnd = new Date('2026-02-14T18:00:00-06:00');
@@ -31,7 +33,7 @@ const jamEnd = new Date('2026-02-14T18:00:00-06:00');
       <div class="container">
         <div id="submission-form-container" class="form-container">
           <div class="lock-overlay" id="lock-overlay">
-            <div class="lock-icon">🔒</div>
+            <div class="lock-icon"><Icon name="lock" size={48} /></div>
             <h2>Submissions Not Yet Open</h2>
             <p>The submission portal opens when the jam starts.</p>
             <div class="countdown-mini" id="countdown-mini"></div>
@@ -126,22 +128,22 @@ const jamEnd = new Date('2026-02-14T18:00:00-06:00');
         <h2>Submission Tips</h2>
         <div class="tips-grid">
           <div class="tip-card">
-            <span class="tip-icon">📦</span>
+            <span class="tip-icon"><Icon name="gift" size={32} /></span>
             <h3>Host Your Game</h3>
             <p>Upload to itch.io (free), GitHub releases, or any hosting service. Make sure it's publicly accessible.</p>
           </div>
           <div class="tip-card">
-            <span class="tip-icon">📝</span>
+            <span class="tip-icon"><Icon name="edit" size={32} /></span>
             <h3>Include Instructions</h3>
             <p>Add a README or description with controls, how to play, and any known issues.</p>
           </div>
           <div class="tip-card">
-            <span class="tip-icon">📸</span>
+            <span class="tip-icon"><Icon name="camera" size={32} /></span>
             <h3>Add Screenshots</h3>
             <p>Include at least one screenshot or GIF in your README showing your game in action.</p>
           </div>
           <div class="tip-card">
-            <span class="tip-icon">✝️</span>
+            <span class="tip-icon"><CrossIcon size={32} /></span>
             <h3>Explain the Faith</h3>
             <p>Briefly describe how your game incorporates Catholic themes - judges want to understand your vision!</p>
           </div>
