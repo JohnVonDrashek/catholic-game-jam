@@ -342,23 +342,23 @@ const jamEnd = new Date('2026-02-14T18:00:00-06:00');
           <div class="form-group">
             <label class="form-label">CHARACTER CLASS (select all that apply)</label>
             <div class="checkbox-group">
-              <label class="nes-checkbox-label">
+              <label class="nes-checkbox-label class-developer">
                 <input type="checkbox" name="class[]" value="developer" class="nes-checkbox">
                 <span>Developer</span>
               </label>
-              <label class="nes-checkbox-label">
+              <label class="nes-checkbox-label class-artist">
                 <input type="checkbox" name="class[]" value="artist" class="nes-checkbox">
                 <span>Artist</span>
               </label>
-              <label class="nes-checkbox-label">
+              <label class="nes-checkbox-label class-musician">
                 <input type="checkbox" name="class[]" value="musician" class="nes-checkbox">
                 <span>Musician</span>
               </label>
-              <label class="nes-checkbox-label">
+              <label class="nes-checkbox-label class-writer">
                 <input type="checkbox" name="class[]" value="writer" class="nes-checkbox">
                 <span>Writer</span>
               </label>
-              <label class="nes-checkbox-label">
+              <label class="nes-checkbox-label class-designer">
                 <input type="checkbox" name="class[]" value="designer" class="nes-checkbox">
                 <span>Designer</span>
               </label>
@@ -1509,10 +1509,35 @@ const jamEnd = new Date('2026-02-14T18:00:00-06:00');
   }
 
   .nes-checkbox-label:has(.nes-checkbox:checked) {
-    background: var(--color-accent);
     color: white;
     border-color: var(--color-text);
   }
+
+  /* Character class colors */
+  .class-developer { border-color: #00BCD4; }
+  .class-developer span { color: #00BCD4; }
+  .class-developer:has(.nes-checkbox:checked) { background: #00BCD4; }
+  .class-developer:has(.nes-checkbox:checked) span { color: white; }
+
+  .class-artist { border-color: #E91E63; }
+  .class-artist span { color: #E91E63; }
+  .class-artist:has(.nes-checkbox:checked) { background: #E91E63; }
+  .class-artist:has(.nes-checkbox:checked) span { color: white; }
+
+  .class-musician { border-color: #9C27B0; }
+  .class-musician span { color: #9C27B0; }
+  .class-musician:has(.nes-checkbox:checked) { background: #9C27B0; }
+  .class-musician:has(.nes-checkbox:checked) span { color: white; }
+
+  .class-writer { border-color: #FF9800; }
+  .class-writer span { color: #FF9800; }
+  .class-writer:has(.nes-checkbox:checked) { background: #FF9800; }
+  .class-writer:has(.nes-checkbox:checked) span { color: white; }
+
+  .class-designer { border-color: #4CAF50; }
+  .class-designer span { color: #4CAF50; }
+  .class-designer:has(.nes-checkbox:checked) { background: #4CAF50; }
+  .class-designer:has(.nes-checkbox:checked) span { color: white; }
 
   .submit-btn {
     width: 100%;
