@@ -147,8 +147,130 @@ import Layout from '../layouts/Layout.astro';
       </div>
     </section>
 
+    <!-- Programming Frameworks -->
+    <section class="section section-alt" id="frameworks">
+      <div class="container">
+        <h2>Programming Frameworks</h2>
+        <p class="section-intro">For coders who prefer writing code over visual editors. Libraries and frameworks for various languages.</p>
+
+        <div class="resource-category">
+          <h3 class="category-title intermediate">Cross-Platform</h3>
+          <div class="resource-grid">
+            <a href="https://www.monogame.net/" target="_blank" rel="noopener noreferrer" class="resource-card">
+              <div class="card-header">
+                <span class="resource-logo resource-logo-img" style="background: #1a1a2e;">
+                  <img src="/catholic-game-jam/images/logos/monogame.png" alt="MonoGame" />
+                </span>
+                <div>
+                  <span class="resource-badge">C#</span>
+                  <h4>MonoGame</h4>
+                </div>
+              </div>
+              <p>Open source C# framework. Spiritual successor to XNA. Made Celeste, Stardew Valley, and more.</p>
+            </a>
+            <a href="https://libgdx.com/" target="_blank" rel="noopener noreferrer" class="resource-card">
+              <div class="card-header">
+                <span class="resource-logo resource-logo-img" style="background: #E74B2F;">
+                  <img src="/catholic-game-jam/images/logos/libgdx.png" alt="libGDX" />
+                </span>
+                <div>
+                  <span class="resource-badge">JAVA</span>
+                  <h4>libGDX</h4>
+                </div>
+              </div>
+              <p>Cross-platform Java game framework. Deploy to desktop, Android, iOS, and web from one codebase.</p>
+            </a>
+            <a href="https://www.raylib.com/" target="_blank" rel="noopener noreferrer" class="resource-card">
+              <div class="card-header">
+                <span class="resource-logo resource-logo-img" style="background: #191919;">
+                  <img src="/catholic-game-jam/images/logos/raylib.png" alt="raylib" />
+                </span>
+                <div>
+                  <span class="resource-badge">C/C++</span>
+                  <h4>raylib</h4>
+                </div>
+              </div>
+              <p>Simple and easy-to-use library for game programming. Great for learning. Bindings for 50+ languages.</p>
+            </a>
+          </div>
+        </div>
+
+        <div class="resource-category">
+          <h3 class="category-title rust">Rust</h3>
+          <div class="resource-grid">
+            <a href="https://bevyengine.org/" target="_blank" rel="noopener noreferrer" class="resource-card">
+              <div class="card-header">
+                <span class="resource-logo resource-logo-img" style="background: #232326;">
+                  <img src="/catholic-game-jam/images/logos/bevy.png" alt="Bevy" />
+                </span>
+                <div>
+                  <span class="resource-badge">ECS</span>
+                  <h4>Bevy</h4>
+                </div>
+              </div>
+              <p>Data-driven game engine in Rust. Fast compile times, ECS architecture. Growing rapidly.</p>
+            </a>
+            <a href="https://macroquad.rs/" target="_blank" rel="noopener noreferrer" class="resource-card">
+              <div class="card-header">
+                <span class="resource-logo resource-logo-img" style="background: #3776AB;">
+                  <img src="/catholic-game-jam/images/logos/macroquad.png" alt="Macroquad" />
+                </span>
+                <div>
+                  <span class="resource-badge">SIMPLE</span>
+                  <h4>Macroquad</h4>
+                </div>
+              </div>
+              <p>Simple Rust game library inspired by raylib. Compiles to WASM. Great for jam games.</p>
+            </a>
+          </div>
+        </div>
+
+        <div class="resource-category">
+          <h3 class="category-title web">Web & Scripting</h3>
+          <div class="resource-grid">
+            <a href="https://phaser.io/" target="_blank" rel="noopener noreferrer" class="resource-card">
+              <div class="card-header">
+                <span class="resource-logo resource-logo-img" style="background: #1D1F24;">
+                  <img src="/catholic-game-jam/images/logos/phaser.png" alt="Phaser" />
+                </span>
+                <div>
+                  <span class="resource-badge">JAVASCRIPT</span>
+                  <h4>Phaser</h4>
+                </div>
+              </div>
+              <p>Fast 2D HTML5 game framework. Huge community, tons of examples. Perfect for web games.</p>
+            </a>
+            <a href="https://www.pygame.org/" target="_blank" rel="noopener noreferrer" class="resource-card">
+              <div class="card-header">
+                <span class="resource-logo resource-logo-img" style="background: #306998;">
+                  <img src="/catholic-game-jam/images/logos/pygame.png" alt="Pygame" />
+                </span>
+                <div>
+                  <span class="resource-badge">PYTHON</span>
+                  <h4>Pygame</h4>
+                </div>
+              </div>
+              <p>Classic Python game library. Easy to learn, great for prototypes. Huge learning community.</p>
+            </a>
+            <a href="https://kaboomjs.com/" target="_blank" rel="noopener noreferrer" class="resource-card">
+              <div class="card-header">
+                <span class="resource-logo resource-logo-img" style="background: #6BC96D;">
+                  <img src="/catholic-game-jam/images/logos/kaboom.png" alt="Kaboom" />
+                </span>
+                <div>
+                  <span class="resource-badge">JAVASCRIPT</span>
+                  <h4>Kaboom.js</h4>
+                </div>
+              </div>
+              <p>Fun and fast JavaScript game library. Simple API, great docs. Perfect for quick prototypes.</p>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- Art & Graphics -->
-    <section class="section section-alt" id="art">
+    <section class="section" id="art">
       <div class="container">
         <h2>Art & Graphics</h2>
         <p class="section-intro">Free assets and tools for creating visuals.</p>
@@ -469,17 +591,17 @@ import Layout from '../layouts/Layout.astro';
             </div>
             <p>Articles on game design principles, career advice, and industry insights.</p>
           </a>
-          <a href="https://gamejam.com/resources" target="_blank" rel="noopener noreferrer" class="resource-card">
+          <a href="https://www.gamedeveloper.com/game-platforms/game-jam-beginner-tips-for-success" target="_blank" rel="noopener noreferrer" class="resource-card">
             <div class="card-header">
-              <span class="resource-logo resource-logo-img" style="background: #00BCD4;">
-                <img src="/catholic-game-jam/images/logos/gamejam.png" alt="Game Jam Guide" />
+              <span class="resource-logo resource-logo-img" style="background: #1a1a2e;">
+                <img src="/catholic-game-jam/images/logos/gamedeveloper.png" alt="Game Developer" />
               </span>
               <div>
                 <span class="resource-badge">JAM TIPS</span>
-                <h4>Game Jam Guide</h4>
+                <h4>Game Jam Tips</h4>
               </div>
             </div>
-            <p>Tips specifically for game jams. Scope management, time planning, finishing games.</p>
+            <p>Essential tips for game jam success. Scope management, time planning, and finishing games.</p>
           </a>
         </div>
       </div>
@@ -666,6 +788,16 @@ import Layout from '../layouts/Layout.astro';
   .category-title.tools {
     background: var(--color-blue);
     color: white;
+  }
+
+  .category-title.rust {
+    background: #B7410E;
+    color: white;
+  }
+
+  .category-title.web {
+    background: #F7DF1E;
+    color: #1a1a2e;
   }
 
   /* Resource Grid */
