@@ -139,7 +139,15 @@ const jamEnd = new Date('2026-02-14T18:00:00-06:00');
           </button>
           <span class="sound-hint">◄ CLICK FOR MUSIC</span>
         </div>
-        <img src="/logo.webp" alt="Catholic Game Jam Logo" class="hero-logo" />
+        <div class="cartridge-wrapper">
+          <div class="cartridge-shadow"></div>
+          <div class="cartridge-scene">
+            <div class="cartridge" role="img" aria-label="Catholic Game Jam - NES Cartridge Logo">
+              <div class="cartridge-face cartridge-front"></div>
+              <div class="cartridge-face cartridge-back"></div>
+            </div>
+          </div>
+        </div>
         <h1>Catholic Game Jam</h1>
         <p class="tagline">7 days. Infinite grace. One epic quest to make games for the glory of God.</p>
 
@@ -819,19 +827,81 @@ const jamEnd = new Date('2026-02-14T18:00:00-06:00');
       inset 0 0 0 4px var(--color-accent);
   }
 
-  .hero-logo {
-    width: 120px;
-    height: 120px;
-    object-fit: contain;
-    display: block;
+  /* Cartridge Logo Animation - True 3D */
+  .cartridge-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     margin: 0 auto 1.5rem;
-    animation: float 3s ease-in-out infinite;
-    border-radius: 12px;
+    position: relative;
   }
 
-  @keyframes float {
-    0%, 100% { transform: translateY(0) rotate(-2deg); }
-    50% { transform: translateY(-10px) rotate(2deg); }
+  /* Ground shadow - stays fixed while cartridge bobs */
+  .cartridge-shadow {
+    position: absolute;
+    bottom: -10px;
+    width: 120px;
+    height: 20px;
+    background: radial-gradient(ellipse, rgba(0, 0, 0, 0.4) 0%, transparent 70%);
+    border-radius: 50%;
+    animation: shadow-pulse 2.5s ease-in-out infinite;
+  }
+
+  @keyframes shadow-pulse {
+    0%, 100% {
+      transform: scale(1);
+      opacity: 0.6;
+    }
+    50% {
+      transform: scale(0.75);
+      opacity: 0.25;
+    }
+  }
+
+  .cartridge-scene {
+    width: 160px;
+    height: 244px;
+    perspective: 800px;
+    animation: bob 2.5s ease-in-out infinite;
+  }
+
+  .cartridge {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transform-style: preserve-3d;
+    animation: spin-3d 4s ease-in-out infinite;
+  }
+
+  .cartridge-face {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    background-image: url('/nes-cartridge-logo.png');
+    background-size: 320px 244px;
+    background-repeat: no-repeat;
+    image-rendering: pixelated;
+    image-rendering: crisp-edges;
+  }
+
+  .cartridge-front {
+    background-position: -160px 0; /* Cross/fire side */
+  }
+
+  .cartridge-back {
+    background-position: 0 0; /* Caution side */
+    transform: rotateY(180deg);
+  }
+
+  @keyframes bob {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-12px); }
+  }
+
+  @keyframes spin-3d {
+    0%, 100% { transform: rotateY(0deg); }
+    50% { transform: rotateY(180deg); }
   }
 
   .hero h1 {
