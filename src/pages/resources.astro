@@ -51,6 +51,10 @@ import CrossIcon from '../components/CrossIcon.astro';
             <Icon name="book-open" size={16} />
             <span>Learning</span>
           </button>
+          <button class="tab-btn" data-tab="ideas">
+            <Icon name="lightbulb" size={16} />
+            <span>Ideas</span>
+          </button>
         </div>
       </div>
     </nav>
@@ -1204,6 +1208,163 @@ import CrossIcon from '../components/CrossIcon.astro';
           </div>
         </div>
       </section>
+
+      <!-- Ideas Tab -->
+      <section class="tab-panel" id="ideas">
+        <div class="container">
+          <h2>Game Ideas</h2>
+          <p class="section-intro">Stuck for inspiration? Here are some free ideas organized by genre. Take one, remix it, or let it spark something completely new!</p>
+
+          <div class="resource-category">
+            <h3>Platformer</h3>
+            <div class="ideas-grid">
+              <div class="idea-card">
+                <h4>Stations of the Cross</h4>
+                <p>Guide Jesus through 14 levels, each representing a Station. Collect graces, avoid temptations, and carry the cross through increasingly difficult terrain.</p>
+              </div>
+              <div class="idea-card">
+                <h4>Angel Wings</h4>
+                <p>Play as a guardian angel helping a child navigate a dangerous world. You can't touch the child directly—only influence the environment to keep them safe.</p>
+              </div>
+              <div class="idea-card">
+                <h4>Pilgrim's Progress</h4>
+                <p>A pilgrimage platformer where you travel to holy sites. Each location grants new abilities based on the saint associated with it.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="resource-category">
+            <h3>Puzzle</h3>
+            <div class="ideas-grid">
+              <div class="idea-card">
+                <h4>Liturgical Colors</h4>
+                <p>A color-matching puzzle where you arrange liturgical seasons correctly. Green for Ordinary Time, purple for Advent/Lent, white for solemnities...</p>
+              </div>
+              <div class="idea-card">
+                <h4>Rosary Riddles</h4>
+                <p>Each mystery unlocks a puzzle. Solve them in order while meditating on the events. Joyful, Luminous, Sorrowful, Glorious.</p>
+              </div>
+              <div class="idea-card">
+                <h4>Monastery Builder</h4>
+                <p>Tetris-style placement of monastery rooms. Balance prayer spaces, work areas, and community rooms according to the Rule of St. Benedict.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="resource-category">
+            <h3>RPG / Adventure</h3>
+            <div class="ideas-grid">
+              <div class="idea-card">
+                <h4>Saints & Sinners</h4>
+                <p>An RPG where your "class" is based on a saint's charism. Franciscan = nature magic, Dominican = wisdom/truth powers, Jesuit = adaptability skills.</p>
+              </div>
+              <div class="idea-card">
+                <h4>The Last Exorcist</h4>
+                <p>A supernatural mystery RPG. Investigate demonic activity, gather evidence, build your case, and perform the ritual. Prayer and discernment over combat.</p>
+              </div>
+              <div class="idea-card">
+                <h4>Desert Fathers</h4>
+                <p>Survive in the Egyptian desert as an early Christian hermit. Manage resources, resist temptations, and grow in holiness. Roguelike elements.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="resource-category">
+            <h3>Visual Novel / Story</h3>
+            <div class="ideas-grid">
+              <div class="idea-card">
+                <h4>Confessional</h4>
+                <p>Play as a priest hearing confessions. Each penitent has a story. Give counsel, assign penance, and watch how your words affect their lives.</p>
+              </div>
+              <div class="idea-card">
+                <h4>Convent Drama</h4>
+                <p>A slice-of-life visual novel about nuns. Navigate community life, personal struggles, and the call to holiness. Cozy but deep.</p>
+              </div>
+              <div class="idea-card">
+                <h4>The Convert</h4>
+                <p>Follow someone's journey into the Church. Answer their questions, introduce them to the faith, and accompany them through RCIA.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="resource-category">
+            <h3>Simulation / Management</h3>
+            <div class="ideas-grid">
+              <div class="idea-card">
+                <h4>Parish Simulator</h4>
+                <p>Manage a parish. Schedule Masses, organize ministries, balance the budget, and keep the flock happy. Random events keep you on your toes.</p>
+              </div>
+              <div class="idea-card">
+                <h4>Scriptorium</h4>
+                <p>Run a medieval monastery scriptorium. Assign monks to copy manuscripts, manage supplies, and preserve knowledge through the Dark Ages.</p>
+              </div>
+              <div class="idea-card">
+                <h4>Catholic School Tycoon</h4>
+                <p>Build and manage a Catholic school. Hire teachers, design curriculum, and form students in faith and academics.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="resource-category">
+            <h3>Action / Arcade</h3>
+            <div class="ideas-grid">
+              <div class="idea-card">
+                <h4>Spiritual Warfare</h4>
+                <p>A shoot-em-up where you're an angel battling demons. Weapons are virtues (Faith Shield, Hope Arrows, Charity Beam). Boss fights against deadly sins.</p>
+              </div>
+              <div class="idea-card">
+                <h4>Eucharistic Miracle</h4>
+                <p>Defend the Blessed Sacrament from desecration. Tower defense with saints as your units, each with unique holy powers.</p>
+              </div>
+              <div class="idea-card">
+                <h4>Martyr's Run</h4>
+                <p>Endless runner as an early Christian escaping persecution. Collect ichthys symbols, avoid Roman soldiers, find safe houses.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="resource-category">
+            <h3>Educational / Trivia</h3>
+            <div class="ideas-grid">
+              <div class="idea-card">
+                <h4>Catechism Quest</h4>
+                <p>A trivia game that teaches the faith. Answer questions from the Catechism to progress. Great for confirmation prep or RCIA.</p>
+              </div>
+              <div class="idea-card">
+                <h4>Saint Match</h4>
+                <p>Memory matching game with saints and their attributes. Match St. Peter with keys, St. Lawrence with a gridiron, etc.</p>
+              </div>
+              <div class="idea-card">
+                <h4>Mass Explained</h4>
+                <p>Interactive walkthrough of the Mass. Click on each part to learn its meaning, history, and scriptural basis.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="resource-category">
+            <h3>Cozy / Casual</h3>
+            <div class="ideas-grid">
+              <div class="idea-card">
+                <h4>Garden of the Soul</h4>
+                <p>A peaceful gardening game where each plant represents a virtue. Tend your garden as a form of prayer and reflection.</p>
+              </div>
+              <div class="idea-card">
+                <h4>Icon Painter</h4>
+                <p>Learn to paint Byzantine icons step by step. Relaxing art game with educational content about iconography traditions.</p>
+              </div>
+              <div class="idea-card">
+                <h4>Breviary Buddy</h4>
+                <p>A gentle reminder app gamified. Complete the Liturgy of the Hours, earn streaks, unlock prayers and devotions.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="ideas-note">
+            <Icon name="lightbulb" size={20} />
+            <p><strong>Remember:</strong> These are just starting points! The best games come from your own passion and creativity. What aspect of the faith moves you? Start there.</p>
+          </div>
+        </div>
+      </section>
     </div>
 
     <!-- CTA -->
@@ -1774,6 +1935,74 @@ import CrossIcon from '../components/CrossIcon.astro';
     color: rgba(255, 255, 255, 0.6);
   }
 
+  /* Ideas Tab */
+  .ideas-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+  }
+
+  .idea-card {
+    background: var(--color-bg-card);
+    border: 3px solid var(--color-text);
+    padding: 1.5rem;
+    position: relative;
+  }
+
+  .idea-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 6px;
+    height: 100%;
+    background: var(--color-accent);
+  }
+
+  .resource-category:nth-child(1) .idea-card::before { background: var(--color-blue); }
+  .resource-category:nth-child(2) .idea-card::before { background: var(--color-purple); }
+  .resource-category:nth-child(3) .idea-card::before { background: var(--color-green); }
+  .resource-category:nth-child(4) .idea-card::before { background: var(--color-cyan); }
+  .resource-category:nth-child(5) .idea-card::before { background: var(--color-red); }
+  .resource-category:nth-child(6) .idea-card::before { background: var(--color-accent); }
+  .resource-category:nth-child(7) .idea-card::before { background: var(--color-purple); }
+  .resource-category:nth-child(8) .idea-card::before { background: var(--color-green); }
+
+  .idea-card h4 {
+    font-family: var(--font-pixel);
+    font-size: 0.7rem;
+    color: var(--color-accent);
+    margin-bottom: 0.75rem;
+  }
+
+  .idea-card p {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: var(--color-text-muted);
+    margin: 0;
+  }
+
+  .ideas-note {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    background: var(--color-accent);
+    border: 3px solid var(--color-text);
+    padding: 1.5rem;
+    margin-top: 3rem;
+    color: white;
+  }
+
+  .ideas-note p {
+    margin: 0;
+    line-height: 1.6;
+  }
+
+  .ideas-note strong {
+    font-family: var(--font-pixel);
+    font-size: 0.65rem;
+  }
+
   @media (max-width: 768px) {
     .tab-buttons {
       padding: 0 0.5rem;
@@ -1795,6 +2024,15 @@ import CrossIcon from '../components/CrossIcon.astro';
     .tip-card {
       flex-direction: column;
       align-items: center;
+      text-align: center;
+    }
+
+    .ideas-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .ideas-note {
+      flex-direction: column;
       text-align: center;
     }
   }
