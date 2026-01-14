@@ -527,6 +527,8 @@ const jamEnd = new Date('2026-02-14T18:00:00-06:00');
 <script define:vars={{ jamStart, jamEnd }}>
   const startTime = new Date(jamStart).getTime();
   const endTime = new Date(jamEnd).getTime();
+  const urlParams = new URLSearchParams(window.location.search);
+  const forceUnlock = urlParams.get('unlock') === 'true';
 
   function updateStatus() {
     const now = Date.now();
@@ -536,7 +538,16 @@ const jamEnd = new Date('2026-02-14T18:00:00-06:00');
     const submitBtn = document.getElementById('submit-btn');
     const countdownMini = document.getElementById('countdown-mini');
 
-    if (now < startTime) {
+    if (forceUnlock || (now >= startTime && now <= endTime)) {
+      // During jam OR testing mode - submissions open!
+      banner.className = 'status-banner open';
+      banner.innerHTML = '<span class="status-icon">🎮</span><span class="status-text">SUBMISSIONS ARE OPEN!</span>';
+      formContainer.classList.remove('locked');
+      formContainer.style.display = 'block';
+      closedMessage.style.display = 'none';
+      submitBtn.disabled = false;
+
+    } else if (now < startTime) {
       // Before jam starts
       banner.className = 'status-banner pending';
       banner.innerHTML = '<span class="status-icon">⏳</span><span class="status-text">Submissions open when jam starts</span>';
@@ -551,15 +562,6 @@ const jamEnd = new Date('2026-02-14T18:00:00-06:00');
       const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
       const seconds = Math.floor((diff % (1000 * 60)) / 1000);
       countdownMini.textContent = `Opens in ${hours}h ${minutes}m ${seconds}s`;
-
-    } else if (now >= startTime && now <= endTime) {
-      // During jam - submissions open!
-      banner.className = 'status-banner open';
-      banner.innerHTML = '<span class="status-icon">🎮</span><span class="status-text">SUBMISSIONS ARE OPEN!</span>';
-      formContainer.classList.remove('locked');
-      formContainer.style.display = 'block';
-      closedMessage.style.display = 'none';
-      submitBtn.disabled = false;
 
     } else {
       // After jam ends
